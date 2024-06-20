@@ -1,0 +1,452 @@
+openapi: 3.0.0
+info:
+  title: Сагаарт маркетплейс
+  version: 1.0.0
+  description: API для маркетплейса Сгаарт
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/TVBOSS_1/Sagaart/1.0.0
+paths:
+  /user:
+    get:
+      summary: Получить список пользователей
+      tags: 
+        - User
+      operationId: getAllUsers
+      responses:
+        '200': 
+          description: успешный ответ со списком пользователей
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Users"
+    post:
+      summary: Создать нового пользователя
+      tags:
+        - User
+      operationId: createUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        '200': 
+          description: успешный ответ с новым личным кабинетом пользователя
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/User"
+  /user/{user_id}:
+    get: 
+      summary: Получить личный кабинет пользователя 
+      tags: 
+        - User
+      operationId: getUserById
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          description: идентификатор пользователя
+          schema: 
+            type: string
+      responses:
+        '200': 
+          description: успешный ответ с личным кабинетом пользователя
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/User"
+    put: 
+      summary: Изменить личный кабинет пользователя 
+      tags: 
+        - User
+      operationId: putUserById
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          description: идентификатор пользователя
+          schema: 
+            type: string
+      responses:
+        '200': 
+          description: успешный ответ с измененным личным кабинетом пользователя
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/User"
+  /Author:
+    get:
+      summary: Получить список авторов
+      tags: 
+        - Author
+      operationId: getAllAuthors
+      responses:
+        '200': 
+          description: успешный ответ со списком авторов
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Authors"
+    post:
+      summary: Создать нового автора
+      tags:
+        - Author
+      operationId: createAuthor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Author"
+      responses:
+        '200': 
+          description: успешный ответ с новой карточкой автора
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Author"
+  /Author/{Author_id}:
+    get: 
+      summary: Получить карточку автора 
+      tags: 
+        - Author
+      operationId: getAuthorById
+      parameters:
+        - name: Author_id
+          in: path
+          required: true
+          description: идентификатор пользователя
+          schema: 
+            type: string
+      responses:
+        '200': 
+          description: успешный ответ с карточкой автора
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Author"
+    put: 
+      summary: Изменить карточку автора 
+      tags: 
+        - Author
+      operationId: putAuthorById
+      parameters:
+        - name: Author_id
+          in: path
+          required: true
+          description: идентификатор автора
+          schema: 
+            type: string
+      responses:
+        '200': 
+          description: успешный ответ с измененной карточкой автора
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Author"
+  /Product:
+    get:
+      summary: Получить список товаров
+      tags: 
+        - Product
+      operationId: getAllProducts
+      responses:
+        '200': 
+          description: успешный ответ со списком товаров
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Products"
+    post:
+      summary: Создать новую карточку товара
+      tags:
+        - Product
+      operationId: createProduct
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Product"
+      responses:
+        '200': 
+          description: успешный ответ с новой карточкой товара
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Product"
+  /Product/{Product_id}:
+    get: 
+      summary: Получить карточку товара 
+      tags: 
+        - Product
+      operationId: getProductById
+      parameters:
+        - name: Product_id
+          in: path
+          required: true
+          description: идентификатор пользователя
+          schema: 
+            type: string
+      responses:
+        '200': 
+          description: успешный ответ с карточкой товара
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Product"
+    put: 
+      summary: Изменить карточку товара 
+      tags: 
+        - Product
+      operationId: putProductById
+      parameters:
+        - name: Product_id
+          in: path
+          required: true
+          description: идентификатор товара
+          schema: 
+            type: string
+      responses:
+        '200': 
+          description: успешный ответ с измененной карточкой товара
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Product"
+  /Subscribe:
+    get:
+      summary: Получить список подписок
+      tags: 
+        - Subscribe
+      operationId: getAllSubscribes
+      responses:
+        '200': 
+          description: успешный ответ со списком подписок
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Subscribes"
+    post:
+      summary: Создать новую подписку
+      tags:
+        - Subscribe
+      operationId: createSubscribe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Subscribe"
+      responses:
+        '200': 
+          description: успешный ответ с новой подпиской
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Subscribe"
+  /Subscribe/{Subscribe_id}:
+    get: 
+      summary: Получить информацию о подписке 
+      tags: 
+        - Subscribe
+      operationId: getSubscribeById
+      parameters:
+        - name: Subscribe_id
+          in: path
+          required: true
+          description: идентификатор подписки
+          schema: 
+            type: string
+      responses:
+        '200': 
+          description: успешный ответ с информацией о подписке
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Subscribe"
+    put: 
+      summary: Изменить подписку 
+      tags: 
+        - Subscribe
+      operationId: putSubscribeById
+      parameters:
+        - name: Subscribe_id
+          in: path
+          required: true
+          description: идентификатор подписки
+          schema: 
+            type: string
+      responses:
+        '200': 
+          description: успешный ответ с измененной подпиской
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Subscribe" 
+
+  /Analytic_prod/{Analytic_prod_id}:
+    get: 
+      summary: Получить аналитику по товару 
+      tags: 
+        - Anallytic_prod
+      operationId: getAnalyticProdById
+      parameters:
+        - name: Analytic_prod_id
+          in: path
+          required: true
+          description: идентификатор аналитики товара
+          schema: 
+            type: string
+      responses:
+        '200': 
+          description: успешный ответ с информацией об аналитике товара
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Analytic_prod"
+    put: 
+      summary: Изменить аналитику товара 
+      tags: 
+        - Analytic_prod
+      operationId: putAnallyticProdById
+      parameters:
+        - name: Analytic_prod_id
+          in: path
+          required: true
+          description: идентификатор подписки
+          schema: 
+            type: string
+      responses:
+        '200': 
+          description: успешный ответ с измененной Аналитикой по товару
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Analytic_prod"    
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        login:
+          type: string 
+        phone:
+          type: string   
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+        pass:
+          type: string
+    Users:      
+      type: array
+      items: 
+        $ref: "#/components/schemas/Users"
+    Author:
+      type: object
+      properties:
+        id:
+          type: integer
+        first_name:
+          type: string
+        last_name:
+          type: string
+        nick_name:
+          type: string
+        photo:
+          type: string
+        videocard:
+          type: string
+          format: uri
+        biograthy:
+          type: string
+        education:
+          type: string
+        gender: 
+          type: string  
+          enum:
+            - male
+            - famale
+        year_of_birth:
+          type: integer
+        place_of_birth:
+          type: string
+        sotial_network:
+          type: string
+          format: uri  
+    Authors:      
+      type: array
+      items: 
+        $ref: "#/components/schemas/Authors"
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+        product_name:
+          type: string
+        product_descrition_id:
+          type: integer
+        product_author_id:  
+          type: integer   
+        product_make_date:
+          type: string
+        product_size:
+          type: string  
+        product_weight:
+          type: number
+        product_edition:
+          type: string
+        protuct_auth_signature:
+          type: boolean
+        product_photo:
+          type: string
+          format: url  
+        product_type:
+          type: string
+        product_category:
+          type: string         
+        product_status:
+          type: string
+        product_price:
+          type: number        
+    Products:      
+      type: array
+      items: 
+        $ref: "#/components/schemas/Products"        
+    Subscribe:
+      type: object
+      properties:
+        id:
+          type: integer
+        status:
+          type: string
+        start_date:
+          type: string
+          format: 2024-05-28T15:00:00+03
+          description: Дата начала подписки
+        end_date:          
+          type: string
+          format: 2025-05-28T15:00:00+03
+          description: Дата окончания подписки
+    Subscribes:      
+      type: array
+      items: 
+        $ref: "#/components/schemas/Subscribes"  
+    Analytic_prod:
+      type: object
+      properties:
+        id:
+          type: integer
+        article:
+          type: string
+        
