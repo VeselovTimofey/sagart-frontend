@@ -1,3 +1,3 @@
-const APIPATH = 'http://localhost:3001';
+const APIPATH = 'http://localhost:3000';
 
 export default APIPATH;
