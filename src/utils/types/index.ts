@@ -1,6 +1,11 @@
 export type {
+  IUserRole,
+  IUser,
   IAuthor,
   IBuyer,
   ICredentialsSignIn,
-  ICredentialsSignUp,
+  ICredentialsSignUpFirstStep,
+  ICredentialsSignUpSecondStep,
+  ICredentialsSignUpThirdStepAuthor,
+  ICredentialsSignUpThirdStepBuyer,
 } from './user';

@@ -1,25 +1,12 @@
 import { Stack, Typography } from '@mui/material';
 
-const stepsData = [
-  {
-    name: 'Шаг 1',
-    description: 'Авторизация',
-  },
-  {
-    name: 'Шаг 2',
-    description: 'Тип пользователя',
-  },
-  {
-    name: 'Шаг 3',
-    description: 'Заполнение профиля продавца / Выбор стиля работ',
-  },
-];
+import { stepsData } from '../lib';
 
 interface IAuthSteps {
-  currentStep: number;
+  signUpStep: number;
 }
 
-export default function AuthSteps({ currentStep }: IAuthSteps) {
+export default function AuthSteps({ signUpStep }: IAuthSteps) {
   return (
     <Stack direction="column" width={184} style={{ boxSizing: 'border-box' }}>
       {stepsData.map(({ name, description }, index) => (
@@ -30,10 +17,10 @@ export default function AuthSteps({ currentStep }: IAuthSteps) {
           gap={1}
           p={3}
           // TODO: Use variable for color
-          bgcolor={currentStep - 1 === index ? '#FAFAFA' : 'transparent'}
-          color={currentStep - 1 === index ? '#1F2020' : '#A5A6A6'}
+          bgcolor={signUpStep === index ? '#FAFAFA' : 'transparent'}
+          color={signUpStep === index ? '#1F2020' : '#A5A6A6'}
           borderRight={
-            currentStep - 1 === index
+            signUpStep === index
               ? '0.25em solid #1F2020'
               : '0.25em solid #A5A6A6'
           }
