@@ -17,22 +17,41 @@ const subscribeSlice = createSlice({
   initialState,
   reducers: {
     emailChange: (state, action) => {
-      state.subscribe.email = action.payload;
+      const newState = {
+        ...state,
+        subscribe: {
+          ...state.subscribe,
+          email: action.payload,
+        },
+      };
+      return newState;
     },
   },
   extraReducers:
     (builder) => {
       builder
         .addCase(subcribeAction.pending, (state) => {
-          state.isLoading = true;
-          state.error = '';
+          const newState = {
+            ...state,
+            isLoading: true,
+            error: '',
+          };
+          return newState;
         })
         .addCase(subcribeAction.fulfilled, (state) => {
-          state.isLoading = false;
+          const newState = {
+            ...state,
+            isLoading: false,
+          };
+          return newState;
         })
         .addCase(subcribeAction.rejected, (state, action) => {
-          state.isLoading = false;
-          state.error = action.error.message;
+          const newState = {
+            ...state,
+            isLoading: false,
+            error: action.error.message,
+          };
+          return newState;
         });
     },
 });
