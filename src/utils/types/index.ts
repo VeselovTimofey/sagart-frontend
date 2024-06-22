@@ -4,8 +4,5 @@ export type {
   IAuthor,
   IBuyer,
   ICredentialsSignIn,
-  ICredentialsSignUpFirstStep,
-  ICredentialsSignUpSecondStep,
-  ICredentialsSignUpThirdStepAuthor,
-  ICredentialsSignUpThirdStepBuyer,
+  ICredentialsSignUp,
 } from './user';

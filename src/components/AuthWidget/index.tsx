@@ -1,101 +1,53 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect } from 'react';
 
-import { Stack, Typography } from '@mui/material';
+import { type SubmitHandler, useForm } from 'react-hook-form';
 
-import type { IUserRole } from '../../utils/types';
+import type { ICredentialsSignUp } from '../../utils/types';
 
-import { stepsData } from './lib';
-import AuthSteps from './AuthSteps';
-import UserDataForm from './UserDataForm';
-import UserRoleForm from './UserRoleForm';
-import BuyerDataForm from './BuyerDataForm';
+import { getSessionStorageValues, setSessionStorageValues } from './lib';
+import AuthWidgetUi from './ui';
+
+const defaultValues: ICredentialsSignUp = {
+  first_name: '',
+  last_name: '',
+  middle_name: '',
+  email: '',
+  phone: '',
+  password: '',
+};
 
 export default function AuthWidget() {
-  const [signUpStep, setSignUpStep] = useState(0);
-  const [role, setRole] = useState<Array<IUserRole | undefined> | undefined>(
-    undefined
-  );
+  const { register, handleSubmit, watch, formState } =
+    useForm<ICredentialsSignUp>({
+      // NOTE: Validation is initially triggered on the first blur event. After that, it is triggered on every change event.
+      mode: 'onTouched',
+      // NOTE: Get initial values from browser session storage or use const
+      defaultValues: async () =>
+        getSessionStorageValues<ICredentialsSignUp>(
+          'signUpFormValues',
+          defaultValues
+        ),
+    });
 
-  const doStepBack = useCallback(() => {
-    if (signUpStep === 0) {
-      return;
-    }
+  // NOTE: Add listener for values updates and update session storage
+  useEffect(() => {
+    const subscription = watch((values) =>
+      setSessionStorageValues(values as never, 'signUpFormValues')
+    );
+    return () => subscription.unsubscribe();
+  }, [watch]);
 
-    setSignUpStep(signUpStep - 1);
-  }, [signUpStep]);
-
-  const doStepForward = useCallback(() => {
-    if (signUpStep === stepsData.length - 1) {
-      // TODO: Add final submit
-      return;
-    }
-
-    setSignUpStep(signUpStep + 1);
-  }, [signUpStep]);
-
-  const selectRole = useCallback(
-    (newRole: Array<IUserRole | undefined> | undefined) => {
-      setRole(newRole);
-    },
+  // TODO: Add submit logic here
+  const onSubmit: SubmitHandler<ICredentialsSignUp> = useCallback(
+    async (data) => console.log(data),
     []
   );
 
-  const renderForm = () => {
-    switch (signUpStep) {
-      case 0:
-        return (
-          <UserDataForm
-            onClickBack={doStepBack}
-            onClickForward={doStepForward}
-          />
-        );
-      case 1:
-        return (
-          <UserRoleForm
-            onClickBack={doStepBack}
-            onClickForward={doStepForward}
-            onRoleSelect={selectRole}
-          />
-        );
-      case 2:
-        console.log('ROLE: ', role);
-        return (
-          <BuyerDataForm
-            onClickBack={doStepBack}
-            onClickForward={doStepForward}
-          />
-        );
-      default:
-        return null;
-    }
-  };
-
   return (
-    <Stack direction="row" justifyContent="space-between" p="2.5rem">
-      <AuthSteps {...{ signUpStep }} />
-      <Stack
-        direction="column"
-        gap={4}
-        sx={{
-          width: '24.125rem',
-          marginX: 'auto',
-        }}
-      >
-        <Stack direction="row" gap={2.25}>
-          <Typography fontSize={32} variant="h2">
-            Регистрация
-          </Typography>
-          <Typography
-            fontSize={32}
-            variant="h2"
-            component="span"
-            color="#A5A6A6"
-          >
-            Шаг {signUpStep + 1}
-          </Typography>
-        </Stack>
-        {renderForm()}
-      </Stack>
-    </Stack>
+    <AuthWidgetUi
+      onSubmit={handleSubmit(onSubmit)}
+      {...{ register }}
+      {...{ formState }}
+    />
   );
 }

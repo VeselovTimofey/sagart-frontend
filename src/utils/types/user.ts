@@ -5,6 +5,7 @@ export interface IUser {
   phone: string;
   first_name: string;
   last_name: string;
+  middle_name: string;
   email: string;
   // TODO: Discuss and confirm
   role: Array<IUserRole>;
@@ -43,19 +44,11 @@ interface IBuyerExtras {
 export interface IBuyer extends IUser, IBuyerExtras {}
 
 // TODO: Discuss and confirm
-export interface ICredentialsSignUpFirstStep
-  extends Omit<IUser, 'id' | 'role'> {
+export interface ICredentialsSignUp extends Omit<IUser, 'id' | 'role'> {
   password: string;
-  confirm_password: string;
-}
-export interface ICredentialsSignUpSecondStep extends Pick<IUser, 'role'> {}
-
-export interface ICredentialsSignUpThirdStepAuthor extends IAuthorExtras {}
-
-export interface ICredentialsSignUpThirdStepBuyer {
-  interests: string[];
+  // confirm_password: string;
 }
 
 // TODO: Discuss and confirm
 export interface ICredentialsSignIn
-  extends Pick<ICredentialsSignUpFirstStep, 'email' | 'password'> {}
+  extends Pick<ICredentialsSignUp, 'email' | 'password'> {}
