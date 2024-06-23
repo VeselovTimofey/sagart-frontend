@@ -16,7 +16,7 @@ const subscribeSlice = createSlice({
   name: 'subscribe',
   initialState,
   reducers: {
-    emailChange: (state, action) => {
+    emailChange: (state:ISubscribeState, action) => {
       const newState = {
         ...state,
         subscribe: {
@@ -26,11 +26,24 @@ const subscribeSlice = createSlice({
       };
       return newState;
     },
+    agreementChange: (state:ISubscribeState, action) => {
+      const newState = {
+        ...state,
+        subscribe: {
+          ...state.subscribe,
+          agreement: action.payload,
+        },
+      };
+      return newState;
+    },
   },
   extraReducers:
     (builder) => {
       builder
-        .addCase(subcribeAction.pending, (state) => {
+        .addCase(subcribeAction.pending, (state:ISubscribeState) => {
+          if (state.subscribe.agreement === false) {
+            throw new Error('Необходимо принять соглашение.');
+          }
           const newState = {
             ...state,
             isLoading: true,
@@ -38,14 +51,14 @@ const subscribeSlice = createSlice({
           };
           return newState;
         })
-        .addCase(subcribeAction.fulfilled, (state) => {
+        .addCase(subcribeAction.fulfilled, (state:ISubscribeState) => {
           const newState = {
             ...state,
             isLoading: false,
           };
           return newState;
         })
-        .addCase(subcribeAction.rejected, (state, action) => {
+        .addCase(subcribeAction.rejected, (state:ISubscribeState, action) => {
           const newState = {
             ...state,
             isLoading: false,
@@ -57,4 +70,4 @@ const subscribeSlice = createSlice({
 });
 
 export default subscribeSlice.reducer;
-export const { emailChange } = subscribeSlice.actions;
+export const { emailChange, agreementChange } = subscribeSlice.actions;
