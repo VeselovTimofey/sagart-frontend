@@ -9,11 +9,13 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { emailChange, agreementChange } from '../../store/slice/subscribeSlice';
 import subscribeAction from '../../store/actions/subscribeActions';
-import { IRootState } from '../../store/store';
+import { AppStore, AppDispatch } from '../../utils/types/appDispatch';
 
 function Subscribe() {
-  const dispatch = useDispatch();
-  const emailValue = useSelector((state: IRootState) => state.reducer.subscribe.subscribe.email);
+  const dispatch = useDispatch<AppDispatch>();
+  const emailValue = useSelector(
+    (state: AppStore) => state.reducer.subscribe.subscribe.email,
+  );
 
   return (
     <Grid container>
