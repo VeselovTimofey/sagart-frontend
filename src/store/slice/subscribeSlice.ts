@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import ISubscribeState from '../../utils/types/subscribeState';
 import subcribeAction from '../actions/subscribeActions';
+import subscribeSchema from '../../utils/validation/subscribeSchema';
 
 const initialState:ISubscribeState = {
   subscribe: {
@@ -44,6 +45,7 @@ const subscribeSlice = createSlice({
           if (state.subscribe.agreement === false) {
             throw new Error('Необходимо принять соглашение.');
           }
+          subscribeSchema.validateSync(state.subscribe);
           const newState = {
             ...state,
             isLoading: true,
