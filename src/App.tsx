@@ -1,5 +1,7 @@
+import AuthWidget from './components/AuthWidget';
+
 function App() {
-  return <></>;
+  return <AuthWidget />;
 }
 
 export default App;

@@ -1,13 +1,14 @@
+export type IUserRole = 'author' | 'buyer';
+
 export interface IUser {
   id: number;
-  login: string;
   phone: string;
   first_name: string;
   last_name: string;
+  middle_name: string;
   email: string;
   // TODO: Discuss and confirm
-  role: 'author' | 'buyer'[];
-  // pass: string;
+  role: Array<IUserRole>;
 }
 
 interface IAuthorExtras {
@@ -42,10 +43,7 @@ interface IBuyerExtras {
 export interface IBuyer extends IUser, IBuyerExtras {}
 
 // TODO: Discuss and confirm
-export interface ICredentialsSignUp
-  extends Omit<IUser, 'login' | 'id'>,
-    Partial<IAuthorExtras>,
-    Partial<IBuyerExtras> {
+export interface ICredentialsSignUp extends Omit<IUser, 'id' | 'role'> {
   password: string;
 }
 
