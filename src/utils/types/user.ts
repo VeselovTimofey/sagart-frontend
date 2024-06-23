@@ -9,7 +9,6 @@ export interface IUser {
   email: string;
   // TODO: Discuss and confirm
   role: Array<IUserRole>;
-  // pass: string;
 }
 
 interface IAuthorExtras {
@@ -46,7 +45,6 @@ export interface IBuyer extends IUser, IBuyerExtras {}
 // TODO: Discuss and confirm
 export interface ICredentialsSignUp extends Omit<IUser, 'id' | 'role'> {
   password: string;
-  // confirm_password: string;
 }
 
 // TODO: Discuss and confirm
