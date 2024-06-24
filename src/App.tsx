@@ -1,12 +1,21 @@
-import { Stack } from '@mui/material';
-import ProductsList from './components/ProductsList';
-import { artworks } from './utils/mock/artworks';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import CataloguePage from './pages/Catalogue';
 
 function App() {
   return (
-    <Stack>
-      <ProductsList products={artworks} amountToShow={8} size="large" />;
-    </Stack>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/catalogue/:category?">
+          <Route index Component={CataloguePage} />
+        </Route>
+        {/* NOTE: Product page */}
+        <Route path="/products/:productId" element={<div>Artwork page</div>} />
+        {/* TODO: Test page. Remove after testing */}
+        <Route path="/test" element={<div>Test page</div>} />
+        <Route path="/" element={<div>Root page</div>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
