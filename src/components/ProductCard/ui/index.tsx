@@ -90,15 +90,15 @@ export default function ProductCardUi({
                 Нисо Атаханова
               </Typography>
               <Typography variant="body1" color="text.primary">
-                Onsen (mini) Мадарао
+                {product.name}
               </Typography>
             </Stack>
             <Stack direction="column" gap={0}>
               <Typography variant="body2" color="text.secondary">
-                Холст, масло
+                {product.type}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                80 x 60 см
+                {product.size}
               </Typography>
             </Stack>
           </Stack>
@@ -111,7 +111,10 @@ export default function ProductCardUi({
             justifyContent="space-between"
           >
             <Typography variant="body1" color="text.primary">
-              85 000 ₽
+              {product.price.toLocaleString('ru-RU', {
+                style: 'currency',
+                currency: 'RUB',
+              })}
             </Typography>
             <IconButton
               size="small"
