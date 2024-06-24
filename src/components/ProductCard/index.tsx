@@ -8,9 +8,16 @@ import ProductCardUi from './ui';
 
 interface IProductCard extends CardProps {
   product: IProduct;
+  size: 'small' | 'medium';
 }
 
-export default function ProductCard({ product, ...props }: IProductCard) {
+/**
+ * Product Card Component.
+ * @param props - MUI Card extra props
+ * @param props.product - Product data
+ * @param props.size - Card size. Small for 224px width, medium for 245px width
+ */
+export default function ProductCard({ product, size, ...props }: IProductCard) {
   const toggleIsFavourite = useCallback(
     () => console.log('toggled favourite: ', product),
     [product]
@@ -22,7 +29,7 @@ export default function ProductCard({ product, ...props }: IProductCard) {
 
   return (
     <ProductCardUi
-      size="small"
+      {...{ size }}
       {...{ product }}
       {...props}
       onFavouriteClick={toggleIsFavourite}
