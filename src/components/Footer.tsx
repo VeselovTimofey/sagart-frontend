@@ -1,9 +1,7 @@
-import Subscribe from './elements/Subscribe';
+import NewsSubscription from './elements/NewsSubscription';
 
 function Footer() {
-  return (
-    <Subscribe />
-  );
+  return <NewsSubscription />;
 }
 
 export default Footer;

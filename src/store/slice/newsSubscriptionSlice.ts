@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import ISubscribeState from '../../utils/types/subscribeState';
-import subcribeAction from '../actions/subscribeActions';
-import subscribeSchema from '../../utils/validation/subscribeSchema';
+import INewsSubscriptionState from '../../utils/types/newsSubscriptionState';
+import newsSubscriptionAction from '../actions/newsSubscriptionActions';
+import newsSubscriptionSchema from '../../utils/validation/newsSubscriptionSchema';
 
-const initialState:ISubscribeState = {
+const initialState: INewsSubscriptionState = {
   subscribe: {
     email: '',
     agreement: false,
@@ -13,11 +13,11 @@ const initialState:ISubscribeState = {
   error: '',
 };
 
-const subscribeSlice = createSlice({
-  name: 'subscribe',
+const newsSubscriptionSlice = createSlice({
+  name: 'newsSubscription',
   initialState,
   reducers: {
-    emailChange: (state:ISubscribeState, action) => {
+    emailChange: (state: INewsSubscriptionState, action) => {
       const newState = {
         ...state,
         subscribe: {
@@ -27,7 +27,7 @@ const subscribeSlice = createSlice({
       };
       return newState;
     },
-    agreementChange: (state:ISubscribeState, action) => {
+    agreementChange: (state: INewsSubscriptionState, action) => {
       const newState = {
         ...state,
         subscribe: {
@@ -38,38 +38,46 @@ const subscribeSlice = createSlice({
       return newState;
     },
   },
-  extraReducers:
-    (builder) => {
-      builder
-        .addCase(subcribeAction.pending, (state:ISubscribeState) => {
+  extraReducers: (builder) => {
+    builder
+      .addCase(
+        newsSubscriptionAction.pending,
+        (state: INewsSubscriptionState) => {
           if (state.subscribe.agreement === false) {
             throw new Error('Необходимо принять соглашение.');
           }
-          subscribeSchema.validateSync(state.subscribe);
+          newsSubscriptionSchema.validateSync(state.subscribe);
           const newState = {
             ...state,
             isLoading: true,
             error: '',
           };
           return newState;
-        })
-        .addCase(subcribeAction.fulfilled, (state:ISubscribeState) => {
+        }
+      )
+      .addCase(
+        newsSubscriptionAction.fulfilled,
+        (state: INewsSubscriptionState) => {
           const newState = {
             ...state,
             isLoading: false,
           };
           return newState;
-        })
-        .addCase(subcribeAction.rejected, (state:ISubscribeState, action) => {
+        }
+      )
+      .addCase(
+        newsSubscriptionAction.rejected,
+        (state: INewsSubscriptionState, action) => {
           const newState = {
             ...state,
             isLoading: false,
             error: action.error.message,
           };
           return newState;
-        });
-    },
+        }
+      );
+  },
 });
 
-export default subscribeSlice.reducer;
-export const { emailChange, agreementChange } = subscribeSlice.actions;
+export default newsSubscriptionSlice.reducer;
+export const { emailChange, agreementChange } = newsSubscriptionSlice.actions;
