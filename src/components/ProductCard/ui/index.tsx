@@ -55,7 +55,10 @@ export default function ProductCardUi({
       <IconButton
         size="small"
         type="button"
-        onClick={onFavouriteClick}
+        onClick={(e) => {
+          e.preventDefault();
+          onFavouriteClick();
+        }}
         sx={{
           position: 'absolute',
           top: size === 'small' ? '0.375rem' : '0.5rem',
@@ -110,7 +113,14 @@ export default function ProductCardUi({
             <Typography variant="body1" color="text.primary">
               85 000 ₽
             </Typography>
-            <IconButton size="small" type="button" onClick={onBasketClick}>
+            <IconButton
+              size="small"
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                onBasketClick();
+              }}
+            >
               <ShoppingBasketOutlined />
             </IconButton>
           </Stack>
