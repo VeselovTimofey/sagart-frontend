@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { Box } from '@mui/material';
 
 import type { IProduct } from '../../../utils/types';
@@ -31,8 +33,8 @@ export default function ProductsListUi({
       }}
     >
       {products.slice(0, amountToShow).map((product) => (
-        <a
-          href={`#${product.id}`}
+        <Link
+          to={`/products/${product.id}`}
           key={product.id}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
@@ -40,7 +42,7 @@ export default function ProductsListUi({
             {...{ product }}
             size={size === 'medium' ? 'small' : 'medium'}
           />
-        </a>
+        </Link>
       ))}
     </Box>
   );
