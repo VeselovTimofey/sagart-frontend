@@ -17,12 +17,22 @@ import {
 import type { IProduct } from '../../../utils/types';
 
 interface IProductCardUi extends CardProps {
+  size: 'small' | 'medium';
   product: IProduct;
   onFavouriteClick: () => void;
   onBasketClick: () => void;
 }
 
+/**
+ * Renders Card UI.
+ * @param props - MUI Card extra props
+ * @param props.product - Product data
+ * @param props.size - Card size. Small for 224px width, medium for 245px width
+ * @callback props.onFavouriteClick - The author of the book
+ * @callback props.onBasketClick - The author of the book
+ */
 export default function ProductCardUi({
+  size,
   product,
   onFavouriteClick,
   onBasketClick,
@@ -33,6 +43,9 @@ export default function ProductCardUi({
       elevation={0}
       {...props}
       sx={{
+        width: size === 'small' ? 224 : 245,
+        height: 399,
+        borderRadius: 0,
         ...props.sx,
         display: 'flex',
         flexDirection: 'column',
@@ -45,8 +58,8 @@ export default function ProductCardUi({
         onClick={onFavouriteClick}
         sx={{
           position: 'absolute',
-          top: '0.5rem',
-          right: '0.5rem',
+          top: size === 'small' ? '0.375rem' : '0.5rem',
+          right: size === 'small' ? '0.375rem' : '0.5rem',
           width: '1.5rem',
           height: '1.5rem',
         }}
@@ -57,9 +70,9 @@ export default function ProductCardUi({
         component="img"
         sx={{
           height: '14.625rem',
-          padding: '0.75rem',
+          padding: size === 'small' ? '0.75rem' : '1.25rem',
           objectFit: 'contain',
-          width: 'calc(100% - 1.5rem)',
+          width: `calc(100% - ${size === 'small' ? '1.5rem' : '2.5rem'})`,
           aspectRatio: 1,
           backgroundColor: '#FAFAFA',
         }}

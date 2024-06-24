@@ -22,6 +22,7 @@ export default function ProductCard({ product, ...props }: IProductCard) {
 
   return (
     <ProductCardUi
+      size="small"
       {...{ product }}
       {...props}
       onFavouriteClick={toggleIsFavourite}
