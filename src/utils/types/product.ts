@@ -1,14 +1,17 @@
 export interface IProduct {
   id: number;
+  aricle_num: number;
   name: string;
   descrition_id: number;
   author_id: number;
-  make_date: string;
+  make_year: string;
   size: string;
-  weight: number;
   edition: string;
   auth_signature: boolean;
-  photo: string;
+  preview_photo: string;
+  photo_gallery: { photo: string }[];
+  ishorizontal: boolean;
+  genre: string;
   type: string;
   category: string;
   status: string;
