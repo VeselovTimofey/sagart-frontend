@@ -20,6 +20,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    'react/jsx-filename-extension': [0],
+    "react/jsx-filename-extension": [0],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
   },
 };
