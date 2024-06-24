@@ -7,11 +7,12 @@ module.exports = {
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'prettier',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json'
+    project: './tsconfig.json',
   },
   plugins: ['react-refresh', '@typescript-eslint'],
   rules: {
@@ -22,4 +23,4 @@ module.exports = {
     "react/jsx-filename-extension": [0],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
   },
-}
+};
