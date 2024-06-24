@@ -6,3 +6,5 @@ export type {
   ICredentialsSignIn,
   ICredentialsSignUp,
 } from './user';
+
+export type { IProduct } from './product';
