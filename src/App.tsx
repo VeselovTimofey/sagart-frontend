@@ -2,7 +2,7 @@ import { Stack } from '@mui/material';
 import ProductsList from './components/ProductsList';
 import { artworks } from './utils/mock/artworks';
 
-import Footer from './components/Footer';
+import Footer from './components/Footer/index';
 
 function App() {
   return (
