@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
-import { Box } from '@mui/material';
+import { Box, Link } from '@mui/material';
 
 import type { IProduct } from '../../../utils/types';
 import ProductCard from '../../ProductCard';
@@ -26,7 +26,7 @@ export default function ProductsListUi({
     <Box
       sx={{
         display: 'grid',
-        gridTemplateColumns: `repeat(auto-fit, minmax(${size === 'medium' ? '245px' : '224px'}, 1fr))`,
+        gridTemplateColumns: `repeat(auto-fit, minmax(${size === 'medium' ? '224px' : '245px'}, 1fr))`,
         gap: '1.5rem',
         justifyItems: 'center',
         width: '100%',
@@ -34,6 +34,7 @@ export default function ProductsListUi({
     >
       {products.slice(0, amountToShow).map((product) => (
         <Link
+          component={RouterLink}
           to={`/products/${product.id}`}
           key={product.id}
           style={{ textDecoration: 'none', color: 'inherit' }}
