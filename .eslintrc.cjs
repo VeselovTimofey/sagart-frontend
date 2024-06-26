@@ -12,7 +12,7 @@ module.exports = {
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
   },
   plugins: ['react-refresh', '@typescript-eslint'],
   rules: {
@@ -21,7 +21,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'react/jsx-filename-extension': [0],
-    'import/no-extraneous-dependencies': ['error', {'devDependencies': true}],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/prefer-default-export': ['off'],
   },
 };
