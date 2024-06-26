@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import CataloguePage from './pages/Catalogue';
+import ProductPage from './pages/Product';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Route index Component={CataloguePage} />
         </Route>
         {/* NOTE: Product page */}
-        <Route path="/products/:productId" element={<div>Artwork page</div>} />
+        <Route path="/products/:productId" Component={ProductPage} />
         {/* TODO: Test page. Remove after testing */}
         <Route path="/test" element={<div>Test page</div>} />
         <Route index element={<div>Root page</div>} />
