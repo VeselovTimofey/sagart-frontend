@@ -1,5 +1,14 @@
 import { Grid, Link, Typography } from '@mui/material';
-import { IFooterLinkGroup } from '../../../utils/types/footerLinkGroup';
+
+interface ILink {
+  name: string;
+  link: string;
+}
+
+export interface IFooterLinkGroup {
+  name: string;
+  links: ILink[];
+}
 
 function FooterLinkGroupUi({ name, links }: IFooterLinkGroup) {
   return (

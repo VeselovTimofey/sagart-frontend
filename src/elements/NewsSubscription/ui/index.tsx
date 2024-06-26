@@ -1,21 +1,28 @@
-import { Button, Checkbox, Input, Grid, Typography } from '@mui/material';
+import { Button, Checkbox, Grid, TextField, Typography } from '@mui/material';
 
-import {
+import INewsSubscriptionState, {
   IButtonChange,
   ICheckboxChange,
 } from '../../../utils/types/newsSubscriptionState';
 
 interface INewsSubscriptionUi {
+  subscribeValue: INewsSubscriptionState;
   onEmailChange: IButtonChange;
   onAgreementChange: ICheckboxChange;
   onNewsSubscriptionClick: () => void;
 }
 
 function NewsSubscriptionUi({
+  subscribeValue,
   onEmailChange,
   onAgreementChange,
   onNewsSubscriptionClick,
 }: INewsSubscriptionUi) {
+  const helperTextEmail =
+    subscribeValue.error === '' && subscribeValue.success === ''
+      ? ''
+      : subscribeValue.error + subscribeValue.success;
+
   return (
     <Grid
       item
@@ -24,6 +31,12 @@ function NewsSubscriptionUi({
       justifyContent="center"
       alignItems="stretch"
       container
+      component="form"
+      noValidate
+      onSubmit={(e) => {
+        e.preventDefault();
+        onNewsSubscriptionClick();
+      }}
     >
       <Grid item>
         <Typography variant="h3" component="h3">
@@ -38,10 +51,17 @@ function NewsSubscriptionUi({
         container
       >
         <Grid item>
-          <Input placeholder="Email *" onChange={onEmailChange} />
+          <TextField
+            placeholder="Email *"
+            onChange={onEmailChange}
+            error={subscribeValue.error !== ''}
+            helperText={helperTextEmail}
+          />
         </Grid>
         <Grid item>
-          <Button onClick={onNewsSubscriptionClick}>Подписаться</Button>
+          <Button type="submit" variant="contained" disableElevation>
+            Подписаться
+          </Button>
         </Grid>
       </Grid>
       <Grid

@@ -11,6 +11,7 @@ const initialState: INewsSubscriptionState = {
   },
   isLoading: false,
   error: '',
+  success: '',
 };
 
 const newsSubscriptionSlice = createSlice({
@@ -51,6 +52,7 @@ const newsSubscriptionSlice = createSlice({
             ...state,
             isLoading: true,
             error: '',
+            success: '',
           };
           return newState;
         }
@@ -61,6 +63,7 @@ const newsSubscriptionSlice = createSlice({
           const newState = {
             ...state,
             isLoading: false,
+            success: 'Email успешно зарегистрировался.',
           };
           return newState;
         }

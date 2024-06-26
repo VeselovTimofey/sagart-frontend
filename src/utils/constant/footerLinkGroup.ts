@@ -1,4 +1,6 @@
-import { IFooterLinkGroups } from '../types/footerLinkGroup';
+import { IFooterLinkGroup } from '../../elements/FooterLinkGroup/ui/index';
+
+interface IFooterLinkGroups extends Array<IFooterLinkGroup> {}
 
 const FOOTERLINKGROUPS: IFooterLinkGroups = [
   {
