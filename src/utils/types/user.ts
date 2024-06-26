@@ -13,24 +13,29 @@ export interface IUser {
 
 interface IAuthorExtras {
   nick_name: string | null;
+  // TODO: Move 'photo' to 'icon' in IUser
   photo: string | null;
-  /** Format: uri */
   videocard: string | null;
-  // TODO: Discuss and change naming
   biography: string | null;
-  education: string | null;
-  /** @enum {string} */
+  education: Array<{
+    type: string;
+    level: 'Среднее' | 'Высшее' | 'Профессиональное' | 'Специальное';
+    institute: string;
+  }> | null;
   gender: 'male' | 'famale' | null;
   year_of_birth: number | null;
   place_of_birth: string | null;
-  /** Format: uri */
-  // TODO: Discuss and confirm
-  social_network:
-    | {
-        name: string;
-        link: string;
-      }[]
-    | null;
+  solo_shows: boolean;
+  group_shows: boolean;
+  collected_private_collectors: boolean;
+  collected_major_institutions: boolean;
+  winner_top_awards: boolean;
+  social_networks: Array<{
+    name: string;
+    account: string;
+  }> | null;
+  address: string | null;
+  style_works: Array<{ name: string }> | null;
 }
 
 export interface IAuthor extends IUser, IAuthorExtras {}
