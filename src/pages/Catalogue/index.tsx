@@ -15,7 +15,7 @@ export default function CataloguePage() {
     : 'Каталог';
 
   return (
-    <Stack direction="column" px="3.75rem" gap={7.5}>
+    <Stack component="main" direction="column" px="3.75rem" gap={7.5}>
       <Stack direction="column" gap={3}>
         <BreadcrumbsWidget />
         <Typography variant="h1" fontSize={32}>
@@ -23,7 +23,7 @@ export default function CataloguePage() {
         </Typography>
       </Stack>
       <Stack direction="row" gap={5}>
-        <Box>
+        <Box component="aside">
           <Box
             position="sticky"
             top={20}
@@ -35,7 +35,7 @@ export default function CataloguePage() {
             <FilterBarWidget />
           </Box>
         </Box>
-        <Box component="main" sx={{ flexGrow: 1 }}>
+        <Box component="section" sx={{ flexGrow: 1 }}>
           <ProductsList products={artworks} amountToShow={20} size="medium" />
         </Box>
       </Stack>
