@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CataloguePage from './pages/Catalogue';
 import ProductPage from './pages/Product';
 
+import Footer from './components/Footer/index';
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +20,7 @@ function App() {
         <Route path="/test" element={<div>Test page</div>} />
         <Route index element={<div>Root page</div>} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
