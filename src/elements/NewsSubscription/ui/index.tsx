@@ -18,10 +18,12 @@ function NewsSubscriptionUi({
   onAgreementChange,
   onNewsSubscriptionClick,
 }: INewsSubscriptionUi) {
-  const helperTextEmail =
-    subscribeValue.error === '' && subscribeValue.success === ''
-      ? ''
-      : subscribeValue.error + subscribeValue.success;
+  let helperTextEmail: string;
+  if (subscribeValue.error === '' && subscribeValue.success === '') {
+    helperTextEmail = '';
+  } else {
+    helperTextEmail = subscribeValue.error + subscribeValue.success;
+  }
 
   return (
     <Grid

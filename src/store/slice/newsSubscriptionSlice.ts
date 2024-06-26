@@ -75,6 +75,7 @@ const newsSubscriptionSlice = createSlice({
             ...state,
             isLoading: false,
             error: action.error.message,
+            success: '',
           };
           return newState;
         }

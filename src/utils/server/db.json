@@ -1,3 +1,12 @@
 {
-  "newsSubscription": []
+  "newsSubscription": [
+    {
+      "id": "81c4",
+      "values": "sdw@fe.ru"
+    },
+    {
+      "id": "9ebe",
+      "values": "ewr@ds.ru"
+    }
+  ]
 }
