@@ -5,13 +5,13 @@ import NewsSubscriptionUi from './ui/index';
 import {
   emailChange,
   agreementChange,
-} from '../../../store/slice/newsSubscriptionSlice';
-import newsSubscriptionAction from '../../../store/actions/newsSubscriptionActions';
-import { AppStore, AppDispatch } from '../../../utils/types/appDispatch';
+} from '../../store/slice/newsSubscriptionSlice';
+import newsSubscriptionAction from '../../store/actions/newsSubscriptionActions';
+import { AppStore, AppDispatch } from '../../utils/types/appDispatch';
 import {
   IButtonChange,
   ICheckboxChange,
-} from '../../../utils/types/newsSubscriptionState';
+} from '../../utils/types/newsSubscriptionState';
 
 function NewsSubscription() {
   const dispatch = useDispatch<AppDispatch>();
