@@ -5,6 +5,7 @@ import ProductPage from './pages/Product';
 
 import Footer from './components/Footer/index';
 import AuthorPage from './pages/Author';
+import SuccessScreenUi from './components/AuthWidget/ui/SuccessScreen';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         {/* NOTE: Author page */}
         <Route path="/authors/:authorId" Component={AuthorPage} />
         {/* TODO: Test page. Remove after testing */}
-        <Route path="/test" element={<div>Test page</div>} />
+        <Route path="/test" Component={SuccessScreenUi} />
         <Route index element={<div>Root page</div>} />
       </Routes>
       <Footer />

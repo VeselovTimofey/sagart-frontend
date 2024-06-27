@@ -11,6 +11,7 @@ import {
 import Grid from '@mui/material/Unstable_Grid2';
 
 import { ICredentialsSignUp } from '../../../utils/types';
+import SuccessScreenUi from './SuccessScreen';
 
 interface IAuthWidgetUi {
   onSubmit: () => void;
@@ -21,9 +22,11 @@ interface IAuthWidgetUi {
 export default function AuthWidgetUi({
   onSubmit,
   register,
-  formState: { isLoading, isSubmitting, errors },
+  formState: { isLoading, isSubmitting, errors, isSubmitSuccessful },
 }: IAuthWidgetUi) {
-  return (
+  return isSubmitSuccessful ? (
+    <SuccessScreenUi />
+  ) : (
     <Stack
       direction="column"
       gap={5}
