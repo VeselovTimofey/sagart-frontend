@@ -1,6 +1,6 @@
 import { Grid, Link, Typography } from '@mui/material';
 
-interface ILink {
+export interface ILink {
   name: string;
   link: string;
 }

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CataloguePage from './pages/Catalogue';
 import ProductPage from './pages/Product';
 
+import Header from './components/Header/index';
 import Footer from './components/Footer/index';
 import AuthorPage from './pages/Author';
 import SuccessScreenUi from './components/AuthWidget/ui/SuccessScreen';
@@ -10,6 +11,8 @@ import SuccessScreenUi from './components/AuthWidget/ui/SuccessScreen';
 function App() {
   return (
     <BrowserRouter>
+      {/* // TODO: Create layout with Header and Footer */}
+      <Header />
       <Routes>
         {/* // TODO: Add data prefetching in Route component  */}
         {/* // TODO: Use param to filter request (on router side) */}

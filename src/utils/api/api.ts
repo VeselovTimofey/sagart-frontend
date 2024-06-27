@@ -1,29 +1,35 @@
 import APIPATH from '../constant/constantsApi';
 
-interface IApi {
+import type { ICredentialsSignUp } from '../types';
+
+interface IApi extends RequestInit {
   endPath: string;
-  method: 'GET' | 'POST' | 'PATCH' | 'PUT' | 'DELETE';
-  headers: {
-    'Content-Type': string;
-    Authorization?: string;
-  };
-  values?: string | object;
+}
+
+async function api({ endPath, ...options }: IApi): Promise<Response> {
+  return fetch(APIPATH + endPath, {
+    ...options,
+  });
 }
 
 // News subscription request
-function postNewsSubscription({
-  values,
-  endPath,
-  method,
-  headers,
-}: IApi): Promise<Response> {
-  return fetch(APIPATH + endPath, {
-    method,
-    headers,
+export async function postNewsSubscription(email: string) {
+  return api({
+    method: 'POST',
+    endPath: '/newsSubscription',
+    headers: new Headers({ 'Content-Type': 'application/json' }),
     body: JSON.stringify({
-      values,
+      email,
     }),
   });
 }
 
-export default postNewsSubscription;
+// Sign Up request
+export async function signUpApi(credentials: ICredentialsSignUp) {
+  return api({
+    method: 'POST',
+    endPath: '/signUp',
+    headers: new Headers({ 'Content-Type': 'application/json' }),
+    body: JSON.stringify(credentials),
+  });
+}
