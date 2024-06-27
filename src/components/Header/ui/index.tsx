@@ -1,5 +1,5 @@
 import {
-  AppBar,
+  Box,
   Button,
   Grid,
   InputBase,
@@ -16,7 +16,7 @@ import HEADERLINK from '../../../utils/constant/headerLink';
 
 function HeaderUi() {
   return (
-    <AppBar color="transparent" position="static">
+    <Box component="header">
       <Grid direction="column" container>
         <Grid item>
           <Toolbar>
@@ -41,7 +41,7 @@ function HeaderUi() {
           ))}
         </Grid>
       </Grid>
-    </AppBar>
+    </Box>
   );
 }
 

@@ -1,4 +1,4 @@
-import { ILink } from '../../elements/FooterLinkGroup/ui/index';
+import type { ILink } from '../../elements/FooterLinkGroup/ui/index';
 
 const HEADERLINK: ILink[] = [
   { name: 'Новинки', link: '#' },

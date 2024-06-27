@@ -1,4 +1,4 @@
-import { IFooterLinkGroup } from '../../elements/FooterLinkGroup/ui/index';
+import type { IFooterLinkGroup } from '../../elements/FooterLinkGroup/ui/index';
 
 interface IFooterLinkGroups extends Array<IFooterLinkGroup> {}
 

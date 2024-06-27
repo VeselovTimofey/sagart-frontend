@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import INewsSubscriptionState from '../../utils/types/newsSubscriptionState';
+import type INewsSubscriptionState from '../../utils/types/newsSubscriptionState';
 import newsSubscriptionAction from '../actions/newsSubscriptionActions';
 import newsSubscriptionSchema from '../../utils/validation/newsSubscriptionSchema';
 
