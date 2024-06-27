@@ -35,17 +35,17 @@ function FooterUi() {
             >
               <Grid item>
                 <Link href="#">
-                  <img src={vkPath} alt="Лого группы вк." />
+                  <img src={vkPath} alt="Логотип группы вк." />
                 </Link>
               </Grid>
               <Grid item>
                 <Link href="#">
-                  <img src={telegramPath} alt="Лого группы в телеграмме." />
+                  <img src={telegramPath} alt="Логотип группы в телеграмме." />
                 </Link>
               </Grid>
               <Grid item>
                 <Link href="#">
-                  <img src={zenPath} alt="Лого группы яндекс дзена." />
+                  <img src={zenPath} alt="Логотип группы яндекс дзена." />
                 </Link>
               </Grid>
             </Grid>
