@@ -30,7 +30,7 @@ function HeaderUi() {
             <ShoppingBasketIcon />
           </Toolbar>
         </Grid>
-        <Grid item justifyContent="space-evenly" container>
+        <Grid item justifyContent="space-evenly" component="nav" container>
           {/* //TODO: Moving this map to a separate file */}
           {HEADERLINK.map((link) => (
             <Grid item key={link.name}>
