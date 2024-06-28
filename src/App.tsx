@@ -1,10 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import CataloguePage from './pages/Catalogue';
-import ProductPage from './pages/Product';
-
 import Header from './components/Header/index';
 import Footer from './components/Footer/index';
+
+import MainPage from './pages/Root';
+import CataloguePage from './pages/Catalogue';
+import ProductPage from './pages/Product';
 import AuthorPage from './pages/Author';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route path="/authors/:authorId" Component={AuthorPage} />
         {/* TODO: Test page. Remove after testing */}
         <Route path="/test" element={<div>Test page</div>} />
-        <Route index element={<div>Root page</div>} />
+        <Route index Component={MainPage} />
       </Routes>
       <Footer />
     </BrowserRouter>
