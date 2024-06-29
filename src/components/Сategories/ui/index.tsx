@@ -1,11 +1,12 @@
-import { Grid } from '@mui/material';
+import { Box } from '@mui/material';
 
+import style from '../style/style.module';
 import Category from '../../../elements/Category';
 import CATEGORIES from '../../../utils/constant/categories';
 
 function СategoriesUi() {
   return (
-    <Grid component="section" container>
+    <Box component="section" style={style.categories}>
       {CATEGORIES.map((category) => (
         <Category
           key={category.title}
@@ -14,7 +15,7 @@ function СategoriesUi() {
           imageurl={category.imageurl}
         />
       ))}
-    </Grid>
+    </Box>
   );
 }
 

@@ -13,12 +13,16 @@ function CategoryUi({ title, link, imageurl }: ICategory) {
         width: '424px',
         height: '220px',
       }}
+      direction="column"
+      justifyContent="space-evenly"
       container
     >
-      <Grid item>
-        <Typography>{title}</Typography>
+      <Grid alignSelf="center" item>
+        <Typography component="h2" variant="h3">
+          {title}
+        </Typography>
       </Grid>
-      <Grid item>
+      <Grid item alignSelf="flex-end">
         <Link href={link}>
           <ArrowForwardIcon />
         </Link>
