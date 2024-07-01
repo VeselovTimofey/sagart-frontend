@@ -1,10 +1,17 @@
 import { Grid } from '@mui/material';
 
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../utils/types/appDispatch';
+import lastNewsAction from '../../store/actions/lastNewsAction';
+
 import LastNews from '../../components/LastNews/index';
 import Categories from '../../components/Сategories/index';
 import ShowCase from '../../components/Showcase';
 
 function MainPage() {
+  const dispatch = useDispatch<AppDispatch>();
+  dispatch(lastNewsAction());
+
   return (
     /* //TODO: Set the width of main and its section to certain sizes */
     <Grid component="main" direction="column" alignItems="center" container>

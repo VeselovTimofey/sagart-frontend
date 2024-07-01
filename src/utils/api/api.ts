@@ -9,7 +9,7 @@ interface IApi extends RequestInit {
 async function api({ endPath, ...options }: IApi): Promise<Response> {
   return fetch(APIPATH + endPath, {
     ...options,
-  });
+  }).then((responce) => responce.json());
 }
 
 // News subscription request
@@ -31,5 +31,14 @@ export async function signUpApi(credentials: ICredentialsSignUp) {
     endPath: '/signUp',
     headers: new Headers({ 'Content-Type': 'application/json' }),
     body: JSON.stringify(credentials),
+  });
+}
+
+// Last news request
+export async function getLastNews() {
+  return api({
+    method: 'GET',
+    endPath: '/lastNews',
+    headers: new Headers({ 'Content-Type': 'application/json' }),
   });
 }
