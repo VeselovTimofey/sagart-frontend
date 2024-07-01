@@ -7,23 +7,30 @@
     {
       "id": "9ebe",
       "values": "ewr@ds.ru"
+    },
+    {
+      "id": "013b",
+      "email": "sd@ds.ru"
     }
   ],
   "lastNews": [
     {
       "title": "Выставка современного искусства",
       "link": "#",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/2f8e/0a54/fa685ea708227716b980b92e0a6a1b79?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lcs8fSQ0zJ7toPQiP4klRSAv9r-VuBWMINxJMzK5ALgC7PGl3exQbMA9uz7lQfjKRde2BHOVwWzop6GbLw8mXY9JludBk9XodPUj8SIXwAd12z4ILbCY1rt-wNvX-wyBZFcmwdR3O24Zfkxou9R0fSxv9m5pOjPkRGz~f7kfuGCfo9btnUb2UJtEgaXB1I91gW1TfxCn1Z~Tv5ErThEY~8K1eHKlguJpI5Cnkc7gznDURAdRKBV2pBHiTPURsKOBqZqevz-Y0hb61EqgYwFWn6i3YjrwUGLSkmrftTA66DhxPhE2ZcEtrYoSUEx0aDt5FsN6deOEL2QyYA0lqpAqmA__"
+      "imageUrl": "https://s3-alpha-sig.figma.com/img/2f8e/0a54/fa685ea708227716b980b92e0a6a1b79?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lcs8fSQ0zJ7toPQiP4klRSAv9r-VuBWMINxJMzK5ALgC7PGl3exQbMA9uz7lQfjKRde2BHOVwWzop6GbLw8mXY9JludBk9XodPUj8SIXwAd12z4ILbCY1rt-wNvX-wyBZFcmwdR3O24Zfkxou9R0fSxv9m5pOjPkRGz~f7kfuGCfo9btnUb2UJtEgaXB1I91gW1TfxCn1Z~Tv5ErThEY~8K1eHKlguJpI5Cnkc7gznDURAdRKBV2pBHiTPURsKOBqZqevz-Y0hb61EqgYwFWn6i3YjrwUGLSkmrftTA66DhxPhE2ZcEtrYoSUEx0aDt5FsN6deOEL2QyYA0lqpAqmA__",
+      "id": "9c3d"
     },
     {
       "title": "2 новость",
       "link": "#",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/2f8e/0a54/fa685ea708227716b980b92e0a6a1b79?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lcs8fSQ0zJ7toPQiP4klRSAv9r-VuBWMINxJMzK5ALgC7PGl3exQbMA9uz7lQfjKRde2BHOVwWzop6GbLw8mXY9JludBk9XodPUj8SIXwAd12z4ILbCY1rt-wNvX-wyBZFcmwdR3O24Zfkxou9R0fSxv9m5pOjPkRGz~f7kfuGCfo9btnUb2UJtEgaXB1I91gW1TfxCn1Z~Tv5ErThEY~8K1eHKlguJpI5Cnkc7gznDURAdRKBV2pBHiTPURsKOBqZqevz-Y0hb61EqgYwFWn6i3YjrwUGLSkmrftTA66DhxPhE2ZcEtrYoSUEx0aDt5FsN6deOEL2QyYA0lqpAqmA__"
+      "imageUrl": "https://s3-alpha-sig.figma.com/img/2f8e/0a54/fa685ea708227716b980b92e0a6a1b79?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lcs8fSQ0zJ7toPQiP4klRSAv9r-VuBWMINxJMzK5ALgC7PGl3exQbMA9uz7lQfjKRde2BHOVwWzop6GbLw8mXY9JludBk9XodPUj8SIXwAd12z4ILbCY1rt-wNvX-wyBZFcmwdR3O24Zfkxou9R0fSxv9m5pOjPkRGz~f7kfuGCfo9btnUb2UJtEgaXB1I91gW1TfxCn1Z~Tv5ErThEY~8K1eHKlguJpI5Cnkc7gznDURAdRKBV2pBHiTPURsKOBqZqevz-Y0hb61EqgYwFWn6i3YjrwUGLSkmrftTA66DhxPhE2ZcEtrYoSUEx0aDt5FsN6deOEL2QyYA0lqpAqmA__",
+      "id": "ac8f"
     },
     {
       "title": "3 новость",
       "link": "#",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/2f8e/0a54/fa685ea708227716b980b92e0a6a1b79?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lcs8fSQ0zJ7toPQiP4klRSAv9r-VuBWMINxJMzK5ALgC7PGl3exQbMA9uz7lQfjKRde2BHOVwWzop6GbLw8mXY9JludBk9XodPUj8SIXwAd12z4ILbCY1rt-wNvX-wyBZFcmwdR3O24Zfkxou9R0fSxv9m5pOjPkRGz~f7kfuGCfo9btnUb2UJtEgaXB1I91gW1TfxCn1Z~Tv5ErThEY~8K1eHKlguJpI5Cnkc7gznDURAdRKBV2pBHiTPURsKOBqZqevz-Y0hb61EqgYwFWn6i3YjrwUGLSkmrftTA66DhxPhE2ZcEtrYoSUEx0aDt5FsN6deOEL2QyYA0lqpAqmA__"
+      "imageUrl": "https://s3-alpha-sig.figma.com/img/2f8e/0a54/fa685ea708227716b980b92e0a6a1b79?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lcs8fSQ0zJ7toPQiP4klRSAv9r-VuBWMINxJMzK5ALgC7PGl3exQbMA9uz7lQfjKRde2BHOVwWzop6GbLw8mXY9JludBk9XodPUj8SIXwAd12z4ILbCY1rt-wNvX-wyBZFcmwdR3O24Zfkxou9R0fSxv9m5pOjPkRGz~f7kfuGCfo9btnUb2UJtEgaXB1I91gW1TfxCn1Z~Tv5ErThEY~8K1eHKlguJpI5Cnkc7gznDURAdRKBV2pBHiTPURsKOBqZqevz-Y0hb61EqgYwFWn6i3YjrwUGLSkmrftTA66DhxPhE2ZcEtrYoSUEx0aDt5FsN6deOEL2QyYA0lqpAqmA__",
+      "id": "b8fc"
     }
   ]
 }

@@ -43,9 +43,9 @@ const lastNewsSlice = createSlice({
       })
       .addCase(lastNewsAction.fulfilled, (state: ILastNewsState, action) => {
         const news: Array<INews> = [];
-        action.payload
-          .json()
-          .then((data) => data.map((element: INews) => news.push(element)));
+        const response = action.payload;
+        // TODO: Fix error interface Response to Array<INews>
+        response.map((element: INews) => news.push(element));
         const newState = {
           ...state,
           isLoading: false,
