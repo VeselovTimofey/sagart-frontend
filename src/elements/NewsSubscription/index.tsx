@@ -16,7 +16,7 @@ import {
 function NewsSubscription() {
   const dispatch = useDispatch<AppDispatch>();
   const subscribeValue = useSelector(
-    (state: AppStore) => state.reducer.newsSubscription
+    (state: AppStore) => state.newsSubscription
   );
 
   const onEmailChange: IButtonChange = (value) => {
