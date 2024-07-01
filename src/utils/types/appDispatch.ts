@@ -4,7 +4,6 @@ import rootReducer from '../../store/slice/root';
 type App = ReturnType<typeof setupStore>;
 type AppDispatch = App['dispatch'];
 
-type AppRoot = ReturnType<typeof rootReducer>;
-type AppStore = { reducer: AppRoot };
+type AppStore = ReturnType<typeof rootReducer>;
 
 export type { AppStore, AppDispatch };
