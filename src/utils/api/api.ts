@@ -9,7 +9,7 @@ interface IApi extends RequestInit {
 async function api({ endPath, ...options }: IApi): Promise<Response> {
   return fetch(APIPATH + endPath, {
     ...options,
-  }).then((responce) => responce.json());
+  });
 }
 
 // News subscription request
