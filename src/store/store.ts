@@ -3,9 +3,7 @@ import rootReducer from './slice/root';
 
 const setupStore = () =>
   configureStore({
-    reducer: {
-      reducer: rootReducer,
-    },
+    reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
         // TODO: Non-serializable value was detected in an action, in the path: `payload` (This is a bad decision)
