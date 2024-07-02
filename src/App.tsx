@@ -19,7 +19,6 @@ function App() {
     <BrowserRouter>
       <ThemeProvider {...{ theme }}>
         <CssBaseline />
-        {/* // TODO: Create layout with Header and Footer */}
         <Header />
         <Routes>
           {/* // TODO: Add data prefetching in Route component  */}
@@ -29,8 +28,6 @@ function App() {
           <Route path="/products/:productId" Component={ProductPage} />
           {/* NOTE: Author page */}
           <Route path="/authors/:authorId" Component={AuthorPage} />
-          {/* TODO: Test page. Remove after testing */}
-          <Route path="/test" element={<div>Test page</div>} />
           <Route index Component={MainPage} />
         </Routes>
         <Footer />
