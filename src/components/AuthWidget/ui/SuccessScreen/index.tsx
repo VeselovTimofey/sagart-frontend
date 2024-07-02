@@ -1,7 +1,11 @@
 import { Link as RouterLink } from 'react-router-dom';
 import { Button, Stack, Typography } from '@mui/material';
 
-export default function SuccessScreenUi() {
+interface ISuccessScreenUi {
+  onSkip: () => void;
+}
+
+export default function SuccessScreenUi({ onSkip }: ISuccessScreenUi) {
   return (
     <Stack gap={7} sx={{ maxWidth: '26rem' }}>
       <Stack gap={3} alignItems="center">
@@ -32,6 +36,7 @@ export default function SuccessScreenUi() {
           variant="outlined"
           sx={{ maxWidth: '23.625rem' }}
           fullWidth
+          onClick={onSkip}
         >
           Пропустить
         </Button>

@@ -31,20 +31,21 @@ const authSlice = createSlice({
         };
         return newState;
       })
-      .addCase(signUpUser.fulfilled, (state) => {
+      .addCase(signUpUser.fulfilled, (state, { payload }) => {
         const newState = {
           ...state,
           loading: false,
           error: null,
+          user: payload,
           success: 'Регистрация успешна',
         };
         return newState;
       })
-      .addCase(signUpUser.rejected, (state, action) => {
+      .addCase(signUpUser.rejected, (state, { payload }) => {
         const newState = {
           ...state,
           loading: false,
-          error: action.payload || null,
+          error: payload || null,
         };
         return newState;
       })
@@ -55,21 +56,21 @@ const authSlice = createSlice({
         };
         return newState;
       })
-      .addCase(signInUser.fulfilled, (state, action) => {
+      .addCase(signInUser.fulfilled, (state, { payload }) => {
         const newState = {
           ...state,
           loading: false,
           error: null,
           success: 'Авторизация успешна',
-          user: action.payload,
+          user: payload,
         };
         return newState;
       })
-      .addCase(signInUser.rejected, (state, action) => {
+      .addCase(signInUser.rejected, (state, { payload }) => {
         const newState = {
           ...state,
           loading: false,
-          error: action.payload || null,
+          error: payload || null,
         };
         return newState;
       });

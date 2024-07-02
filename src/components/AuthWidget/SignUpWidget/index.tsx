@@ -20,7 +20,11 @@ const defaultValues: ICredentialsSignUp = {
   password: '',
 };
 
-export default function SignUpWidget() {
+interface ISignUpWidget {
+  onSuccess: () => void;
+}
+
+export default function SignUpWidget({ onSuccess }: ISignUpWidget) {
   const dispatch = useDispatch<AppDispatch>();
   const authState = useSelector((state: AppStore) => state.authSlice);
 
@@ -48,6 +52,12 @@ export default function SignUpWidget() {
     (data) => dispatch(signUpUser(data)),
     [dispatch]
   );
+
+  useEffect(() => {
+    if (authState.success) {
+      onSuccess();
+    }
+  }, [authState.success, onSuccess]);
 
   return (
     <AuthWidgetUi

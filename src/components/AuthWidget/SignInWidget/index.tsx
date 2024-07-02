@@ -1,7 +1,5 @@
 import { useCallback, useEffect } from 'react';
 
-import { useNavigate } from 'react-router-dom';
-
 import { useSelector, useDispatch } from 'react-redux';
 
 import { type SubmitHandler, useForm } from 'react-hook-form';
@@ -17,8 +15,11 @@ const defaultValues: ICredentialsSignIn = {
   password: '',
 };
 
-export default function SignInWidget() {
-  const navigate = useNavigate();
+interface ISignInWidget {
+  onSuccess: () => void;
+}
+
+export default function SignInWidget({ onSuccess }: ISignInWidget) {
   const dispatch = useDispatch<AppDispatch>();
   const authState = useSelector((state: AppStore) => state.authSlice);
 
@@ -37,9 +38,9 @@ export default function SignInWidget() {
   // NOTE: Redirect after succsessful sign in
   useEffect(() => {
     if (authState.success) {
-      setTimeout(() => navigate('/'), 3500);
+      setTimeout(() => onSuccess(), 3500);
     }
-  }, [authState.success, navigate]);
+  }, [authState.success, onSuccess]);
 
   return (
     <SignInWidgetUi

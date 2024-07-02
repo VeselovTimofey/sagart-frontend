@@ -12,7 +12,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 
 import type { AppStore } from '../../../../utils/types/appDispatch';
 import type { ICredentialsSignUp } from '../../../../utils/types';
-import SuccessScreenUi from './SuccessScreen';
+import SuccessScreenUi from '../../ui/SuccessScreen';
 
 interface ISignUpWidgetUi {
   onSubmit: () => void;
