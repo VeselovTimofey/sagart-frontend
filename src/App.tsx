@@ -7,6 +7,7 @@ import Header from './components/Header/index';
 import Footer from './components/Footer/index';
 import AuthorPage from './pages/Author';
 import SuccessScreenUi from './components/AuthWidget/ui/SuccessScreen';
+import AuthWidget from './components/AuthWidget';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         <Route path="/products/:productId" Component={ProductPage} />
         {/* NOTE: Author page */}
         <Route path="/authors/:authorId" Component={AuthorPage} />
+        {/* NOTE: Auth page */}
+        {/* TODO: Temporary page. Later to update to popup */}
+        <Route path="/auth" Component={AuthWidget} />
         {/* TODO: Test page. Remove after testing */}
         <Route path="/test" Component={SuccessScreenUi} />
         <Route index element={<div>Root page</div>} />

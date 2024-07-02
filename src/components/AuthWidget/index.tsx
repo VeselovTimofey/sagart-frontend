@@ -1,11 +1,15 @@
 import { useCallback, useEffect } from 'react';
 
+import { useSelector, useDispatch } from 'react-redux';
+
 import { type SubmitHandler, useForm } from 'react-hook-form';
 
+import type { AppDispatch, AppStore } from '../../utils/types/appDispatch';
 import type { ICredentialsSignUp } from '../../utils/types';
 
 import { getSessionStorageValues, setSessionStorageValues } from './lib';
 import AuthWidgetUi from './ui';
+import { signUpUser } from '../../store/actions/authUserAction';
 
 const defaultValues: ICredentialsSignUp = {
   first_name: '',
@@ -17,6 +21,9 @@ const defaultValues: ICredentialsSignUp = {
 };
 
 export default function AuthWidget() {
+  const dispatch = useDispatch<AppDispatch>();
+  const authState = useSelector((state: AppStore) => state.authSlice);
+
   const { register, handleSubmit, watch, formState } =
     useForm<ICredentialsSignUp>({
       // NOTE: Validation is initially triggered on the first blur event. After that, it is triggered on every change event.
@@ -39,8 +46,8 @@ export default function AuthWidget() {
 
   // TODO: Add submit logic here
   const onSubmit: SubmitHandler<ICredentialsSignUp> = useCallback(
-    async (data) => console.log(data),
-    []
+    (data) => dispatch(signUpUser(data)),
+    [dispatch]
   );
 
   return (
@@ -48,6 +55,7 @@ export default function AuthWidget() {
       onSubmit={handleSubmit(onSubmit)}
       {...{ register }}
       {...{ formState }}
+      {...{ authState }}
     />
   );
 }

@@ -10,21 +10,24 @@ import {
 } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 
-import { ICredentialsSignUp } from '../../../utils/types';
+import type { AppStore } from '../../../utils/types/appDispatch';
+import type { ICredentialsSignUp } from '../../../utils/types';
 import SuccessScreenUi from './SuccessScreen';
 
 interface IAuthWidgetUi {
   onSubmit: () => void;
   register: UseFormRegister<ICredentialsSignUp>;
   formState: UseFormStateReturn<ICredentialsSignUp>;
+  authState: AppStore['authSlice'];
 }
 
 export default function AuthWidgetUi({
   onSubmit,
   register,
-  formState: { isLoading, isSubmitting, errors, isSubmitSuccessful },
+  formState: { isLoading, isSubmitting, errors },
+  authState: { loading, success },
 }: IAuthWidgetUi) {
-  return isSubmitSuccessful ? (
+  return success ? (
     <SuccessScreenUi />
   ) : (
     <Stack
@@ -149,10 +152,10 @@ export default function AuthWidgetUi({
         disableElevation
         size="large"
         fullWidth
-        disabled={isLoading || isSubmitting}
+        disabled={isLoading || isSubmitting || loading}
         sx={{ maxWidth: '24.125rem', alignSelf: 'center' }}
       >
-        {isLoading || isSubmitting ? 'Обработка...' : 'Продолжить'}
+        {isLoading || isSubmitting || loading ? 'Обработка...' : 'Продолжить'}
       </Button>
     </Stack>
   );
