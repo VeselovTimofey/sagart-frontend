@@ -76,6 +76,5 @@ const authSlice = createSlice({
       });
   },
 });
-// eslint-disable-next-line no-empty-pattern
-export const {} = authSlice.actions;
+
 export default authSlice.reducer;
