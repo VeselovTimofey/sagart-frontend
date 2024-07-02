@@ -33,3 +33,12 @@ export async function signUpApi(credentials: ICredentialsSignUp) {
     body: JSON.stringify(credentials),
   });
 }
+
+// Last news request
+export async function getLastNews() {
+  return api({
+    method: 'GET',
+    endPath: '/lastNews',
+    headers: new Headers({ 'Content-Type': 'application/json' }),
+  });
+}
