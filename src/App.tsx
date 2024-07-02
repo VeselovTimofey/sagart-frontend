@@ -6,8 +6,7 @@ import ProductPage from './pages/Product';
 import Header from './components/Header/index';
 import Footer from './components/Footer/index';
 import AuthorPage from './pages/Author';
-import SuccessScreenUi from './components/AuthWidget/ui/SuccessScreen';
-import AuthWidget from './components/AuthWidget';
+import { AuthWidget } from './components/AuthWidget';
 
 function App() {
   return (
@@ -26,7 +25,7 @@ function App() {
         {/* TODO: Temporary page. Later to update to popup */}
         <Route path="/auth" Component={AuthWidget} />
         {/* TODO: Test page. Remove after testing */}
-        <Route path="/test" Component={SuccessScreenUi} />
+        <Route path="/test" element={<div>Test page</div>} />
         <Route index element={<div>Root page</div>} />
       </Routes>
       <Footer />
