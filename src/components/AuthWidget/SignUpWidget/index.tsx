@@ -4,12 +4,12 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { type SubmitHandler, useForm } from 'react-hook-form';
 
+import { signUpUser } from '../../../store/actions/authUserAction';
 import type { AppDispatch, AppStore } from '../../../utils/types/appDispatch';
 import type { ICredentialsSignUp } from '../../../utils/types';
 
 import { getSessionStorageValues, setSessionStorageValues } from '../lib';
 import AuthWidgetUi from './ui';
-import { signUpUser } from '../../../store/actions/authUserAction';
 
 const defaultValues: ICredentialsSignUp = {
   first_name: '',
@@ -44,7 +44,6 @@ export default function SignUpWidget() {
     return () => subscription.unsubscribe();
   }, [watch]);
 
-  // TODO: Add submit logic here
   const onSubmit: SubmitHandler<ICredentialsSignUp> = useCallback(
     (data) => dispatch(signUpUser(data)),
     [dispatch]

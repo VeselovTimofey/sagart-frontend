@@ -18,8 +18,10 @@ export const signUpUser = createAsyncThunk<
     }
 
     return data;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (error: any) {
-    return rejectWithValue(error.message || 'Не удалось зарегистрироваться');
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      return rejectWithValue(error.message);
+    }
+    return rejectWithValue('Не удалось зарегистрироваться');
   }
 });

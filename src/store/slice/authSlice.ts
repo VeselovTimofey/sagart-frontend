@@ -35,6 +35,7 @@ const authSlice = createSlice({
         const newState = {
           ...state,
           loading: false,
+          error: null,
           success: 'Регистрация успешна',
         };
         return newState;

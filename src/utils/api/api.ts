@@ -28,7 +28,7 @@ export async function postNewsSubscription(email: string) {
 export async function signUpApi(credentials: ICredentialsSignUp) {
   return api({
     method: 'POST',
-    endPath: '/signUp',
+    endPath: '/user',
     headers: new Headers({ 'Content-Type': 'application/json' }),
     body: JSON.stringify(credentials),
   });
