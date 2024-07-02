@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import type ILastNewsState from '../../utils/types/lastNewsState';
 import lastNewsAction from '../actions/lastNewsAction';
-import { INews } from '../../utils/types/lastNewsState';
 
 const initialState: ILastNewsState = {
   news: [
@@ -42,14 +41,10 @@ const lastNewsSlice = createSlice({
         return newState;
       })
       .addCase(lastNewsAction.fulfilled, (state: ILastNewsState, action) => {
-        const news: Array<INews> = [];
-        const response = action.payload;
-        // TODO: Fix error interface Response to Array<INews>
-        response.map((element: INews) => news.push(element));
         const newState = {
           ...state,
           isLoading: false,
-          news,
+          news: action.payload,
         };
         return newState;
       })
@@ -66,3 +61,4 @@ const lastNewsSlice = createSlice({
 
 export default lastNewsSlice.reducer;
 export const { currentNewsChange } = lastNewsSlice.actions;
+export type { ILastNewsState };

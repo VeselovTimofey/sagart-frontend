@@ -7,7 +7,7 @@ import { currentNewsChange } from '../../store/slice/lastNewsSlice';
 
 function LastNews() {
   const dispatch = useDispatch<AppDispatch>();
-  const newsValue = useSelector((state: AppStore) => state.reducer.lastNews);
+  const newsValue = useSelector((state: AppStore) => state.lastNews);
 
   const onCurrentNewsChange: ISliderChange = (value) => {
     dispatch(currentNewsChange(value.target));
