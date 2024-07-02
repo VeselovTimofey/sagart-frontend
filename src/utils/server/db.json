@@ -424,6 +424,44 @@
       "category": "Modernism",
       "status": "Unavailable",
       "price": 30000000
+    },
+    {
+      "id": 21,
+      "aricle_num": 1021,
+      "name": "Wild wild west",
+      "descrition_id": 121,
+      "author_id": 5,
+      "make_year": 1930,
+      "size": "80 x 120 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "/images/american_gothic.jpg",
+      "photo_gallery": [{ "photo": "/images/american_gothic.jpg" }],
+      "ishorizontal": false,
+      "genre": "Modernism",
+      "type": "Painting",
+      "category": "Modernism",
+      "status": "Unavailable",
+      "price": 45000
+    },
+    {
+      "id": 22,
+      "aricle_num": 1022,
+      "name": "Morning in paris",
+      "descrition_id": 122,
+      "author_id": 4,
+      "make_year": 1486,
+      "size": "100 x 140 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "/images/birth_of_venus.jpg",
+      "photo_gallery": [{ "photo": "/images/birth_of_venus.jpg" }],
+      "ishorizontal": true,
+      "genre": "Renaissance",
+      "type": "Холст, масло",
+      "category": "Renaissance",
+      "status": "Available",
+      "price": 100000
     }
   ]
 }

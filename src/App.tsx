@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import Header from './components/Header/index';
 import Footer from './components/Footer/index';
@@ -8,8 +9,13 @@ import CataloguePage from './pages/Catalogue';
 import ProductPage from './pages/Product';
 import AuthorPage from './pages/Author';
 import { AuthWidget } from './components/AuthWidget';
+import { AppDispatch } from './utils/types/appDispatch';
+import allProductsAction from './store/actions/allProductsAction';
 
 function App() {
+  const dispatch = useDispatch<AppDispatch>();
+  dispatch(allProductsAction());
+
   return (
     <BrowserRouter>
       {/* // TODO: Create layout with Header and Footer */}
