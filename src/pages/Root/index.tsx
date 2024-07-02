@@ -7,10 +7,12 @@ import lastNewsAction from '../../store/actions/lastNewsAction';
 import LastNews from '../../components/LastNews/index';
 import Categories from '../../components/Сategories/index';
 import ShowCase from '../../components/Showcase';
+import allProductsAction from '../../store/actions/allProductsAction';
 
 function MainPage() {
   const dispatch = useDispatch<AppDispatch>();
   dispatch(lastNewsAction());
+  dispatch(allProductsAction());
 
   return (
     /* //TODO: Set the width of main and its section to certain sizes */

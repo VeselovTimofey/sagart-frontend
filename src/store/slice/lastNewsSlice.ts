@@ -61,4 +61,3 @@ const lastNewsSlice = createSlice({
 
 export default lastNewsSlice.reducer;
 export const { currentNewsChange } = lastNewsSlice.actions;
-export type { ILastNewsState };
