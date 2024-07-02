@@ -42,3 +42,12 @@ export async function signInApi(credentials: ICredentialsSignIn) {
     headers: new Headers({ 'Content-Type': 'application/json' }),
   });
 }
+
+// Last news request
+export async function getLastNews() {
+  return api({
+    method: 'GET',
+    endPath: '/lastNews',
+    headers: new Headers({ 'Content-Type': 'application/json' }),
+  });
+}
