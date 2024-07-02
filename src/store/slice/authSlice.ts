@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { signUpUser } from '../actions/authUserAction';
+import { signInUser, signUpUser } from '../actions/authUserAction';
 import { IUser } from '../../utils/types';
 
 export interface IauthState {
@@ -41,6 +41,31 @@ const authSlice = createSlice({
         return newState;
       })
       .addCase(signUpUser.rejected, (state, action) => {
+        const newState = {
+          ...state,
+          loading: false,
+          error: action.payload || null,
+        };
+        return newState;
+      })
+      .addCase(signInUser.pending, (state) => {
+        const newState = {
+          ...state,
+          loading: true,
+        };
+        return newState;
+      })
+      .addCase(signInUser.fulfilled, (state, action) => {
+        const newState = {
+          ...state,
+          loading: false,
+          error: null,
+          success: 'Авторизация успешна',
+          user: action.payload,
+        };
+        return newState;
+      })
+      .addCase(signInUser.rejected, (state, action) => {
         const newState = {
           ...state,
           loading: false,

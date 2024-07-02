@@ -1,8 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { signUpApi } from '../../utils/api/api';
+import { signInApi, signUpApi } from '../../utils/api/api';
 
-import type { ICredentialsSignUp, IUser } from '../../utils/types';
+import type {
+  ICredentialsSignIn,
+  ICredentialsSignUp,
+  IUser,
+} from '../../utils/types';
 
 export const signUpUser = createAsyncThunk<
   IUser,
@@ -23,5 +27,30 @@ export const signUpUser = createAsyncThunk<
       return rejectWithValue(error.message);
     }
     return rejectWithValue('Не удалось зарегистрироваться');
+  }
+});
+
+export const signInUser = createAsyncThunk<
+  IUser,
+  ICredentialsSignIn,
+  { rejectValue: string }
+>('auth/signin', async (credentials, { rejectWithValue }) => {
+  try {
+    const response = await signInApi(credentials);
+    const data = await response.json();
+
+    // NOTE: Data structures in Response are temporary and sticked to the abilities of json-server lib.
+
+    if (!response.ok || !data?.[0]?.id) {
+      // NOTE: Here goes processing of expected errors from backend
+      return rejectWithValue(data?.[0]?.message || 'Неверные учетные данные');
+    }
+
+    return data[0];
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      return rejectWithValue(error.message);
+    }
+    return rejectWithValue('Неверные учетные данные');
   }
 });

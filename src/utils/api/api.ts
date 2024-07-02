@@ -1,6 +1,6 @@
 import APIPATH from '../constant/constantsApi';
 
-import type { ICredentialsSignUp } from '../types';
+import type { ICredentialsSignIn, ICredentialsSignUp } from '../types';
 
 interface IApi extends RequestInit {
   endPath: string;
@@ -31,5 +31,14 @@ export async function signUpApi(credentials: ICredentialsSignUp) {
     endPath: '/user',
     headers: new Headers({ 'Content-Type': 'application/json' }),
     body: JSON.stringify(credentials),
+  });
+}
+
+// Sign In request
+export async function signInApi(credentials: ICredentialsSignIn) {
+  return api({
+    method: 'GET',
+    endPath: `/user?email=${credentials.email}&password=${credentials.password}`,
+    headers: new Headers({ 'Content-Type': 'application/json' }),
   });
 }

@@ -22,7 +22,7 @@ export function SignInWidgetUi({
   onSubmit,
   register,
   formState: { isLoading, isSubmitting, errors },
-  authState: { loading },
+  authState: { loading, error, success },
 }: ISignInWidgetUi) {
   return (
     <Stack
@@ -67,6 +67,20 @@ export function SignInWidgetUi({
             })}
           />
         </Stack>
+        {error && (
+          <Typography variant="body2" sx={{ color: 'red' }} textAlign="center">
+            {error}
+          </Typography>
+        )}
+        {success && (
+          <Typography
+            variant="body2"
+            sx={{ color: 'green' }}
+            textAlign="center"
+          >
+            Авторизация успешна. Перенаравляем на главную.
+          </Typography>
+        )}
       </Stack>
       <Button
         type="submit"

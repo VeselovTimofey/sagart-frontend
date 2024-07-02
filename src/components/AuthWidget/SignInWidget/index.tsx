@@ -1,9 +1,12 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
+
+import { useNavigate } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
 
 import { type SubmitHandler, useForm } from 'react-hook-form';
 
+import { signInUser } from '../../../store/actions/authUserAction';
 import type { AppDispatch, AppStore } from '../../../utils/types/appDispatch';
 import type { ICredentialsSignIn } from '../../../utils/types';
 
@@ -15,6 +18,7 @@ const defaultValues: ICredentialsSignIn = {
 };
 
 export default function SignInWidget() {
+  const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   const authState = useSelector((state: AppStore) => state.authSlice);
 
@@ -24,12 +28,18 @@ export default function SignInWidget() {
     defaultValues,
   });
 
-  // TODO: Add submit logic here
   const onSubmit: SubmitHandler<ICredentialsSignIn> = useCallback(
     // (data) => dispatch(signUpUser(data)),
-    (data) => console.log(data),
+    (data) => dispatch(signInUser(data)),
     [dispatch]
   );
+
+  // NOTE: Redirect after succsessful sign in
+  useEffect(() => {
+    if (authState.success) {
+      setTimeout(() => navigate('/'), 3500);
+    }
+  }, [authState.success, navigate]);
 
   return (
     <SignInWidgetUi
