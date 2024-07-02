@@ -14,7 +14,12 @@ function MainPage() {
   dispatch(lastNewsAction());
 
   return (
-    <Stack component="main" direction="column" gap={10}>
+    <Stack
+      component="main"
+      direction="column"
+      gap={10}
+      sx={{ paddingTop: '2.5rem' }}
+    >
       <LastNews />
       <Categories />
       <ShowCase title="Новинки" link="#" />

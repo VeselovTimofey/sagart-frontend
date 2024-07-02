@@ -6,7 +6,7 @@ import CATEGORIES from '../../../utils/constant/categories';
 
 function СategoriesUi() {
   return (
-    <Box component="section" style={style.categories}>
+    <Box component="section" sx={style.categories}>
       {CATEGORIES.map((category) => (
         <Category
           key={category.title}
