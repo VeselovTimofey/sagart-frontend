@@ -36,8 +36,8 @@ export const theme = createTheme({
       lineHeight: 1.2,
     },
     body1: {
-      fontSize: '1.5rem',
-      fontWeight: 500,
+      fontSize: '1rem',
+      fontWeight: 400,
       lineHeight: 1.2,
     },
     body2: {
