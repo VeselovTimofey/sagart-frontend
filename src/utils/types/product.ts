@@ -1,10 +1,10 @@
-export interface IProduct {
+interface IProduct {
   id: number;
   aricle_num: number;
   name: string;
   descrition_id: number;
   author_id: number;
-  make_year: string;
+  make_year: number;
   size: string;
   edition: string;
   auth_signature: boolean;
@@ -17,3 +17,12 @@ export interface IProduct {
   status: string;
   price: number;
 }
+
+interface IProductsState {
+  products: IProduct[];
+  isLoading: boolean;
+  error: string;
+}
+
+export default IProductsState;
+export type { IProduct };
