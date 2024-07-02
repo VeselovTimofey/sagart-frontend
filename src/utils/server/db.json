@@ -33,6 +33,17 @@
       "id": "b8fc"
     }
   ],
+  "user": [
+    {
+      "id": "1",
+      "phone": "+7 000 323-34-43",
+      "first_name": "John",
+      "last_name": "Snow",
+      "middle_name": "Nedovich",
+      "email": "winterLoard@hotmail.com",
+      "role": ["author"]
+    }
+  ],
   "Product": [
     {
       "id": 1,

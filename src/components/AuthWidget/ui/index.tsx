@@ -1,156 +1,35 @@
-import type { UseFormRegister, UseFormStateReturn } from 'react-hook-form';
+import { Link, Stack, Typography } from '@mui/material';
 
-import {
-  Avatar,
-  Button,
-  InputLabel,
-  Stack,
-  TextField,
-  Typography,
-} from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+import SignUpWidget from '../SignUpWidget';
+import SignInWidget from '../SignInWidget';
 
-import { ICredentialsSignUp } from '../../../utils/types';
+import SuccessScreenUi from './SuccessScreen';
 
+export type Ttabs = 'sign-in' | 'sign-up' | 'success';
 interface IAuthWidgetUi {
-  onSubmit: () => void;
-  register: UseFormRegister<ICredentialsSignUp>;
-  formState: UseFormStateReturn<ICredentialsSignUp>;
+  tab: Ttabs;
+  toggleTab: (tab: Ttabs) => void;
+  onSuccess: () => void;
 }
 
-export default function AuthWidgetUi({
-  onSubmit,
-  register,
-  formState: { isLoading, isSubmitting, errors },
-}: IAuthWidgetUi) {
-  return (
-    <Stack
-      direction="column"
-      gap={5}
-      component="form"
-      noValidate
-      onSubmit={onSubmit}
-    >
-      <Typography fontSize={32} variant="h2" textAlign="center">
-        Регистрация
+export function AuthWidgetUi({ tab, toggleTab, onSuccess }: IAuthWidgetUi) {
+  return tab === 'success' ? (
+    <SuccessScreenUi onSkip={onSuccess} />
+  ) : (
+    <Stack>
+      {tab === 'sign-in' ? (
+        <SignInWidget {...{ onSuccess }} />
+      ) : (
+        <SignUpWidget onSuccess={() => toggleTab('success')} />
+      )}
+      <Typography textAlign="center">
+        {tab === 'sign-in' ? 'Еще не зарегистрированы? ' : 'Уже есть аккаунт? '}
+        <Link
+          onClick={() => toggleTab(tab === 'sign-in' ? 'sign-up' : 'sign-in')}
+        >
+          {tab === 'sign-in' ? 'Зарегистрироваться' : 'Войти'}
+        </Link>
       </Typography>
-      <Stack direction="column" gap={2.5}>
-        <Stack direction="row" gap={2.25} alignItems="center">
-          <Avatar
-            sx={{ width: 88, height: 88 }}
-            alt="Фотография профиля пользователя"
-            src={undefined}
-          />
-          <Button
-            variant="contained"
-            size="medium"
-            type="button"
-            onClick={() => console.log('uploading avatar')}
-          >
-            Загрузить изображение
-          </Button>
-        </Stack>
-        <Grid container rowSpacing={0.25} columnSpacing={2.5}>
-          <Grid xs={6}>
-            <InputLabel htmlFor={'first_name'} required>
-              Имя
-            </InputLabel>
-            <TextField
-              required
-              autoComplete="name"
-              fullWidth
-              helperText={errors.first_name?.message || ' '}
-              error={Boolean(errors.first_name)}
-              {...register('first_name', {
-                required: 'Обязательное поле',
-              })}
-            />
-          </Grid>
-          <Grid xs={6}>
-            <InputLabel htmlFor={'last_name'} required>
-              Фамилия
-            </InputLabel>
-            <TextField
-              required
-              autoComplete="family-name"
-              fullWidth
-              helperText={errors.last_name?.message || ' '}
-              error={Boolean(errors.last_name)}
-              {...register('last_name', {
-                required: 'Обязательное поле',
-              })}
-            />
-          </Grid>
-          <Grid xs={6}>
-            <InputLabel htmlFor={'middle_name'}>Отчество</InputLabel>
-            <TextField
-              autoComplete="middle-name"
-              fullWidth
-              helperText={errors.middle_name?.message || ' '}
-              error={Boolean(errors.middle_name)}
-              {...register('middle_name')}
-            />
-          </Grid>
-          <Grid xs={6}>
-            <InputLabel htmlFor={'phone'} required>
-              Номер телефона
-            </InputLabel>
-            <TextField
-              required
-              type="tel"
-              autoComplete="tel"
-              fullWidth
-              helperText={errors.phone?.message || ' '}
-              error={Boolean(errors.phone)}
-              {...register('phone', {
-                required: 'Обязательное поле',
-              })}
-            />
-          </Grid>
-          <Grid xs={6}>
-            <InputLabel htmlFor={'email'} required>
-              Электронная почта
-            </InputLabel>
-            <TextField
-              required
-              type="email"
-              autoComplete="email"
-              fullWidth
-              helperText={errors.email?.message || ' '}
-              error={Boolean(errors.email)}
-              {...register('email', {
-                required: 'Обязательное поле',
-              })}
-            />
-          </Grid>
-          <Grid xs={6}>
-            <InputLabel htmlFor={'password'} required>
-              Пароль
-            </InputLabel>
-            <TextField
-              required
-              type="password"
-              fullWidth
-              helperText={errors.password?.message || ' '}
-              error={Boolean(errors.password)}
-              {...register('password', {
-                required: 'Обязательное поле',
-              })}
-            />
-          </Grid>
-        </Grid>
-      </Stack>
-      <Button
-        type="submit"
-        variant="contained"
-        disableElevation
-        size="large"
-        fullWidth
-        disabled={isLoading || isSubmitting}
-        sx={{ maxWidth: '24.125rem', alignSelf: 'center' }}
-      >
-        {isLoading || isSubmitting ? 'Обработка...' : 'Продолжить'}
-      </Button>
     </Stack>
   );
 }
