@@ -19,8 +19,8 @@ const newsSubscriptionAction = createAsyncThunk<
       if (error instanceof Error) {
         return rejectWithValue(error.message);
       }
+      return rejectWithValue('Не удалось подписаться на рассылку новостей.');
     }
-    return null;
   }
 );
 

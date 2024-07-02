@@ -19,8 +19,8 @@ const allProductsAction = createAsyncThunk<
     if (error instanceof Error) {
       return rejectWithValue(error.message);
     }
+    return rejectWithValue('Не удалось получить информацию о картинах.');
   }
-  return null;
 });
 
 export default allProductsAction;
