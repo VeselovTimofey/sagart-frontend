@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Grid } from '@mui/material';
+import { Stack } from '@mui/material';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, AppStore } from '../../utils/types/appDispatch';
@@ -32,8 +32,16 @@ function MainPage() {
       <LastNews />
       <Categories />
       <ShowCase title="Новинки" link="#" products={newProducts} />
-      <ShowCase title="Работы до 50 000 рублей" link="#" products={cheapProducts} />
-      <ShowCase title="Работы до 500 000 рублей" link="#" products={expensiveProducts} />
+      <ShowCase
+        title="Работы до 50 000 рублей"
+        link="#"
+        products={cheapProducts}
+      />
+      <ShowCase
+        title="Работы до 500 000 рублей"
+        link="#"
+        products={expensiveProducts}
+      />
     </Stack>
   );
 }

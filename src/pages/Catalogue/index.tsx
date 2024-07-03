@@ -14,7 +14,9 @@ export default function CataloguePage() {
   const name = category
     ? breadcrumbNameMap[`/catalogue/${category}`]
     : 'Каталог';
-  const products = useSelector((state: AppStore) => state.products.products);
+
+  const { products } = useSelector((state: AppStore) => state.products);
+  const currentProducts = products.filter((product) => product.type === name);
 
   return (
     <Stack
@@ -45,7 +47,11 @@ export default function CataloguePage() {
           </Box>
         </Box>
         <Box component="section" sx={{ flexGrow: 1 }}>
-          <ProductsList products={products} amountToShow={20} size="medium" />
+          <ProductsList
+            products={currentProducts}
+            amountToShow={20}
+            size="medium"
+          />
         </Box>
       </Stack>
     </Stack>

@@ -17,7 +17,7 @@
     ],
     "ishorizontal": true,
     "genre": "Post-Impressionism",
-    "type": "Холст, масло",
+    "type": "Живопись",
     "category": "Post-Impressionism",
     "status": "Available",
     "price": 55000
@@ -40,7 +40,7 @@
     ],
     "ishorizontal": false,
     "genre": "Renaissance",
-    "type": "Painting",
+    "type": "Графика",
     "category": "Renaissance",
     "status": "Unavailable",
     "price": 2127215
@@ -63,7 +63,7 @@
     ],
     "ishorizontal": true,
     "genre": "Surrealism",
-    "type": "Холст, масло",
+    "type": "Фотография",
     "category": "Surrealism",
     "status": "Available",
     "price": 39000
@@ -86,7 +86,7 @@
     ],
     "ishorizontal": false,
     "genre": "Expressionism",
-    "type": "Холст, гуашь",
+    "type": "Digital",
     "category": "Expressionism",
     "status": "Unavailable",
     "price": 27000
@@ -109,7 +109,7 @@
     ],
     "ishorizontal": true,
     "genre": "Cubism",
-    "type": "Painting",
+    "type": "Принты",
     "category": "Cubism",
     "status": "Available",
     "price": 70000
@@ -132,7 +132,7 @@
     ],
     "ishorizontal": false,
     "genre": "Baroque",
-    "type": "Холст, масло",
+    "type": "Живопись",
     "category": "Baroque",
     "status": "Unavailable",
     "price": 85000
@@ -155,7 +155,7 @@
     ],
     "ishorizontal": true,
     "genre": "Baroque",
-    "type": "Холст, гуашь",
+    "type": "Графика",
     "category": "Baroque",
     "status": "Available",
     "price": 35000
@@ -178,7 +178,7 @@
     ],
     "ishorizontal": true,
     "genre": "Symbolism",
-    "type": "Холст, масло",
+    "type": "Фотография",
     "category": "Symbolism",
     "status": "Unavailable",
     "price": 1000000
@@ -201,7 +201,7 @@
     ],
     "ishorizontal": true,
     "genre": "Renaissance",
-    "type": "Painting",
+    "type": "Digital",
     "category": "Renaissance",
     "status": "Available",
     "price": 120000
@@ -224,7 +224,7 @@
     ],
     "ishorizontal": false,
     "genre": "Modernism",
-    "type": "Painting",
+    "type": "Принты",
     "category": "Modernism",
     "status": "Unavailable",
     "price": 300000
@@ -247,7 +247,7 @@
     ],
     "ishorizontal": false,
     "genre": "Modernism",
-    "type": "Painting",
+    "type": "Живопись",
     "category": "Modernism",
     "status": "Unavailable",
     "price": 45000
@@ -270,7 +270,7 @@
     ],
     "ishorizontal": true,
     "genre": "Renaissance",
-    "type": "Холст, масло",
+    "type": "Графика",
     "category": "Renaissance",
     "status": "Available",
     "price": 100000
@@ -293,7 +293,7 @@
     ],
     "ishorizontal": true,
     "genre": "Renaissance",
-    "type": "Painting",
+    "type": "Фотография",
     "category": "Renaissance",
     "status": "Available",
     "price": 55000
@@ -316,7 +316,7 @@
     ],
     "ishorizontal": true,
     "genre": "Symbolism",
-    "type": "Холст, масло",
+    "type": "Digital",
     "category": "Symbolism",
     "status": "Unavailable",
     "price": 30000
@@ -339,7 +339,7 @@
     ],
     "ishorizontal": true,
     "genre": "Baroque",
-    "type": "Digital",
+    "type": "Принты",
     "category": "Baroque",
     "status": "Available",
     "price": 10000
@@ -362,7 +362,7 @@
     ],
     "ishorizontal": true,
     "genre": "Renaissance",
-    "type": "Digital",
+    "type": "Живопись",
     "category": "Renaissance",
     "status": "Available",
     "price": 75000
@@ -385,7 +385,7 @@
     ],
     "ishorizontal": false,
     "genre": "Modernism",
-    "type": "Painting",
+    "type": "Графика",
     "category": "Modernism",
     "status": "Unavailable",
     "price": 30000
@@ -408,7 +408,7 @@
     ],
     "ishorizontal": false,
     "genre": "Expressionism",
-    "type": "Digital",
+    "type": "Фотография",
     "category": "Expressionism",
     "status": "Unavailable",
     "price": 3000
@@ -454,7 +454,7 @@
     ],
     "ishorizontal": true,
     "genre": "Symbolism",
-    "type": "Digital",
+    "type": "Принты",
     "category": "Symbolism",
     "status": "Unavailable",
     "price": 30000
@@ -477,7 +477,7 @@
     ],
     "ishorizontal": false,
     "genre": "Modernism",
-    "type": "Painting",
+    "type": "Живопись",
     "category": "Modernism",
     "status": "Unavailable",
     "price": 120000
@@ -500,7 +500,7 @@
     ],
     "ishorizontal": true,
     "genre": "Symbolism",
-    "type": "Digital",
+    "type": "Графика",
     "category": "Symbolism",
     "status": "Unavailable",
     "price": 25000
