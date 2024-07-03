@@ -50,6 +50,7 @@ export default function FilterBlockUi<T extends FieldValues>({
         <FormGroup>
           {fields.map((field) => (
             <FormControlLabel
+              key={field.title}
               control={
                 <Controller
                   name={field.inputName as Path<T>}
