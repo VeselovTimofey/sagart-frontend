@@ -14,7 +14,7 @@ interface IAuthWidgetUi {
 
 export function AuthWidgetUi({ tab, toggleTab, onSuccess }: IAuthWidgetUi) {
   return tab === 'success' ? (
-    <SuccessScreenUi onSkip={onSuccess} />
+    <SuccessScreenUi />
   ) : (
     <Stack>
       {tab === 'sign-in' ? (
