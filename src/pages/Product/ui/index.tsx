@@ -10,6 +10,7 @@ import {
 import type { IProduct } from '../../../utils/types';
 import BreadcrumbsWidget from '../../../components/BreadcrumbsWidget';
 import ProductsList from '../../../components/ProductsList';
+import { PREFIXPATH } from '../../../utils/constant/routes';
 
 interface IProductPageUi extends IProduct {
   otherWorksByAuthor: IProduct[] | null;
@@ -56,7 +57,7 @@ export default function ProductPageUi({
               {/* TODO: Add data */}
               <Link
                 component={RouterLink}
-                to="#"
+                to={PREFIXPATH}
                 sx={{ marginBottom: '3.5rem' }}
               >
                 Винсент Ван Гог
@@ -198,7 +199,7 @@ export default function ProductPageUi({
           <Stack gap={4}>
             <Stack gap={0.5}>
               <Typography variant="h2">Другие работы художника</Typography>
-              <Link component={RouterLink} to="#">
+              <Link component={RouterLink} to={PREFIXPATH}>
                 смотреть все &rarr;
               </Link>
             </Stack>
@@ -214,7 +215,7 @@ export default function ProductPageUi({
       <Stack gap={4}>
         <Stack gap={0.5}>
           <Typography variant="h2">Похожие товары</Typography>
-          <Link component={RouterLink} to="#">
+          <Link component={RouterLink} to={PREFIXPATH}>
             смотреть все &rarr;
           </Link>
         </Stack>
