@@ -1,0 +1,555 @@
+{
+  "newsSubscription": [
+    {
+      "id": "81c4",
+      "values": "sdw@fe.ru"
+    },
+    {
+      "id": "9ebe",
+      "values": "ewr@ds.ru"
+    },
+    {
+      "id": "013b",
+      "email": "sd@ds.ru"
+    }
+  ],
+  "lastNews": [
+    {
+      "title": "Выставка современного искусства",
+      "link": "/sagart-frontend",
+      "imageUrl": "https://s3-alpha-sig.figma.com/img/2f8e/0a54/fa685ea708227716b980b92e0a6a1b79?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lcs8fSQ0zJ7toPQiP4klRSAv9r-VuBWMINxJMzK5ALgC7PGl3exQbMA9uz7lQfjKRde2BHOVwWzop6GbLw8mXY9JludBk9XodPUj8SIXwAd12z4ILbCY1rt-wNvX-wyBZFcmwdR3O24Zfkxou9R0fSxv9m5pOjPkRGz~f7kfuGCfo9btnUb2UJtEgaXB1I91gW1TfxCn1Z~Tv5ErThEY~8K1eHKlguJpI5Cnkc7gznDURAdRKBV2pBHiTPURsKOBqZqevz-Y0hb61EqgYwFWn6i3YjrwUGLSkmrftTA66DhxPhE2ZcEtrYoSUEx0aDt5FsN6deOEL2QyYA0lqpAqmA__",
+      "id": "9c3d"
+    },
+    {
+      "title": "2 новость",
+      "link": "/sagart-frontend",
+      "imageUrl": "https://s3-alpha-sig.figma.com/img/ce46/75e3/7d6f17a5b49b94e0ae591ef18a6fdffc?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Rp-E1pw1ALJBt6VmmoZTijp9gOakU3vodMV8xQSTbMM6LWXu1K1djhoqgYJqotT49lkWARZ5aYyK4nL3ahgOXXhHNWJabs-gpno4rWXvEbqm5vNGujPiE4W3YLHlwQhAHNvfV5~9~TZTQ1NpIHpE3cooOWQDBFgmYniFhw9VphbdLI6emQYGBHB5m1ZyF~l31jzsBaO0VjlGXTK8JwRE9ZlpU0a88SkorXtRr47mtD5GUDNye-MuXs3SrzR30ISRYnYrNYYeyvAJ-1po-8GpuZ6vPJmeJj7e1~j7Sx3072Lpbmo~D19RRpxDjtAFQ9vRNWcXwBOLj~iMRDhctG9o7A__",
+      "id": "ac8f"
+    },
+    {
+      "title": "3 новость",
+      "link": "/sagart-frontend",
+      "imageUrl": "https://s3-alpha-sig.figma.com/img/4e13/4b29/b12f642e9f1a7b752b95399623e2a0f3?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cB3CZE2gYaQrQgYl-PW6398KHA3b294bS9Z6OZ2PU17hyMSoyFDiC0vBo-pjxXtSuCA6Atn9BW~SiIaN17iEkW7biOpfWsBT4DPI8cjIk8PmaybWcycauCQCZ6c9RN9V9IzKAtPiCXagpDF9yjopJzg8LkfDrhJlF1joicw~KQadTLsY6to1UcW3pdAAMttV8ngPc2rXMGqhSy1MDV4ZqALJfq6ld3QbBzxzA3hoe~jBnH8Qr0Ck2SN3s7eEFNGnwwiqV0cZTh-k4XCRc1LC8jqi6O1-FOhZHEHfYmw4K0OEd0MDLw1IzcGIsYz9vLzM55qX-VLi~qZ63e41yBSDHA__",
+      "id": "b8fc"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "phone": "+7 000 323-34-43",
+      "first_name": "John",
+      "last_name": "Snow",
+      "middle_name": "Nedovich",
+      "email": "winterLoard@hotmail.com",
+      "role": ["author"]
+    }
+  ],
+  "Product": [
+    {
+      "id": 1,
+      "aricle_num": 1001,
+      "name": "Силуэт танцпола",
+      "descrition_id": 101,
+      "author_id": 1,
+      "make_year": 1889,
+      "size": "60 x 40 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://s3-alpha-sig.figma.com/img/ce46/75e3/7d6f17a5b49b94e0ae591ef18a6fdffc?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Rp-E1pw1ALJBt6VmmoZTijp9gOakU3vodMV8xQSTbMM6LWXu1K1djhoqgYJqotT49lkWARZ5aYyK4nL3ahgOXXhHNWJabs-gpno4rWXvEbqm5vNGujPiE4W3YLHlwQhAHNvfV5~9~TZTQ1NpIHpE3cooOWQDBFgmYniFhw9VphbdLI6emQYGBHB5m1ZyF~l31jzsBaO0VjlGXTK8JwRE9ZlpU0a88SkorXtRr47mtD5GUDNye-MuXs3SrzR30ISRYnYrNYYeyvAJ-1po-8GpuZ6vPJmeJj7e1~j7Sx3072Lpbmo~D19RRpxDjtAFQ9vRNWcXwBOLj~iMRDhctG9o7A__",
+      "photo_gallery": [
+        {
+          "photo": "https://s3-alpha-sig.figma.com/img/ce46/75e3/7d6f17a5b49b94e0ae591ef18a6fdffc?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Rp-E1pw1ALJBt6VmmoZTijp9gOakU3vodMV8xQSTbMM6LWXu1K1djhoqgYJqotT49lkWARZ5aYyK4nL3ahgOXXhHNWJabs-gpno4rWXvEbqm5vNGujPiE4W3YLHlwQhAHNvfV5~9~TZTQ1NpIHpE3cooOWQDBFgmYniFhw9VphbdLI6emQYGBHB5m1ZyF~l31jzsBaO0VjlGXTK8JwRE9ZlpU0a88SkorXtRr47mtD5GUDNye-MuXs3SrzR30ISRYnYrNYYeyvAJ-1po-8GpuZ6vPJmeJj7e1~j7Sx3072Lpbmo~D19RRpxDjtAFQ9vRNWcXwBOLj~iMRDhctG9o7A__"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Post-Impressionism",
+      "type": "Живопись",
+      "category": "Post-Impressionism",
+      "status": "Available",
+      "price": 55000
+    },
+    {
+      "id": 2,
+      "aricle_num": 1002,
+      "name": "Athena",
+      "descrition_id": 102,
+      "author_id": 2,
+      "make_year": 1503,
+      "size": "150 x 200 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://s3-alpha-sig.figma.com/img/9f89/8597/84925e67347d9258060390e78407296a?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=M1TybOReTY0xktLny5sWgEhw8eHO1X6iv1f2mrOzehHslJxAnqGIudgDYfqdfyed7zvfuImosJeiRnFdML~HYDbN--RRaEEF8qkek861qwu5W5irkkRNrFNiItTiHeGgwMbTxh~G-AcD1ONwivn1A85sc7rMUNqvQ4dRW4lpcbWRWOBnxAkN0orAoGym-7PU3xbkUh25DP3SIeZQKeJVF5KYu0riZsVhsPmTFExbluI3PmQg3EnlNpCH78KN5YyNnaCIn~XwXIF-M3-cjBwv6HkIwgLmJZJ9F6qgeAVdkxkQZNumZKBucK9S~7aJCsYHg40hg6V0FAU7ojA4bA39iw__",
+      "photo_gallery": [
+        {
+          "photo": "https://s3-alpha-sig.figma.com/img/9f89/8597/84925e67347d9258060390e78407296a?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=M1TybOReTY0xktLny5sWgEhw8eHO1X6iv1f2mrOzehHslJxAnqGIudgDYfqdfyed7zvfuImosJeiRnFdML~HYDbN--RRaEEF8qkek861qwu5W5irkkRNrFNiItTiHeGgwMbTxh~G-AcD1ONwivn1A85sc7rMUNqvQ4dRW4lpcbWRWOBnxAkN0orAoGym-7PU3xbkUh25DP3SIeZQKeJVF5KYu0riZsVhsPmTFExbluI3PmQg3EnlNpCH78KN5YyNnaCIn~XwXIF-M3-cjBwv6HkIwgLmJZJ9F6qgeAVdkxkQZNumZKBucK9S~7aJCsYHg40hg6V0FAU7ojA4bA39iw__"
+        }
+      ],
+      "ishorizontal": false,
+      "genre": "Renaissance",
+      "type": "Графика",
+      "category": "Renaissance",
+      "status": "Unavailable",
+      "price": 2127215
+    },
+    {
+      "id": 3,
+      "aricle_num": 1003,
+      "name": "Вечер перед крепким",
+      "descrition_id": 103,
+      "author_id": 3,
+      "make_year": 2004,
+      "size": "50 x 40 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://s3-alpha-sig.figma.com/img/4e13/4b29/b12f642e9f1a7b752b95399623e2a0f3?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cB3CZE2gYaQrQgYl-PW6398KHA3b294bS9Z6OZ2PU17hyMSoyFDiC0vBo-pjxXtSuCA6Atn9BW~SiIaN17iEkW7biOpfWsBT4DPI8cjIk8PmaybWcycauCQCZ6c9RN9V9IzKAtPiCXagpDF9yjopJzg8LkfDrhJlF1joicw~KQadTLsY6to1UcW3pdAAMttV8ngPc2rXMGqhSy1MDV4ZqALJfq6ld3QbBzxzA3hoe~jBnH8Qr0Ck2SN3s7eEFNGnwwiqV0cZTh-k4XCRc1LC8jqi6O1-FOhZHEHfYmw4K0OEd0MDLw1IzcGIsYz9vLzM55qX-VLi~qZ63e41yBSDHA__",
+      "photo_gallery": [
+        {
+          "photo": "https://s3-alpha-sig.figma.com/img/4e13/4b29/b12f642e9f1a7b752b95399623e2a0f3?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cB3CZE2gYaQrQgYl-PW6398KHA3b294bS9Z6OZ2PU17hyMSoyFDiC0vBo-pjxXtSuCA6Atn9BW~SiIaN17iEkW7biOpfWsBT4DPI8cjIk8PmaybWcycauCQCZ6c9RN9V9IzKAtPiCXagpDF9yjopJzg8LkfDrhJlF1joicw~KQadTLsY6to1UcW3pdAAMttV8ngPc2rXMGqhSy1MDV4ZqALJfq6ld3QbBzxzA3hoe~jBnH8Qr0Ck2SN3s7eEFNGnwwiqV0cZTh-k4XCRc1LC8jqi6O1-FOhZHEHfYmw4K0OEd0MDLw1IzcGIsYz9vLzM55qX-VLi~qZ63e41yBSDHA__"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Surrealism",
+      "type": "Живопись",
+      "category": "Surrealism",
+      "status": "Available",
+      "price": 39000
+    },
+    {
+      "id": 4,
+      "aricle_num": 1004,
+      "name": "Abstract flowers",
+      "descrition_id": 104,
+      "author_id": 4,
+      "make_year": 2010,
+      "size": "80 x 100 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://s3-alpha-sig.figma.com/img/5ce3/62c5/b639b32d0b8905913061ad1ee5c72dde?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lnC0AbHVUuMs~jvFUcIDXeUlTzl0GofB4rM545c3rJow8jsQrCbUR5--2GhX4K6mmtv-ZZDhcjpUc9evEfhT9FBJ2ZoiKeCZYDC~U9fepnn8YB2IBQISpi3D0t8t2omuPTRLm3Oxet4hkK5S47mCm7G1UwJlIUIzt-af~i5lCkOGyyvL9XFGGPGikR4YygN-fu5ZSeSu27UkmZnzJIk6IOE4qWx15Uh5nLs~sQhwhUQvAd~fXQQXp-xJZpRqUlkfG7rsF9vJGxnjjNBNTZUwXVnpFMdysBlH7Pl7GV~ToVCuQHUeR2i6vpmPpU9vGQqxbfoVVtch7o4QiyYqZ1WdmA__",
+      "photo_gallery": [
+        {
+          "photo": "https://s3-alpha-sig.figma.com/img/5ce3/62c5/b639b32d0b8905913061ad1ee5c72dde?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lnC0AbHVUuMs~jvFUcIDXeUlTzl0GofB4rM545c3rJow8jsQrCbUR5--2GhX4K6mmtv-ZZDhcjpUc9evEfhT9FBJ2ZoiKeCZYDC~U9fepnn8YB2IBQISpi3D0t8t2omuPTRLm3Oxet4hkK5S47mCm7G1UwJlIUIzt-af~i5lCkOGyyvL9XFGGPGikR4YygN-fu5ZSeSu27UkmZnzJIk6IOE4qWx15Uh5nLs~sQhwhUQvAd~fXQQXp-xJZpRqUlkfG7rsF9vJGxnjjNBNTZUwXVnpFMdysBlH7Pl7GV~ToVCuQHUeR2i6vpmPpU9vGQqxbfoVVtch7o4QiyYqZ1WdmA__"
+        }
+      ],
+      "ishorizontal": false,
+      "genre": "Expressionism",
+      "type": "Живопись",
+      "category": "Expressionism",
+      "status": "Unavailable",
+      "price": 27000
+    },
+    {
+      "id": 5,
+      "aricle_num": 1005,
+      "name": "Красная ваза",
+      "descrition_id": 105,
+      "author_id": 5,
+      "make_year": 1937,
+      "size": "110 x 80 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://s3-alpha-sig.figma.com/img/53ca/2a3d/66b91507edfd1d25320c05bd3158bb7c?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cyqH2W7km855ABBo3MwjnqHvZZA9G21jOkeoWxTFbiCc8Wo4ienuceLaP7t1h6vkwCJo0IifOyE42Jqd0aqvTlJSh8AGC2AaD-peK5KLu1xcVCgUOx6DGuLJBGk-p421q2KZBX~CEamEgJQifJCa~eQsNgrxUr9jJmdlNoNpzgQzMQJlu7HP5Ce7D0IJ9FuvVFtutrG6~xSKwPFiAcW6~VadvJyrrxwa6-sZRFN4M1rJ-9-HVI346qC1Ie8WIBzbsnw05uTS-w8gwd9~~Y9ooSzeZMFDaAlPYLz5-yOrd0PbmYPum4-o2HFccyDx2ri0qWD9JfnyneIQ1vZf-u7X9w__",
+      "photo_gallery": [
+        {
+          "photo": "https://s3-alpha-sig.figma.com/img/53ca/2a3d/66b91507edfd1d25320c05bd3158bb7c?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cyqH2W7km855ABBo3MwjnqHvZZA9G21jOkeoWxTFbiCc8Wo4ienuceLaP7t1h6vkwCJo0IifOyE42Jqd0aqvTlJSh8AGC2AaD-peK5KLu1xcVCgUOx6DGuLJBGk-p421q2KZBX~CEamEgJQifJCa~eQsNgrxUr9jJmdlNoNpzgQzMQJlu7HP5Ce7D0IJ9FuvVFtutrG6~xSKwPFiAcW6~VadvJyrrxwa6-sZRFN4M1rJ-9-HVI346qC1Ie8WIBzbsnw05uTS-w8gwd9~~Y9ooSzeZMFDaAlPYLz5-yOrd0PbmYPum4-o2HFccyDx2ri0qWD9JfnyneIQ1vZf-u7X9w__"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Cubism",
+      "type": "Графика",
+      "category": "Cubism",
+      "status": "Available",
+      "price": 70000
+    },
+    {
+      "id": 6,
+      "aricle_num": 1006,
+      "name": "Мадарао",
+      "descrition_id": 106,
+      "author_id": 6,
+      "make_year": 2005,
+      "size": "30 x 46 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://s3-alpha-sig.figma.com/img/b336/5559/67f014f85692524262712103d82ab2fc?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FsEQTI6AgcM2pGhlrzrrYCsGAzUm-6JCk1scwjTaKrJdFK8yHMmlES4AGYbhMZ2EU1Y0zNkYEE6S0i8hexyd3ujFyZcAhwMp6qxfVbhDPZpwFXvlFWuySa1P9hcyqX~6iBbW6g84IV-SC2O5dnMicPIBCH0k1NasG7lcqEcQo0yY~6Kni0jvmNtT-iaMkDInZerdYPUjFOlim9T19EHBBDdohJtbN2ILLXiA1DI~NL8dEPnwjSRvIQtEV21~zd4gGIPw~ZHqn3YCJSWFW3Wwetmnaw1VkXayrC8qB8zEtIUJxp2MSQFxJpIwRms7dXCQ0VHtjLSmGrbDxoe7oH-Kjg__",
+      "photo_gallery": [
+        {
+          "photo": "https://s3-alpha-sig.figma.com/img/b336/5559/67f014f85692524262712103d82ab2fc?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FsEQTI6AgcM2pGhlrzrrYCsGAzUm-6JCk1scwjTaKrJdFK8yHMmlES4AGYbhMZ2EU1Y0zNkYEE6S0i8hexyd3ujFyZcAhwMp6qxfVbhDPZpwFXvlFWuySa1P9hcyqX~6iBbW6g84IV-SC2O5dnMicPIBCH0k1NasG7lcqEcQo0yY~6Kni0jvmNtT-iaMkDInZerdYPUjFOlim9T19EHBBDdohJtbN2ILLXiA1DI~NL8dEPnwjSRvIQtEV21~zd4gGIPw~ZHqn3YCJSWFW3Wwetmnaw1VkXayrC8qB8zEtIUJxp2MSQFxJpIwRms7dXCQ0VHtjLSmGrbDxoe7oH-Kjg__"
+        }
+      ],
+      "ishorizontal": false,
+      "genre": "Baroque",
+      "type": "Фотография",
+      "category": "Baroque",
+      "status": "Unavailable",
+      "price": 85000
+    },
+    {
+      "id": 7,
+      "aricle_num": 1007,
+      "name": "Сияй!",
+      "descrition_id": 107,
+      "author_id": 3,
+      "make_year": 2008,
+      "size": "80 x 60 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://s3-alpha-sig.figma.com/img/035b/60c1/45c316e5c16e98dba2f47706c6b739dd?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=B4Brcv6J3Y1XvQNc8f1Xzof6makDQFhKJpbEVrpwy2pBnMUvAxD9rJO7co~EjRxr8nZpLqSdyzf51bwZckLwoy0FY4TDLagR4tifbWBv4BdwZ43l-0ms9bV2lG06MUmX-qSR6SOjPPRzXEunnW0kyD4swKHrjv52HwZRw2IR7F-rzjhyH-1sOMQ5CNXgrBl33CdeHm-nlUe2yNoMD53Wrcsw7uGiIxiR1~vv9l2ka9AbBb4-1Yyt9YgwFqypSt0JQGvF87ySRhcpNbHDevU06p3qbExjWN7J1qkvOZPINFwuFcE9q1dI5tjySiyutB~6fx0Um~uX0jrIHvUZlagRbg__",
+      "photo_gallery": [
+        {
+          "photo": "https://s3-alpha-sig.figma.com/img/035b/60c1/45c316e5c16e98dba2f47706c6b739dd?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=B4Brcv6J3Y1XvQNc8f1Xzof6makDQFhKJpbEVrpwy2pBnMUvAxD9rJO7co~EjRxr8nZpLqSdyzf51bwZckLwoy0FY4TDLagR4tifbWBv4BdwZ43l-0ms9bV2lG06MUmX-qSR6SOjPPRzXEunnW0kyD4swKHrjv52HwZRw2IR7F-rzjhyH-1sOMQ5CNXgrBl33CdeHm-nlUe2yNoMD53Wrcsw7uGiIxiR1~vv9l2ka9AbBb4-1Yyt9YgwFqypSt0JQGvF87ySRhcpNbHDevU06p3qbExjWN7J1qkvOZPINFwuFcE9q1dI5tjySiyutB~6fx0Um~uX0jrIHvUZlagRbg__"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Baroque",
+      "type": "Живопись",
+      "category": "Baroque",
+      "status": "Available",
+      "price": 35000
+    },
+    {
+      "id": 8,
+      "aricle_num": 1008,
+      "name": "Утро в Париже",
+      "descrition_id": 108,
+      "author_id": 2,
+      "make_year": 1525,
+      "size": "100 x 140 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://s3-alpha-sig.figma.com/img/bb71/24dd/d12773ddf1e78d7e0cea5e3b94afb5b1?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Y8grce5eV-pV04-ZNqiI5EYRgtPrb8ZLWiiPErpZ4GM8NpBkkjW60EatU2iz2gFWt1GwpF-RTNlCMP3SMsRR1JHyYEpPRelc~d2k4lMzAlNJKQorUxZRbmftv2XIQWFGpohnv9~mzhS1Fi~06iKQwJyY3acckyfne68p3Y7IWDXx27N-vjqruGAFUqZ-Eg9UWqFAIJ3SJk9NU4SqjIMWoDnpsqgXkogZFcAYtwrYgRiinZcT~pnc1LbeH0CxwlMejOeLVNKGyf4ZKu02HsYrBuE0ZnKwgCGHlScRrE5dYf2hN6joeEK7rnfWoFpwqtZR8wOx0DhrOGcoLDJywV~pxA__",
+      "photo_gallery": [
+        {
+          "photo": "https://s3-alpha-sig.figma.com/img/bb71/24dd/d12773ddf1e78d7e0cea5e3b94afb5b1?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Y8grce5eV-pV04-ZNqiI5EYRgtPrb8ZLWiiPErpZ4GM8NpBkkjW60EatU2iz2gFWt1GwpF-RTNlCMP3SMsRR1JHyYEpPRelc~d2k4lMzAlNJKQorUxZRbmftv2XIQWFGpohnv9~mzhS1Fi~06iKQwJyY3acckyfne68p3Y7IWDXx27N-vjqruGAFUqZ-Eg9UWqFAIJ3SJk9NU4SqjIMWoDnpsqgXkogZFcAYtwrYgRiinZcT~pnc1LbeH0CxwlMejOeLVNKGyf4ZKu02HsYrBuE0ZnKwgCGHlScRrE5dYf2hN6joeEK7rnfWoFpwqtZR8wOx0DhrOGcoLDJywV~pxA__"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Symbolism",
+      "type": "Принты",
+      "category": "Symbolism",
+      "status": "Unavailable",
+      "price": 1000000
+    },
+    {
+      "id": 9,
+      "aricle_num": 1009,
+      "name": "Любовники",
+      "descrition_id": 109,
+      "author_id": 4,
+      "make_year": 2010,
+      "size": "50 x 50 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://s3-alpha-sig.figma.com/img/2a50/9818/c558b79ca3fbd67934b78dec05fca8f0?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZNCWFWSMLPEXu-NTNb4I1-NzBAjO-bE6bAQdt2A9iX7cCeEV3pFnCVoY6JyOiSInFcDwGljPtkLIJEmZ-OFjmm9pc7NI9vcgX3H~llkMGlDCkaM7fRppsErzYX8Bu~HoNcjAtg7eTNqTIe4-wUZfzOb16qSYDAJtg4Hq7BBPwTpn1HbS8HS-NVsJfykrqVoMKhTuBHjRkWsWNKgmGhhLonFt1G2hMob93FgP2tPoP9J~YzS1hzlI7vNmrMJGLaZCgBxOiI8khQlAzRxoDDIJL29TQ05broh3EN4sBbtTvOGhgdLIpoC~lIQtJhE7mf7Gv9mUgJlsGEUmn2Xt2Vg4Sg__",
+      "photo_gallery": [
+        {
+          "photo": "https://s3-alpha-sig.figma.com/img/2a50/9818/c558b79ca3fbd67934b78dec05fca8f0?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZNCWFWSMLPEXu-NTNb4I1-NzBAjO-bE6bAQdt2A9iX7cCeEV3pFnCVoY6JyOiSInFcDwGljPtkLIJEmZ-OFjmm9pc7NI9vcgX3H~llkMGlDCkaM7fRppsErzYX8Bu~HoNcjAtg7eTNqTIe4-wUZfzOb16qSYDAJtg4Hq7BBPwTpn1HbS8HS-NVsJfykrqVoMKhTuBHjRkWsWNKgmGhhLonFt1G2hMob93FgP2tPoP9J~YzS1hzlI7vNmrMJGLaZCgBxOiI8khQlAzRxoDDIJL29TQ05broh3EN4sBbtTvOGhgdLIpoC~lIQtJhE7mf7Gv9mUgJlsGEUmn2Xt2Vg4Sg__"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Renaissance",
+      "type": "Живопись",
+      "category": "Renaissance",
+      "status": "Available",
+      "price": 120000
+    },
+    {
+      "id": 10,
+      "aricle_num": 1010,
+      "name": "Красный квадрат",
+      "descrition_id": 110,
+      "author_id": 5,
+      "make_year": 2014,
+      "size": "78 см x 65.3 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://cs5.pikabu.ru/post_img/2014/10/29/4/1414555948_1603930553.jpg",
+      "photo_gallery": [
+        {
+          "photo": "https://cs5.pikabu.ru/post_img/2014/10/29/4/1414555948_1603930553.jpg"
+        }
+      ],
+      "ishorizontal": false,
+      "genre": "Modernism",
+      "type": "Painting",
+      "category": "Modernism",
+      "status": "Unavailable",
+      "price": 300000
+    },
+    {
+      "id": 11,
+      "aricle_num": 1011,
+      "name": "Wild wild west",
+      "descrition_id": 111,
+      "author_id": 5,
+      "make_year": 1930,
+      "size": "80 x 120 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://s3-alpha-sig.figma.com/img/b1a2/7e1f/323c271de4724afcb0622bab97ab8617?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fCs4zinccklzrchtrFQh5JLDMhF1xjU91PBIQbrPUjVz5dwHyo1TjpI7lABn07HxuRnQ6kHCZHPYIolbQY-TG66ejbbm5IoC2D9LzNeKaVWTloDuw~SKGaGug0FYgrpNAe~57P1LEC-HHXOuSs61ulNLD0mlB6TBbzp056xNkzMJTsiL9GjZv4dPRoWRMlwx~s5vu39h-U3HuJfFZyRBNXnv6-HcRD-LJ8p1WR2LQzQXFf4kOFDR-fImST5DZBXcdC0fmlhztS5K1gLSRC-opYtjob6GjhDP8c1JomIy~X5PlCINF~bO2tEnKcFlc5nr2cSMCifahysQ-8qlCzRUsQ__",
+      "photo_gallery": [
+        {
+          "photo": "https://s3-alpha-sig.figma.com/img/b1a2/7e1f/323c271de4724afcb0622bab97ab8617?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fCs4zinccklzrchtrFQh5JLDMhF1xjU91PBIQbrPUjVz5dwHyo1TjpI7lABn07HxuRnQ6kHCZHPYIolbQY-TG66ejbbm5IoC2D9LzNeKaVWTloDuw~SKGaGug0FYgrpNAe~57P1LEC-HHXOuSs61ulNLD0mlB6TBbzp056xNkzMJTsiL9GjZv4dPRoWRMlwx~s5vu39h-U3HuJfFZyRBNXnv6-HcRD-LJ8p1WR2LQzQXFf4kOFDR-fImST5DZBXcdC0fmlhztS5K1gLSRC-opYtjob6GjhDP8c1JomIy~X5PlCINF~bO2tEnKcFlc5nr2cSMCifahysQ-8qlCzRUsQ__"
+        }
+      ],
+      "ishorizontal": false,
+      "genre": "Modernism",
+      "type": "Фотография",
+      "category": "Modernism",
+      "status": "Unavailable",
+      "price": 45000
+    },
+    {
+      "id": 12,
+      "aricle_num": 1012,
+      "name": "Morning in Paris",
+      "descrition_id": 112,
+      "author_id": 4,
+      "make_year": 1486,
+      "size": "100 x 140 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://masterpiecer-images.s3.yandex.net/f69bfacf641511ee9e45baea8797b5f2:upscaled",
+      "photo_gallery": [
+        {
+          "photo": "https://masterpiecer-images.s3.yandex.net/f69bfacf641511ee9e45baea8797b5f2:upscaled"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Renaissance",
+      "type": "Digital",
+      "category": "Renaissance",
+      "status": "Available",
+      "price": 100000
+    },
+    {
+      "id": 13,
+      "aricle_num": 1013,
+      "name": "Город",
+      "descrition_id": 113,
+      "author_id": 4,
+      "make_year": 2015,
+      "size": "100 x 140 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://i.pinimg.com/736x/bd/06/73/bd067307040f722b82191a2622deb320.jpg",
+      "photo_gallery": [
+        {
+          "photo": "https://i.pinimg.com/736x/bd/06/73/bd067307040f722b82191a2622deb320.jpg"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Renaissance",
+      "type": "Живопись",
+      "category": "Renaissance",
+      "status": "Available",
+      "price": 55000
+    },
+    {
+      "id": 14,
+      "aricle_num": 1014,
+      "name": "Общество",
+      "descrition_id": 114,
+      "author_id": 6,
+      "make_year": 2018,
+      "size": "100 x 140 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://masterpiecer-images.s3.yandex.net/f01d2e256a8611ee94ff2ab2a9c6ab46:upscaled",
+      "photo_gallery": [
+        {
+          "photo": "https://masterpiecer-images.s3.yandex.net/f01d2e256a8611ee94ff2ab2a9c6ab46:upscaled"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Symbolism",
+      "type": "Графика",
+      "category": "Symbolism",
+      "status": "Unavailable",
+      "price": 30000
+    },
+    {
+      "id": 15,
+      "aricle_num": 1015,
+      "name": "Путешествие",
+      "descrition_id": 115,
+      "author_id": 3,
+      "make_year": 2011,
+      "size": "80 x 60 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://masterpiecer-images.s3.yandex.net/e96972c96da211eeb88a1e5d9776cfa6:upscaled",
+      "photo_gallery": [
+        {
+          "photo": "https://masterpiecer-images.s3.yandex.net/e96972c96da211eeb88a1e5d9776cfa6:upscaled"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Baroque",
+      "type": "Фотография",
+      "category": "Baroque",
+      "status": "Available",
+      "price": 10000
+    },
+    {
+      "id": 16,
+      "aricle_num": 1016,
+      "name": "Вокзал",
+      "descrition_id": 116,
+      "author_id": 4,
+      "make_year": 2012,
+      "size": "75 x 50 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://avatars.mds.yandex.net/get-shedevrum/12994731/ae436ff5df4711eeb2faae5494798a57/orig",
+      "photo_gallery": [
+        {
+          "photo": "https://avatars.mds.yandex.net/get-shedevrum/12994731/ae436ff5df4711eeb2faae5494798a57/orig"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Renaissance",
+      "type": "Digital",
+      "category": "Renaissance",
+      "status": "Available",
+      "price": 75000
+    },
+    {
+      "id": 17,
+      "aricle_num": 1017,
+      "name": "Загадочный дом",
+      "descrition_id": 117,
+      "author_id": 5,
+      "make_year": 2016,
+      "size": "78 см x 65.3 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://cs14.pikabu.ru/post_img/big/2023/06/13/4/1686635740195414768.png",
+      "photo_gallery": [
+        {
+          "photo": "https://cs14.pikabu.ru/post_img/big/2023/06/13/4/1686635740195414768.png"
+        }
+      ],
+      "ishorizontal": false,
+      "genre": "Modernism",
+      "type": "Принты",
+      "category": "Modernism",
+      "status": "Unavailable",
+      "price": 30000
+    },
+    {
+      "id": 18,
+      "aricle_num": 1018,
+      "name": "Кот",
+      "descrition_id": 118,
+      "author_id": 4,
+      "make_year": 2018,
+      "size": "80 x 100 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://masterpiecer-images.s3.yandex.net/f824b3c55da211eeb12e96e999421984:upscaled",
+      "photo_gallery": [
+        {
+          "photo": "https://masterpiecer-images.s3.yandex.net/f824b3c55da211eeb12e96e999421984:upscaled"
+        }
+      ],
+      "ishorizontal": false,
+      "genre": "Expressionism",
+      "type": "Живопись",
+      "category": "Expressionism",
+      "status": "Unavailable",
+      "price": 3000
+    },
+    {
+      "id": 19,
+      "aricle_num": 1019,
+      "name": "Шестерни",
+      "descrition_id": 119,
+      "author_id": 3,
+      "make_year": 2019,
+      "size": "50 x 40 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6645aaaf6a6c8c411ac7da93_6645ac3e3bbb6a083041a8ec/scale_1200",
+      "photo_gallery": [
+        {
+          "photo": "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6645aaaf6a6c8c411ac7da93_6645ac3e3bbb6a083041a8ec/scale_1200"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Surrealism",
+      "type": "Графика",
+      "category": "Surrealism",
+      "status": "Available",
+      "price": 55000
+    },
+    {
+      "id": 20,
+      "aricle_num": 1020,
+      "name": "Заснеженность",
+      "descrition_id": 120,
+      "author_id": 6,
+      "make_year": 2016,
+      "size": "100 x 140 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://cs14.pikabu.ru/post_img/2024/03/22/12/1711139318127046955.jpg",
+      "photo_gallery": [
+        {
+          "photo": "https://cs14.pikabu.ru/post_img/2024/03/22/12/1711139318127046955.jpg"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Symbolism",
+      "type": "Фотография",
+      "category": "Symbolism",
+      "status": "Unavailable",
+      "price": 30000
+    },
+    {
+      "id": 21,
+      "aricle_num": 1021,
+      "name": "Улица",
+      "descrition_id": 121,
+      "author_id": 5,
+      "make_year": 1945,
+      "size": "80 x 120 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://cs13.pikabu.ru/post_img/2024/03/22/12/1711139319117335431.jpg",
+      "photo_gallery": [
+        {
+          "photo": "https://cs13.pikabu.ru/post_img/2024/03/22/12/1711139319117335431.jpg"
+        }
+      ],
+      "ishorizontal": false,
+      "genre": "Modernism",
+      "type": "Digital",
+      "category": "Modernism",
+      "status": "Unavailable",
+      "price": 120000
+    },
+    {
+      "id": 22,
+      "aricle_num": 1022,
+      "name": "Парадная",
+      "descrition_id": 122,
+      "author_id": 6,
+      "make_year": 2021,
+      "size": "100 x 140 см",
+      "edition": "Original",
+      "auth_signature": true,
+      "preview_photo": "https://masterpiecer-images.s3.yandex.net/45564bdf9c6011eea0471e2d0b427d15:upscaled",
+      "photo_gallery": [
+        {
+          "photo": "https://masterpiecer-images.s3.yandex.net/45564bdf9c6011eea0471e2d0b427d15:upscaled"
+        }
+      ],
+      "ishorizontal": true,
+      "genre": "Symbolism",
+      "type": "Принты",
+      "category": "Symbolism",
+      "status": "Unavailable",
+      "price": 25000
+    }
+  ]
+}
