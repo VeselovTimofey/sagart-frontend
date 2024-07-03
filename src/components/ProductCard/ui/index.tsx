@@ -1,7 +1,4 @@
-import {
-  // FavoriteBorderOutlined,
-  ShoppingBasketOutlined,
-} from '@mui/icons-material';
+import { ShoppingBasketOutlined } from '@mui/icons-material';
 
 import {
   Card,

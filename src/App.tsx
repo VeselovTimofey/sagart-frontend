@@ -30,8 +30,6 @@ function App() {
         <CssBaseline />
         <Header />
         <Routes>
-          {/* // TODO: Add data prefetching in Route component  */}
-          {/* // TODO: Use param to filter request (on router side) */}
           <Route path={`/catalogue/:category?`} Component={CataloguePage} />
           {/* NOTE: Product page */}
           <Route path={`/products/:productId`} Component={ProductPage} />

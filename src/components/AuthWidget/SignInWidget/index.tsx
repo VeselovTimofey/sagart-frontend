@@ -30,7 +30,6 @@ export default function SignInWidget({ onSuccess }: ISignInWidget) {
   });
 
   const onSubmit: SubmitHandler<ICredentialsSignIn> = useCallback(
-    // (data) => dispatch(signUpUser(data)),
     (data) => dispatch(signInUser(data)),
     [dispatch]
   );
