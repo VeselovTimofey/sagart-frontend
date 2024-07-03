@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import type ILastNewsState from '../../utils/types/lastNewsState';
 import lastNewsAction from '../actions/lastNewsAction';
+import mockLastNews from '../../utils/mock/lastNews.json';
 
 const initialState: ILastNewsState = {
   news: [
@@ -54,6 +55,9 @@ const lastNewsSlice = createSlice({
           isLoading: false,
           error: action.error.message,
         };
+        if (action.error.message === 'Rejected') {
+          newState.news = mockLastNews;
+        }
         return newState;
       });
   },

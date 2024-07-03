@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import IProductsState from '../../utils/types/product';
 import allProductsAction from '../actions/allProductsAction';
+import mockProduct from '../../utils/mock/products.json';
 
 const initialState: IProductsState = {
   products: [],
@@ -35,6 +36,9 @@ const productsSlice = createSlice({
           isLoading: false,
           error: action.error.message,
         };
+        if (action.error.message === 'Rejected') {
+          newState.products = mockProduct;
+        }
         return newState;
       });
   },
