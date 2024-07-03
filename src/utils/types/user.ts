@@ -7,13 +7,11 @@ export interface IUser {
   last_name: string;
   middle_name: string;
   email: string;
-  // TODO: Discuss and confirm
   role: Array<IUserRole>;
 }
 
 interface IAuthorExtras {
   nick_name: string | null;
-  // TODO: Move 'photo' to 'icon' in IUser
   photo: string | null;
   videocard: string | null;
   biography: string | null;
@@ -40,18 +38,15 @@ interface IAuthorExtras {
 
 export interface IAuthor extends IUser, IAuthorExtras {}
 
-// TODO: Discuss and confirm
 interface IBuyerExtras {
   interests: string[] | null;
 }
 
 export interface IBuyer extends IUser, IBuyerExtras {}
 
-// TODO: Discuss and confirm
 export interface ICredentialsSignUp extends Omit<IUser, 'id' | 'role'> {
   password: string;
 }
 
-// TODO: Discuss and confirm
 export interface ICredentialsSignIn
   extends Pick<ICredentialsSignUp, 'email' | 'password'> {}

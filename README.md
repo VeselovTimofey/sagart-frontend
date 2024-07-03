@@ -4,6 +4,8 @@
 
 Фронтенд для сайта галереи "Сагаарт".
 
+[Ссылка на github pages](https://veselovtimofey.github.io/sagart-frontend/)
+
 ## Запуск проекта
 
 ```bash

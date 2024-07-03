@@ -87,7 +87,6 @@ export default function AuthorPageUi({
           <Stack direction="row" gap={3}>
             <Box
               component="img"
-              // TODO: Add data
               src="/mock-image.png.webp"
               alt=""
               sx={{
