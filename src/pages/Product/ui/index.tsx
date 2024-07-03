@@ -7,7 +7,7 @@ import {
   WorkspacePremiumOutlined,
 } from '@mui/icons-material';
 
-import type { IAuthor, IProduct } from '../../../utils/types';
+import type { IProduct } from '../../../utils/types';
 import BreadcrumbsWidget from '../../../components/BreadcrumbsWidget';
 import ProductsList from '../../../components/ProductsList';
 import { PREFIXPATH } from '../../../utils/constant/routes';
@@ -15,18 +15,12 @@ import { PREFIXPATH } from '../../../utils/constant/routes';
 interface IProductPageUi extends IProduct {
   otherWorksByAuthor: IProduct[] | null;
   similarWorks: IProduct[];
-  user: IAuthor;
 }
 
 export default function ProductPageUi({
   otherWorksByAuthor,
   similarWorks,
-  user,
   type,
-  category,
-  preview_photo,
-  edition,
-  status,
   name,
   size,
   make_year,
@@ -44,16 +38,7 @@ export default function ProductPageUi({
       <Stack direction="column" gap={3}>
         <BreadcrumbsWidget />
         <Stack component="section" direction="row" gap={3}>
-          <Box
-            sx={{
-              width: 760,
-              height: 579,
-              backgroundImage: `url(${preview_photo})`,
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }}
-          />
+          <Box sx={{ width: 760, height: 579, backgroundColor: 'salmon' }} />
           <Stack
             component="article"
             direction="column"
@@ -61,10 +46,11 @@ export default function ProductPageUi({
           >
             <Stack>
               <Stack gap={2.5} sx={{ marginBottom: '2rem' }}>
-                <Typography>{category}</Typography>
+                <Typography>{type}</Typography>
                 <Typography variant="h2">{name}</Typography>
                 <Stack>
-                  <Typography>{type}</Typography>
+                  {/* TODO: Add data */}
+                  <Typography>Холст, масло</Typography>
                   <Typography>{size}</Typography>
                 </Stack>
               </Stack>
@@ -74,7 +60,7 @@ export default function ProductPageUi({
                 to={PREFIXPATH}
                 sx={{ marginBottom: '3.5rem' }}
               >
-                {user.first_name + user.middle_name + user.last_name}
+                Винсент Ван Гог
               </Link>
               <Stack sx={{ height: '100px', backgroundColor: 'beige' }}>
                 <Typography>Здесь цены и опции</Typography>
@@ -96,7 +82,14 @@ export default function ProductPageUi({
         <Stack gap={2.5}>
           <Typography variant="h2">О работе</Typography>
           {/* TODO: Add data */}
-          <Typography sx={{ maxWidth: '49rem' }}>{user.biography}</Typography>
+          <Typography sx={{ maxWidth: '49rem' }}>
+            Стремясь к спокойной обстановке,ван Гог начал рисовать в Аньере в
+            апреле 1887 года, где жили его коллеги-художники Синьяк и Бернар. За
+            городскими укреплениями и вдоль берегов Сены лежат Аньер и остров
+            Гран-Жатт. Он экспериментировал с более светлой и красочной
+            палитрой, чем та, что использовалась в его ранних голландских и
+            монмартрских картинах.
+          </Typography>
         </Stack>
         <Box
           sx={{
@@ -126,11 +119,13 @@ export default function ProductPageUi({
           </Stack>
           <Stack gap={1}>
             <Typography>Уникальность работы:</Typography>
-            <Typography>{edition}</Typography>
+            {/* TODO: Add data */}
+            <Typography>Уникальная работа</Typography>
           </Stack>
           <Stack gap={1}>
             <Typography>Категория:</Typography>
-            <Typography>{category}</Typography>
+            {/* TODO: Add data */}
+            <Typography>{type}</Typography>
           </Stack>
           <Stack gap={1}>
             <Typography>Стиль:</Typography>
@@ -138,11 +133,13 @@ export default function ProductPageUi({
           </Stack>
           <Stack gap={1}>
             <Typography>Жанр:</Typography>
-            <Typography>{genre}</Typography>
+            {/* TODO: Add data */}
+            <Typography>Современный пейзаж</Typography>
           </Stack>
           <Stack gap={1}>
             <Typography>Рамка:</Typography>
-            <Typography>{status}</Typography>
+            {/* TODO: Add data */}
+            <Typography>Включено</Typography>
           </Stack>
           <Stack gap={1}>
             <Typography>Сертификат подлинности:</Typography>
@@ -166,11 +163,14 @@ export default function ProductPageUi({
           />
           <Stack gap={2.5}>
             {/* TODO: Add data */}
-            <Typography variant="h2">
-              {user.first_name + user.middle_name + user.last_name}
-            </Typography>
+            <Typography variant="h2">Винсент Ван Гог</Typography>
             {/* TODO: Add data */}
-            <Typography sx={{ maxWidth: '49rem' }}>{user.biography}</Typography>
+            <Typography sx={{ maxWidth: '49rem' }}>
+              Винсент Виллем ван Гог (30 марта 1853 — 29 июля 1890) —
+              нидерландский живописец и график, одна из трёх главных фигур
+              постимпрессионизма (наряду с Полем Сезанном и Полем Гогеном), чьё
+              творчество оказало значительное влияние на живопись XX века.
+            </Typography>
           </Stack>
         </Stack>
         <Stack direction="row" gap={3}>
