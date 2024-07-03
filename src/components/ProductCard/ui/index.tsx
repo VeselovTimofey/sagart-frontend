@@ -79,7 +79,7 @@ export default function ProductCardUi({
           aspectRatio: 1,
           backgroundColor: '#FAFAFA',
         }}
-        image={product.preview_photo}
+        src={product.preview_photo}
         title={product.name}
       />
       <Stack direction="column" justifyContent="space-between" flexGrow={1}>
