@@ -15,21 +15,20 @@ export default function PriceAnalytics({
   return (
     <Stack direction="column" gap={1.25}>
       <Stack direction="row" gap={3}>
-        <Avatar src="/mock-image.png.webp" />
-        <Stack direction="column" gap={1.5}>
-          <Typography>
+        <Avatar src="/sagart-frontend/self-portrait.jpeg" />
+        <Stack direction="column" gap={0.5}>
+          <Typography fontWeight={600}>
             {price.toLocaleString('ru-RU', {
               style: 'currency',
               currency: 'RUB',
             })}
           </Typography>
-          <Stack direction="row" gap={0.5}>
+          <Stack direction="row" gap={0.5} alignItems="center">
+            <Typography fontSize={12}>44 000 ₽ | +30,3%</Typography>
             <ArrowDropUp color="success" />
-            <Typography>44 000 ₽ | +30,3%</Typography>
           </Stack>
         </Stack>
       </Stack>
-      <Typography>Период: 1 год</Typography>
       <SparkLineChart
         sx={{ border: '1px solid #D9D9D9' }}
         colors={['#63ABFD']}
@@ -43,6 +42,7 @@ export default function PriceAnalytics({
         showTooltip
         showHighlight
       />
+      <Typography fontSize={12}>Период: 1 год</Typography>
     </Stack>
   );
 }
