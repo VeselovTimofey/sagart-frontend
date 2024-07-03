@@ -1,18 +1,24 @@
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import { Box, Stack, Typography } from '@mui/material';
 
 import ProductsList from '../../components/ProductsList';
-import artworks from '../../utils/mock/artworks';
 import BreadcrumbsWidget from '../../components/BreadcrumbsWidget';
 import breadcrumbNameMap from '../../utils/const';
 import FilterBarWidget from '../../components/FilterBarWidget';
+import { AppStore } from '../../utils/types/appDispatch';
 
 export default function CataloguePage() {
   const { category } = useParams();
   const name = category
     ? breadcrumbNameMap[`/catalogue/${category}`]
     : 'Каталог';
+
+  const { products } = useSelector((state: AppStore) => state.products);
+  const currentProducts = products.filter(
+    (product) => product.type === name || name === 'Каталог'
+  );
 
   return (
     <Stack
@@ -43,7 +49,11 @@ export default function CataloguePage() {
           </Box>
         </Box>
         <Box component="section" sx={{ flexGrow: 1 }}>
-          <ProductsList products={artworks} amountToShow={20} size="medium" />
+          <ProductsList
+            products={currentProducts}
+            amountToShow={20}
+            size="medium"
+          />
         </Box>
       </Stack>
     </Stack>

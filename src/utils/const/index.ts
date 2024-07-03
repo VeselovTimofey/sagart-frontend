@@ -4,7 +4,7 @@ const breadcrumbNameMap: { [key: string]: string } = {
   '/catalogue/graphic': 'Графика',
   '/catalogue/photography': 'Фотография',
   '/catalogue/digital': 'Digital',
-  '/catalogue/prints': 'Принты',
+  '/catalogue/print': 'Принты',
 };
 
 export default breadcrumbNameMap;

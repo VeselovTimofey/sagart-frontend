@@ -17,7 +17,7 @@ export default function FilterBarWidgetUi<T extends FieldValues>({
   return (
     <Stack direction="column" gap={3}>
       {form.map((filter) => (
-        <FilterBlock {...filter} {...{ control }} />
+        <FilterBlock {...filter} {...{ control }} key={filter.name} />
       ))}
     </Stack>
   );

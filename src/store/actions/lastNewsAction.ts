@@ -17,8 +17,8 @@ const lastNewsAction = createAsyncThunk<INews[], void, { rejectValue: string }>(
       if (error instanceof Error) {
         return rejectWithValue(error.message);
       }
+      return rejectWithValue('Не удалось получить последние новости.');
     }
-    return null;
   }
 );
 

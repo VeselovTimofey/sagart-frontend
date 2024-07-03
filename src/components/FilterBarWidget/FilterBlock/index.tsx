@@ -10,6 +10,7 @@ interface IFilterBlock<T extends FieldValues> {
   control: Control<T>;
   fields: IFilterFields;
   name: string;
+  key: string;
 }
 
 export default function FilterBlock<T extends FieldValues>(

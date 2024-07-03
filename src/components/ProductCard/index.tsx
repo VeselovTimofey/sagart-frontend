@@ -5,6 +5,7 @@ import type { CardProps } from '@mui/material';
 import type { IProduct } from '../../utils/types';
 
 import ProductCardUi from './ui';
+import { authors } from '../../utils/mock/authors';
 
 interface IProductCard extends CardProps {
   product: IProduct;
@@ -27,10 +28,15 @@ export default function ProductCard({ product, size, ...props }: IProductCard) {
     [product]
   );
 
+  const author =
+    authors.find((currentAuthor) => currentAuthor.id === product.author_id) ||
+    authors[0];
+
   return (
     <ProductCardUi
       {...{ size }}
       {...{ product }}
+      {...{ author }}
       {...props}
       onFavouriteClick={toggleIsFavourite}
       onBasketClick={toggleIsInBasket}

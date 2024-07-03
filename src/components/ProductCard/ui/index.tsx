@@ -14,13 +14,14 @@ import {
   type CardProps,
 } from '@mui/material';
 
-import type { IProduct } from '../../../utils/types';
+import type { IAuthor, IProduct } from '../../../utils/types';
 
 import { card, favButton, image } from './styles';
 
 interface IProductCardUi extends CardProps {
   size: 'small' | 'medium';
   product: IProduct;
+  author: IAuthor;
   onFavouriteClick: () => void;
   onBasketClick: () => void;
 }
@@ -36,6 +37,7 @@ interface IProductCardUi extends CardProps {
 export default function ProductCardUi({
   size,
   product,
+  author,
   onFavouriteClick,
   onBasketClick,
   ...props
@@ -83,7 +85,7 @@ export default function ProductCardUi({
                 fontWeight={600}
                 lineHeight={1.2}
               >
-                Нисо Атаханова
+                {`${author.first_name} ${author.middle_name} ${author.last_name}`}
               </Typography>
               <Typography variant="body1" color="text.primary">
                 {product.name}
