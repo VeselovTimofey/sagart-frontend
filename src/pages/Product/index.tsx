@@ -1,5 +1,8 @@
-import artworks from '../../utils/mock/artworks';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import ProductPageUi from './ui';
+import { AppStore } from '../../utils/types/appDispatch';
+import { authors } from '../../utils/mock/authors';
 
 export default function ProductPage() {
   const { productId } = useParams();
@@ -18,6 +21,7 @@ export default function ProductPage() {
   return (
     <ProductPageUi
       {...product}
+      {...{ user }}
       {...{ otherWorksByAuthor }}
       {...{ similarWorks }}
     />
