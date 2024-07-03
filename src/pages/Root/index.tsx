@@ -8,6 +8,7 @@ import lastNewsAction from '../../store/actions/lastNewsAction';
 import LastNews from '../../components/LastNews/index';
 import Categories from '../../components/Сategories/index';
 import ShowCase from '../../components/Showcase';
+import { PREFIXPATH } from '../../utils/constant/routes';
 
 function MainPage() {
   const dispatch = useDispatch<AppDispatch>();
@@ -31,15 +32,15 @@ function MainPage() {
     >
       <LastNews />
       <Categories />
-      <ShowCase title="Новинки" link="#" products={newProducts} />
+      <ShowCase title="Новинки" link={PREFIXPATH} products={newProducts} />
       <ShowCase
         title="Работы до 50 000 рублей"
-        link="#"
+        link={PREFIXPATH}
         products={cheapProducts}
       />
       <ShowCase
         title="Работы до 500 000 рублей"
-        link="#"
+        link={PREFIXPATH}
         products={expensiveProducts}
       />
     </Stack>

@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 
 import breadcrumbNameMap from '../../../utils/const';
+import { PREFIXPATH } from '../../../utils/constant/routes';
 
 interface LinkRouterProps extends LinkProps {
   to: string;
@@ -29,7 +30,7 @@ export default function BreadcrumbsWidgetUi({
 }: IBreadcrumbsWidgetUi) {
   return (
     <Breadcrumbs aria-label="breadcrumb" {...props}>
-      <LinkRouter underline="hover" color="text.primary" to="/">
+      <LinkRouter underline="hover" color="text.primary" to={PREFIXPATH}>
         Главная
       </LinkRouter>
       {crumbs.map((_crumb, index) => {
