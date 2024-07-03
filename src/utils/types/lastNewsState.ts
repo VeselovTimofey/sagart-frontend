@@ -14,7 +14,6 @@ interface ILastNewsState {
   error: string | undefined;
 }
 
-// TODO: Moving this interface to a separate file
 interface ISliderChange {
   (event: Event, value: number | number[], activeThumb: number): void;
 }
