@@ -21,7 +21,7 @@ interface IProduct {
 interface IProductsState {
   products: IProduct[];
   isLoading: boolean;
-  error: string;
+  error: string | undefined;
 }
 
 export default IProductsState;
