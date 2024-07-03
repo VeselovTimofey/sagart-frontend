@@ -4,7 +4,27 @@ import allProductsAction from '../actions/allProductsAction';
 import mockProduct from '../../utils/mock/products.json';
 
 const initialState: IProductsState = {
-  products: [],
+  products: [
+    {
+      id: 0,
+      aricle_num: 0,
+      name: '',
+      descrition_id: 0,
+      author_id: 1,
+      make_year: 0,
+      size: '',
+      edition: '',
+      auth_signature: false,
+      preview_photo: '',
+      photo_gallery: [{ photo: '' }],
+      ishorizontal: false,
+      genre: '',
+      type: '',
+      category: '',
+      status: '',
+      price: 0,
+    },
+  ],
   isLoading: false,
   error: '',
 };
