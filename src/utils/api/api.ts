@@ -52,7 +52,7 @@ export async function getLastNews() {
   });
 }
 
-// all products request
+// All products request
 export async function getAllProducts() {
   return api({
     method: 'GET',
