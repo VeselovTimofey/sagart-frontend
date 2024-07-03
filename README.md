@@ -1,8 +1,10 @@
 # Сагаарт
 
-![Static Badge](https://img.shields.io/badge/React-gray?logo=React) ![Static Badge](https://img.shields.io/badge/TypeScript-gray?logo=TypeScript) ![Static Badge](https://img.shields.io/badge/Redux_Toolkit-gray?logo=Redux) ![Static Badge](https://img.shields.io/badge/MUI-gray?logo=MUI) ![Static Badge](https://img.shields.io/badge/React_Hook_Form-gray?logo=ReactHookForm)
+![Static Badge](https://img.shields.io/badge/React-gray?logo=React) ![Static Badge](https://img.shields.io/badge/TypeScript-gray?logo=TypeScript) ![Static Badge](https://img.shields.io/badge/Redux_Toolkit-gray?logo=Redux) ![Static Badge](https://img.shields.io/badge/MUI-gray?logo=MUI) ![Static Badge](https://img.shields.io/badge/React_Hook_Form-gray?logo=ReactHookForm) ![Static Badge](https://img.shields.io/badge/Yup-gray)
 
 Фронтенд для сайта галереи "Сагаарт".
+
+[Ссылка на github pages](https://veselovtimofey.github.io/sagart-frontend/)
 
 ## Запуск проекта
 
