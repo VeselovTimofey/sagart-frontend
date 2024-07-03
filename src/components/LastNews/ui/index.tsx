@@ -22,7 +22,7 @@ function LastNewsUi({ lastNewsValue, onCurrentNewsChange }: ILastNewsUi) {
         direction="row"
         justifyContent="space-between"
         gap={2}
-        sx={{ paddingX: '3.75rem' }}
+        px={7.5}
       >
         <Stack
           direction="column"

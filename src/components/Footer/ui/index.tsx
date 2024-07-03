@@ -12,8 +12,8 @@ function FooterUi() {
     <Stack
       component="footer"
       direction="column"
+      px={7.5}
       sx={{
-        paddingX: '3.75rem',
         paddingBottom: '2.5rem',
         borderTop: '1px solid #D9D9D9',
       }}

@@ -64,7 +64,7 @@ export default function ProductCardUi({
         <CardMedia
           component="img"
           sx={image(size)}
-          src="/mock-image.png.webp"
+          src={product.preview_photo}
           title={product.name}
         />
       </Stack>

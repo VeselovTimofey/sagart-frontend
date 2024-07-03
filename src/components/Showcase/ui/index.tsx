@@ -14,12 +14,7 @@ export interface IShowCaseUi {
 
 function ShowCaseUi({ title, link, products }: IShowCaseUi) {
   return (
-    <Stack
-      component="section"
-      direction="column"
-      gap={4}
-      sx={{ paddingX: '3.75rem' }}
-    >
+    <Stack component="section" direction="column" gap={4} px={7.5}>
       <Stack direction="column" gap={0.5}>
         <Typography variant="h2">{title}</Typography>
         <Link component={RouterLink} to={link} sx={{ textDecoration: 'none' }}>

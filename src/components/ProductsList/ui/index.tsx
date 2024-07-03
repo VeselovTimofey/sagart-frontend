@@ -27,7 +27,7 @@ export default function ProductsListUi({
   return (
     <Box component="ul" sx={list(size)}>
       {products.slice(0, amountToShow).map((product) => (
-        <Box component="li" key={product.id}>
+        <Box component="li" key={product.id} sx={{ width: '100%' }}>
           <Link
             component={RouterLink}
             to={`/products/${product.id}`}
