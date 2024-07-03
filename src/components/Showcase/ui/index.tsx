@@ -1,4 +1,6 @@
-import { Grid, Link, Typography } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
+
+import { Link, Stack, Typography } from '@mui/material';
 import { ArrowForward } from '@mui/icons-material';
 
 import ProductsList from '../../ProductsList';
@@ -12,20 +14,23 @@ export interface IShowCaseUi {
 
 function ShowCaseUi({ title, link, products }: IShowCaseUi) {
   return (
-    <Grid component="section" direction="column" container>
-      <Typography variant="h2" component="h2">
-        {title}
-      </Typography>
-      <Link href={link}>
-        <Grid spacing={1} container>
-          <Typography variant="inherit" component="p">
-            смотреть все
-          </Typography>
-          <ArrowForward />
-        </Grid>
-      </Link>
+    <Stack
+      component="section"
+      direction="column"
+      gap={4}
+      sx={{ paddingX: '3.75rem' }}
+    >
+      <Stack direction="column" gap={0.5}>
+        <Typography variant="h2">{title}</Typography>
+        <Link component={RouterLink} to={link} sx={{ textDecoration: 'none' }}>
+          <Stack direction="row" alignItems="center" gap={1} color="#B8B8B8">
+            <Typography>смотреть все</Typography>
+            <ArrowForward />
+          </Stack>
+        </Link>
+      </Stack>
       <ProductsList products={products} size="large" amountToShow={10} />
-    </Grid>
+    </Stack>
   );
 }
 

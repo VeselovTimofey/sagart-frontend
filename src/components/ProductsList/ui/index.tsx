@@ -5,6 +5,8 @@ import { Box, Link } from '@mui/material';
 import type { IProduct } from '../../../utils/types';
 import ProductCard from '../../ProductCard';
 
+import { list } from './styles';
+
 interface IProductsListUi {
   size: 'medium' | 'large';
   products: IProduct[];
@@ -23,27 +25,21 @@ export default function ProductsListUi({
   amountToShow,
 }: IProductsListUi) {
   return (
-    <Box
-      sx={{
-        display: 'grid',
-        gridTemplateColumns: `repeat(auto-fit, minmax(${size === 'medium' ? '224px' : '245px'}, 1fr))`,
-        gap: '1.5rem',
-        justifyItems: 'center',
-        width: '100%',
-      }}
-    >
+    <Box component="ul" sx={list(size)}>
       {products.slice(0, amountToShow).map((product) => (
-        <Link
-          component={RouterLink}
-          to={`/products/${product.id}`}
-          key={product.id}
-          style={{ textDecoration: 'none', color: 'inherit' }}
-        >
-          <ProductCard
-            {...{ product }}
-            size={size === 'medium' ? 'small' : 'medium'}
-          />
-        </Link>
+        <Box component="li" key={product.id}>
+          <Link
+            component={RouterLink}
+            to={`/products/${product.id}`}
+            sx={{ textDecoration: 'none', color: 'inherit' }}
+            preventScrollReset={true}
+          >
+            <ProductCard
+              {...{ product }}
+              size={size === 'medium' ? 'small' : 'medium'}
+            />
+          </Link>
+        </Box>
       ))}
     </Box>
   );
