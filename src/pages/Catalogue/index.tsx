@@ -16,7 +16,9 @@ export default function CataloguePage() {
     : 'Каталог';
 
   const { products } = useSelector((state: AppStore) => state.products);
-  const currentProducts = products.filter((product) => product.type === name);
+  const currentProducts = products.filter(
+    (product) => product.type === name || name === 'Каталог'
+  );
 
   return (
     <Stack
