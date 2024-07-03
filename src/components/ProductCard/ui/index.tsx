@@ -1,7 +1,4 @@
-import {
-  FavoriteBorderOutlined,
-  ShoppingBasketOutlined,
-} from '@mui/icons-material';
+import { ShoppingBasketOutlined } from '@mui/icons-material';
 
 import {
   Card,
@@ -16,7 +13,7 @@ import {
 
 import type { IAuthor, IProduct } from '../../../utils/types';
 
-import { card, favButton, image } from './styles';
+import { card, image } from './styles';
 
 interface IProductCardUi extends CardProps {
   size: 'small' | 'medium';
@@ -44,17 +41,6 @@ export default function ProductCardUi({
 }: IProductCardUi) {
   return (
     <Card elevation={0} {...props} sx={(card(size), { ...props.sx })}>
-      <IconButton
-        size="small"
-        type="button"
-        onClick={(e) => {
-          e.preventDefault();
-          onFavouriteClick();
-        }}
-        sx={favButton(size)}
-      >
-        <FavoriteBorderOutlined />
-      </IconButton>
       <Stack
         direction="column"
         justifyContent="center"

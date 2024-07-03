@@ -23,6 +23,7 @@
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
+    "@mui/x-charts": "^7.8.0",
     "@reduxjs/toolkit": "^2.2.5",
     "@types/react-redux": "^7.1.33",
     "react": "^18.0.0",

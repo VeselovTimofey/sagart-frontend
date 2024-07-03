@@ -10,7 +10,9 @@ import {
 import type { IProduct } from '../../../utils/types';
 import BreadcrumbsWidget from '../../../components/BreadcrumbsWidget';
 import ProductsList from '../../../components/ProductsList';
-import { PREFIXPATH } from '../../../utils/constant/routes';
+import { price } from '../../../utils/mock/priceHistory';
+
+import PriceAnalytics from './PriceAnalytics';
 
 interface IProductPageUi extends IProduct {
   otherWorksByAuthor: IProduct[] | null;
@@ -57,13 +59,13 @@ export default function ProductPageUi({
               {/* TODO: Add data */}
               <Link
                 component={RouterLink}
-                to={PREFIXPATH}
+                to={'/'}
                 sx={{ marginBottom: '3.5rem' }}
               >
                 Винсент Ван Гог
               </Link>
-              <Stack sx={{ height: '100px', backgroundColor: 'beige' }}>
-                <Typography>Здесь цены и опции</Typography>
+              <Stack>
+                <PriceAnalytics data={price} />
                 {/* TODO: Here goes component with options like 'origin', 'limited edirion' etc */}
               </Stack>
             </Stack>
@@ -153,12 +155,13 @@ export default function ProductPageUi({
         <Stack direction="row" gap={3}>
           <Box
             component="img"
-            src="/mock-image.png.webp"
+            src="/sagart-frontend/self-portrait.jpeg"
             alt=""
             sx={{
               width: '12.5rem',
               height: '12.5rem',
               borderRadius: '100%',
+              objectFit: 'cover',
             }}
           />
           <Stack gap={2.5}>
@@ -199,7 +202,7 @@ export default function ProductPageUi({
           <Stack gap={4}>
             <Stack gap={0.5}>
               <Typography variant="h2">Другие работы художника</Typography>
-              <Link component={RouterLink} to={PREFIXPATH}>
+              <Link component={RouterLink} to={'/'}>
                 смотреть все &rarr;
               </Link>
             </Stack>
@@ -215,7 +218,7 @@ export default function ProductPageUi({
       <Stack gap={4}>
         <Stack gap={0.5}>
           <Typography variant="h2">Похожие товары</Typography>
-          <Link component={RouterLink} to={PREFIXPATH}>
+          <Link component={RouterLink} to={'/'}>
             смотреть все &rarr;
           </Link>
         </Stack>

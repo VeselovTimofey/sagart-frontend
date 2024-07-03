@@ -19,7 +19,6 @@ import {
 import type { IAuthor, IProduct } from '../../../utils/types';
 import BreadcrumbsWidget from '../../../components/BreadcrumbsWidget';
 import ProductsList from '../../../components/ProductsList';
-import { PREFIXPATH } from '../../../utils/constant/routes';
 
 interface IAuthorPageUi extends IAuthor {
   worksByAuthor: IProduct[] | null;
@@ -75,7 +74,7 @@ export default function AuthorPageUi({
                 size="large"
                 color="primary"
                 LinkComponent={RouterLink}
-                href={PREFIXPATH}
+                href={'/'}
               >
                 <Telegram />
               </IconButton>
@@ -127,7 +126,7 @@ export default function AuthorPageUi({
         <Stack gap={3}>
           <Typography variant="h2">Аналитика</Typography>
           <Stack gap={1} sx={{ maxWidth: '20.5rem' }}>
-            <Button component={RouterLink} variant="contained" to={PREFIXPATH}>
+            <Button component={RouterLink} variant="contained" to={'/'}>
               Купить подписку
             </Button>
             <Typography variant="body2">
@@ -141,7 +140,7 @@ export default function AuthorPageUi({
             <Stack gap={4}>
               <Stack gap={0.5}>
                 <Typography variant="h2">Все работы художника</Typography>
-                <Link component={RouterLink} to={PREFIXPATH}>
+                <Link component={RouterLink} to={'/'}>
                   смотреть все &rarr;
                 </Link>
               </Stack>
