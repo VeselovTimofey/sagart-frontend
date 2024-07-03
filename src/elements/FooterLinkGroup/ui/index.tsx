@@ -1,4 +1,4 @@
-import { Grid, Link, Typography } from '@mui/material';
+import { Box, Link, Stack, Typography } from '@mui/material';
 
 export interface ILink {
   name: string;
@@ -12,20 +12,23 @@ export interface IFooterLinkGroup {
 
 function FooterLinkGroupUi({ name, links }: IFooterLinkGroup) {
   return (
-    <Grid item xs direction="column" container>
-      <Grid item>
-        <Typography component="h3" variant="inherit">
-          {name}
-        </Typography>
-      </Grid>
-      {links.map((link) => (
-        <Grid item key={link.name}>
-          <Link href={link.link}>
-            <Typography component="p">{link.name}</Typography>
-          </Link>
-        </Grid>
-      ))}
-    </Grid>
+    <Stack direction="column" gap={2.5}>
+      <Typography component="h3" variant="body1">
+        {name}
+      </Typography>
+      <Stack
+        component="ul"
+        direction="column"
+        gap={1.5}
+        sx={{ listStyle: 'none', padding: 0, margin: 0 }}
+      >
+        {links.map((link) => (
+          <Box key={link.name}>
+            <Link href={link.link}>{link.name}</Link>
+          </Box>
+        ))}
+      </Stack>
+    </Stack>
   );
 }
 

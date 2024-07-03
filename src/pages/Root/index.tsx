@@ -18,7 +18,7 @@ function MainPage() {
       component="main"
       direction="column"
       gap={10}
-      sx={{ paddingTop: '2.5rem' }}
+      sx={{ paddingTop: '2.5rem', paddingBottom: '10rem' }}
     >
       <LastNews />
       <Categories />
