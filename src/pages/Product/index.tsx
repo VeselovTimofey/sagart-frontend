@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import artworks from '../../utils/mock/artworks';
 import ProductPageUi from './ui';
 import { AppStore } from '../../utils/types/appDispatch';
 import { authors } from '../../utils/mock/authors';
@@ -14,8 +13,10 @@ export default function ProductPage() {
   const user =
     authors.find((currentAuthors) => currentAuthors.id === product.author_id) ||
     authors[0];
-  const otherWorksByAuthor = artworks.slice(5);
-  const similarWorks = artworks;
+  const otherWorksByAuthor = allProduct.filter(
+    (currentProduct) => currentProduct.author_id === user.id
+  );
+  const similarWorks = allProduct.slice(5);
 
   return (
     <ProductPageUi
