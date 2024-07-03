@@ -16,6 +16,8 @@ import {
 
 import type { IProduct } from '../../../utils/types';
 
+import { card, favButton, image } from './styles';
+
 interface IProductCardUi extends CardProps {
   size: 'small' | 'medium';
   product: IProduct;
@@ -39,19 +41,7 @@ export default function ProductCardUi({
   ...props
 }: IProductCardUi) {
   return (
-    <Card
-      elevation={0}
-      {...props}
-      sx={{
-        width: size === 'small' ? 224 : 245,
-        height: 399,
-        borderRadius: 0,
-        ...props.sx,
-        display: 'flex',
-        flexDirection: 'column',
-        position: 'relative',
-      }}
-    >
+    <Card elevation={0} {...props} sx={(card(size), { ...props.sx })}>
       <IconButton
         size="small"
         type="button"
@@ -59,34 +49,40 @@ export default function ProductCardUi({
           e.preventDefault();
           onFavouriteClick();
         }}
-        sx={{
-          position: 'absolute',
-          top: size === 'small' ? '0.375rem' : '0.5rem',
-          right: size === 'small' ? '0.375rem' : '0.5rem',
-          width: '1.5rem',
-          height: '1.5rem',
-        }}
+        sx={favButton(size)}
       >
         <FavoriteBorderOutlined />
       </IconButton>
-      <CardMedia
-        component="img"
+      <Stack
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
         sx={{
-          height: '14.625rem',
-          padding: size === 'small' ? '0.75rem' : '1.25rem',
-          objectFit: 'contain',
-          width: `calc(100% - ${size === 'small' ? '1.5rem' : '2.5rem'})`,
-          aspectRatio: 1,
           backgroundColor: '#FAFAFA',
         }}
-        image={product.preview_photo}
-        title={product.name}
-      />
-      <Stack direction="column" justifyContent="space-between" flexGrow={1}>
+      >
+        <CardMedia
+          component="img"
+          sx={image(size)}
+          src={product.preview_photo}
+          title={product.name}
+        />
+      </Stack>
+      <Stack
+        direction="column"
+        justifyContent="space-between"
+        flexGrow={1}
+        sx={{ paddingTop: '0.75rem' }}
+      >
         <CardContent sx={{ padding: 0 }}>
           <Stack direction="column" gap={1}>
             <Stack direction="column" gap={0.5}>
-              <Typography variant="h5" fontSize={20} lineHeight={1.2}>
+              <Typography
+                variant="h5"
+                fontSize={20}
+                fontWeight={600}
+                lineHeight={1.2}
+              >
                 Нисо Атаханова
               </Typography>
               <Typography variant="body1" color="text.primary">
@@ -94,10 +90,10 @@ export default function ProductCardUi({
               </Typography>
             </Stack>
             <Stack direction="column" gap={0}>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body1" color="text.secondary">
                 {product.type}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body1" color="text.secondary">
                 {product.size}
               </Typography>
             </Stack>

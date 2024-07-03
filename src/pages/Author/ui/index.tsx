@@ -57,7 +57,7 @@ export default function AuthorPageUi({
   };
 
   return (
-    <Stack component="main" direction="column" px="3.75rem" gap={3}>
+    <Stack component="main" direction="column" px={7.5} pt={5} pb={20} gap={3}>
       <BreadcrumbsWidget />
       <Stack direction="column" gap={7.5} position="relative">
         {social_networks && (

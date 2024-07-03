@@ -1,6 +1,7 @@
-import { Grid } from '@mui/material';
-
 import { useDispatch } from 'react-redux';
+
+import { Stack } from '@mui/material';
+
 import { AppDispatch } from '../../utils/types/appDispatch';
 import lastNewsAction from '../../store/actions/lastNewsAction';
 
@@ -13,24 +14,18 @@ function MainPage() {
   dispatch(lastNewsAction());
 
   return (
-    /* //TODO: Set the width of main and its section to certain sizes */
-    <Grid component="main" direction="column" alignItems="center" container>
-      <Grid item>
-        <LastNews />
-      </Grid>
-      <Grid item>
-        <Categories />
-      </Grid>
-      <Grid style={{ width: '1321px' }} item>
-        <ShowCase title="Новинки" link="#" />
-      </Grid>
-      <Grid style={{ width: '1321px' }} item>
-        <ShowCase title="Работы до 50 000 рублей" link="#" />
-      </Grid>
-      <Grid style={{ width: '1321px' }} item>
-        <ShowCase title="Работы до 500 000 рублей" link="#" />
-      </Grid>
-    </Grid>
+    <Stack
+      component="main"
+      direction="column"
+      gap={10}
+      sx={{ paddingTop: '2.5rem', paddingBottom: '10rem' }}
+    >
+      <LastNews />
+      <Categories />
+      <ShowCase title="Новинки" link="#" />
+      <ShowCase title="Работы до 50 000 рублей" link="#" />
+      <ShowCase title="Работы до 500 000 рублей" link="#" />
+    </Stack>
   );
 }
 

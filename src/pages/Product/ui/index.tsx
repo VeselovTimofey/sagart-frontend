@@ -26,7 +26,14 @@ export default function ProductPageUi({
   genre,
 }: IProductPageUi) {
   return (
-    <Stack component="main" direction="column" px="3.75rem" gap={7.5}>
+    <Stack
+      component="main"
+      direction="column"
+      px={7.5}
+      pt={5}
+      pb={20}
+      gap={7.5}
+    >
       <Stack direction="column" gap={3}>
         <BreadcrumbsWidget />
         <Stack component="section" direction="row" gap={3}>
