@@ -1,4 +1,11 @@
-import { Button, Checkbox, Grid, TextField, Typography } from '@mui/material';
+import {
+  Button,
+  Checkbox,
+  FormControlLabel,
+  Stack,
+  TextField,
+  Typography,
+} from '@mui/material';
 
 import INewsSubscriptionState, {
   IButtonChange,
@@ -26,63 +33,46 @@ function NewsSubscriptionUi({
   }
 
   return (
-    <Grid
-      item
-      xs
-      direction="column"
-      justifyContent="center"
-      alignItems="stretch"
-      container
+    <Stack
       component="form"
+      direction="column"
+      gap={2}
       noValidate
       onSubmit={(e) => {
         e.preventDefault();
         onNewsSubscriptionClick();
       }}
     >
-      <Grid item>
-        <Typography variant="h3" component="h3">
-          ПОДПИСКА НА НОВОСТИ
-        </Typography>
-      </Grid>
-      <Grid
-        item
-        justifyContent="space-between"
-        alignItems="center"
-        spacing={2}
-        container
-      >
-        <Grid item>
+      <Typography variant="body1" component="h2">
+        ПОДПИСКА НА НОВОСТИ
+      </Typography>
+      <Stack direction="column" gap={0.5}>
+        <Stack direction="row" gap={1} alignItems="flex-start">
           <TextField
-            placeholder="Email *"
+            size="small"
+            placeholder="Email*"
             onChange={onEmailChange}
             error={subscribeValue.error !== ''}
             helperText={helperTextEmail}
           />
-        </Grid>
-        <Grid item>
-          <Button type="submit" variant="contained" disableElevation>
+          <Button
+            type="submit"
+            variant="contained"
+            disableElevation
+            size="large"
+          >
             Подписаться
           </Button>
-        </Grid>
-      </Grid>
-      <Grid
-        item
-        justifyContent="flex-start"
-        alignItems="center"
-        spacing={1}
-        container
-      >
-        <Grid item>
-          <Checkbox onClick={onAgreementChange} />
-        </Grid>
-        <Grid item>
-          <Typography variant="body1" component="span">
-            Соглашение на обработку персональных данных
-          </Typography>
-        </Grid>
-      </Grid>
-    </Grid>
+        </Stack>
+        <Stack direction="row" gap={1} alignItems="center" color="secondary">
+          <FormControlLabel
+            sx={{ color: '#A5A6A6', fontSize: '0.875rem', fontWeight: 400 }}
+            control={<Checkbox onClick={onAgreementChange} color="secondary" />}
+            label="Соглашение на обработку персональных данных"
+          />
+        </Stack>
+      </Stack>
+    </Stack>
   );
 }
 

@@ -23,32 +23,18 @@ function MainPage() {
   );
 
   return (
-    /* //TODO: Set the width of main and its section to certain sizes */
-    <Grid component="main" direction="column" alignItems="center" container>
-      <Grid item>
-        <LastNews />
-      </Grid>
-      <Grid item>
-        <Categories />
-      </Grid>
-      <Grid style={{ width: '1321px' }} item>
-        <ShowCase title="Новинки" link="#" products={newProducts} />
-      </Grid>
-      <Grid style={{ width: '1321px' }} item>
-        <ShowCase
-          title="Работы до 50 000 рублей"
-          link="#"
-          products={cheapProducts}
-        />
-      </Grid>
-      <Grid style={{ width: '1321px' }} item>
-        <ShowCase
-          title="Работы до 500 000 рублей"
-          link="#"
-          products={expensiveProducts}
-        />
-      </Grid>
-    </Grid>
+    <Stack
+      component="main"
+      direction="column"
+      gap={10}
+      sx={{ paddingTop: '2.5rem', paddingBottom: '10rem' }}
+    >
+      <LastNews />
+      <Categories />
+      <ShowCase title="Новинки" link="#" products={newProducts} />
+      <ShowCase title="Работы до 50 000 рублей" link="#" products={cheapProducts} />
+      <ShowCase title="Работы до 500 000 рублей" link="#" products={expensiveProducts} />
+    </Stack>
   );
 }
 

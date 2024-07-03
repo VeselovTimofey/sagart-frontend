@@ -15,7 +15,7 @@ interface IProductCard extends CardProps {
  * Product Card Component.
  * @param props - MUI Card extra props
  * @param props.product - Product data
- * @param props.size - Card size. Small for 224px width, medium for 245px width
+ * @param props.size - Card size. Small for 224px width, medium for 244px width
  */
 export default function ProductCard({ product, size, ...props }: IProductCard) {
   const toggleIsFavourite = useCallback(
