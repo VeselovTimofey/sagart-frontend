@@ -158,12 +158,13 @@ export default function ProductPageUi({
         <Stack direction="row" gap={3}>
           <Box
             component="img"
-            src="/mock-image.png.webp"
+            src="/sagart-frontend/self-portrait.jpeg"
             alt=""
             sx={{
               width: '12.5rem',
               height: '12.5rem',
               borderRadius: '100%',
+              objectFit: 'cover',
             }}
           />
           <Stack gap={2.5}>

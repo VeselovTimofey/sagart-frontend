@@ -73,11 +73,12 @@ function HeaderUi({
               type="button"
               onClick={handleAuthOpen}
               sx={{ fontSize: '1rem' }}
+              disableElevation
             >
               Вход
             </Button>
           ) : (
-            <Button variant="contained" type="button">
+            <Button variant="contained" type="button" disableElevation>
               Инвестиции в искусство
             </Button>
           )}
