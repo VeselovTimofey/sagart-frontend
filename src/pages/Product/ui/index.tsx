@@ -21,6 +21,10 @@ export default function ProductPageUi({
   otherWorksByAuthor,
   similarWorks,
   type,
+  category,
+  preview_photo,
+  edition,
+  status,
   name,
   size,
   make_year,
@@ -38,7 +42,16 @@ export default function ProductPageUi({
       <Stack direction="column" gap={3}>
         <BreadcrumbsWidget />
         <Stack component="section" direction="row" gap={3}>
-          <Box sx={{ width: 760, height: 579, backgroundColor: 'salmon' }} />
+          <Box
+            sx={{
+              width: 760,
+              height: 579,
+              backgroundImage: `url(${preview_photo})`,
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }}
+          />
           <Stack
             component="article"
             direction="column"
@@ -46,11 +59,10 @@ export default function ProductPageUi({
           >
             <Stack>
               <Stack gap={2.5} sx={{ marginBottom: '2rem' }}>
-                <Typography>{type}</Typography>
+                <Typography>{category}</Typography>
                 <Typography variant="h2">{name}</Typography>
                 <Stack>
-                  {/* TODO: Add data */}
-                  <Typography>Холст, масло</Typography>
+                  <Typography>{type}</Typography>
                   <Typography>{size}</Typography>
                 </Stack>
               </Stack>
@@ -119,13 +131,11 @@ export default function ProductPageUi({
           </Stack>
           <Stack gap={1}>
             <Typography>Уникальность работы:</Typography>
-            {/* TODO: Add data */}
-            <Typography>Уникальная работа</Typography>
+            <Typography>{edition}</Typography>
           </Stack>
           <Stack gap={1}>
             <Typography>Категория:</Typography>
-            {/* TODO: Add data */}
-            <Typography>{type}</Typography>
+            <Typography>{category}</Typography>
           </Stack>
           <Stack gap={1}>
             <Typography>Стиль:</Typography>
@@ -133,13 +143,11 @@ export default function ProductPageUi({
           </Stack>
           <Stack gap={1}>
             <Typography>Жанр:</Typography>
-            {/* TODO: Add data */}
-            <Typography>Современный пейзаж</Typography>
+            <Typography>{genre}</Typography>
           </Stack>
           <Stack gap={1}>
             <Typography>Рамка:</Typography>
-            {/* TODO: Add data */}
-            <Typography>Включено</Typography>
+            <Typography>{status}</Typography>
           </Stack>
           <Stack gap={1}>
             <Typography>Сертификат подлинности:</Typography>
