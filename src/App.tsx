@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
 
@@ -13,8 +15,15 @@ import MainPage from './pages/Root';
 import CataloguePage from './pages/Catalogue';
 import ProductPage from './pages/Product';
 import AuthorPage from './pages/Author';
+import { AppDispatch } from './utils/types/appDispatch';
+import allProductsAction from './store/actions/allProductsAction';
 
 function App() {
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    dispatch(allProductsAction());
+  }, [dispatch]);
+
   return (
     <BrowserRouter>
       <ThemeProvider {...{ theme }}>

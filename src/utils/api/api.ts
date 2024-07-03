@@ -51,3 +51,12 @@ export async function getLastNews() {
     headers: new Headers({ 'Content-Type': 'application/json' }),
   });
 }
+
+// all products request
+export async function getAllProducts() {
+  return api({
+    method: 'GET',
+    endPath: '/Product',
+    headers: new Headers({ 'Content-Type': 'application/json' }),
+  });
+}
