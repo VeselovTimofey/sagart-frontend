@@ -1,17 +1,18 @@
 import { Grid, Link, Slider, Typography } from '@mui/material';
 
 import style from '../style/styles.module';
-import ILastNewsState, {
-  ISliderChange,
-} from '../../../utils/types/lastNewsState';
+import { INews, ISliderChange } from '../../../utils/types/lastNewsState';
 
 interface ILastNewsUi {
-  lastNewsValue: ILastNewsState;
+  news: INews[];
   onCurrentNewsChange: ISliderChange;
+  currentNews: {
+    value: 0 | 1 | 2;
+  };
 }
 
-function LastNewsUi({ lastNewsValue, onCurrentNewsChange }: ILastNewsUi) {
-  const CurrentNews = lastNewsValue.news[lastNewsValue.currentNews.value];
+function LastNewsUi({ news, onCurrentNewsChange, currentNews }: ILastNewsUi) {
+  const CurrentNews = news[currentNews.value];
 
   return (
     <Grid component="section" direction="column" alignItems="center" container>

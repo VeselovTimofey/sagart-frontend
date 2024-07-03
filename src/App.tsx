@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
@@ -14,7 +15,9 @@ import allProductsAction from './store/actions/allProductsAction';
 
 function App() {
   const dispatch = useDispatch<AppDispatch>();
-  dispatch(allProductsAction());
+  useEffect(() => {
+    dispatch(allProductsAction());
+  }, [dispatch]);
 
   return (
     <BrowserRouter>

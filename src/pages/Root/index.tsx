@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Grid } from '@mui/material';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,16 +11,14 @@ import ShowCase from '../../components/Showcase';
 
 function MainPage() {
   const dispatch = useDispatch<AppDispatch>();
-  dispatch(lastNewsAction());
+  useEffect(() => {
+    dispatch(lastNewsAction());
+  }, [dispatch]);
 
-  const productsValue = useSelector(
-    (state: AppStore) => state.products.products
-  );
-  const newProducts = productsValue.slice(0, 10);
-  const cheapProducts = productsValue.filter(
-    (product) => product.price < 50000
-  );
-  const expensiveProducts = productsValue.filter(
+  const { products } = useSelector((state: AppStore) => state.products);
+  const newProducts = products.slice(0, 10);
+  const cheapProducts = products.filter((product) => product.price < 50000);
+  const expensiveProducts = products.filter(
     (product) => product.price < 500000 && product.price > 50000
   );
 
