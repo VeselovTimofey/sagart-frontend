@@ -6,17 +6,17 @@ import { authors } from '../../utils/mock/authors';
 
 export default function ProductPage() {
   const { productId } = useParams();
-  const allProduct = useSelector((state: AppStore) => state.products.products);
+  const { products } = useSelector((state: AppStore) => state.products);
   const product =
-    allProduct.find((currentProduct) => `${currentProduct.id}` === productId) ||
-    allProduct[0];
+    products.find((currentProduct) => `${currentProduct.id}` === productId) ||
+    products[0];
   const user =
     authors.find((currentAuthors) => currentAuthors.id === product.author_id) ||
     authors[0];
-  const otherWorksByAuthor = allProduct.filter(
+  const otherWorksByAuthor = products.filter(
     (currentProduct) => currentProduct.author_id === user.id
   );
-  const similarWorks = allProduct.slice(5);
+  const similarWorks = products.slice(5);
 
   return (
     <ProductPageUi
