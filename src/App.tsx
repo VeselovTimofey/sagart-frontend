@@ -17,7 +17,6 @@ import ProductPage from './pages/Product';
 import AuthorPage from './pages/Author';
 import { AppDispatch } from './utils/types/appDispatch';
 import allProductsAction from './store/actions/allProductsAction';
-import { PREFIXPATH } from './utils/constant/routes';
 
 function App() {
   const dispatch = useDispatch<AppDispatch>();
@@ -26,28 +25,19 @@ function App() {
   }, [dispatch]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={'sagart-frontend'}>
       <ThemeProvider {...{ theme }}>
         <CssBaseline />
         <Header />
         <Routes>
           {/* // TODO: Add data prefetching in Route component  */}
           {/* // TODO: Use param to filter request (on router side) */}
-          <Route
-            path={`${PREFIXPATH}/catalogue/:category?`}
-            Component={CataloguePage}
-          />
+          <Route path={`/catalogue/:category?`} Component={CataloguePage} />
           {/* NOTE: Product page */}
-          <Route
-            path={`${PREFIXPATH}/products/:productId`}
-            Component={ProductPage}
-          />
+          <Route path={`/products/:productId`} Component={ProductPage} />
           {/* NOTE: Author page */}
-          <Route
-            path={`${PREFIXPATH}/authors/:authorId`}
-            Component={AuthorPage}
-          />
-          <Route index path={PREFIXPATH} Component={MainPage} />
+          <Route path={`/authors/:authorId`} Component={AuthorPage} />
+          <Route index Component={MainPage} />
         </Routes>
         <Footer />
       </ThemeProvider>
