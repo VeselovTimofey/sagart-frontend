@@ -6,7 +6,6 @@ import type { IProduct } from '../../../utils/types';
 import ProductCard from '../../ProductCard';
 
 import { list } from './styles';
-import { PREFIXPATH } from '../../../utils/constant/routes';
 
 interface IProductsListUi {
   size: 'medium' | 'large';
@@ -31,7 +30,7 @@ export default function ProductsListUi({
         <Box component="li" key={product.id} sx={{ width: '100%' }}>
           <Link
             component={RouterLink}
-            to={`${PREFIXPATH}/products/${product.id}`}
+            to={`/products/${product.id}`}
             sx={{ textDecoration: 'none', color: 'inherit' }}
             preventScrollReset={true}
           >
