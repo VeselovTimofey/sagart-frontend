@@ -10,7 +10,10 @@ import {
 import type { IProduct } from '../../../utils/types';
 import BreadcrumbsWidget from '../../../components/BreadcrumbsWidget';
 import ProductsList from '../../../components/ProductsList';
+import { price } from '../../../utils/mock/priceHistory';
 import { PREFIXPATH } from '../../../utils/constant/routes';
+
+import PriceAnalytics from './PriceAnalytics';
 
 interface IProductPageUi extends IProduct {
   otherWorksByAuthor: IProduct[] | null;
@@ -62,8 +65,8 @@ export default function ProductPageUi({
               >
                 Винсент Ван Гог
               </Link>
-              <Stack sx={{ height: '100px', backgroundColor: 'beige' }}>
-                <Typography>Здесь цены и опции</Typography>
+              <Stack>
+                <PriceAnalytics data={price} />
                 {/* TODO: Here goes component with options like 'origin', 'limited edirion' etc */}
               </Stack>
             </Stack>
