@@ -60,3 +60,12 @@ export async function getAllProducts() {
     headers: new Headers({ 'Content-Type': 'application/json' }),
   });
 }
+
+// all author request
+export async function getAllAuthor() {
+  return api({
+    method: 'GET',
+    endPath: '/Author',
+    headers: new Headers({ 'Content-Type': 'application/json' }),
+  });
+}
