@@ -17,11 +17,15 @@ import ProductPage from './pages/Product';
 import AuthorPage from './pages/Author';
 import { AppDispatch } from './utils/types/appDispatch';
 import allProductsAction from './store/actions/allProductsAction';
+import allAuthorAction from './store/actions/allAuthorAction';
 
 function App() {
   const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
     dispatch(allProductsAction());
+  }, [dispatch]);
+  useEffect(() => {
+    dispatch(allAuthorAction());
   }, [dispatch]);
 
   return (
