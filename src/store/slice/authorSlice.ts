@@ -11,7 +11,7 @@ const initialState: IAuthorsState = {
       last_name: '',
       middle_name: '',
       email: '',
-      role: [''],
+      role: ['author'],
       nick_name: '',
       photo: '',
       videocard: '',
@@ -19,11 +19,11 @@ const initialState: IAuthorsState = {
       education: [
         {
           type: '',
-          level: '',
+          level: 'Высшее',
           institute: '',
         },
       ],
-      gender: '',
+      gender: null,
       year_of_birth: 0,
       place_of_birth: '',
       solo_shows: false,
@@ -57,7 +57,7 @@ const authorSlice = createSlice({
         const newState = {
           ...state,
           isLoading: false,
-          products: action.payload,
+          authors: action.payload,
         };
         return newState;
       })
