@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import IAuthorsState from '../../utils/types/authorsState';
+import IAuthorsState, { IAuthor } from '../../utils/types/authorsState';
 import allAuthorAction from '../actions/allAuthorAction';
+import mockAuthors from '../../utils/mock/authors.json';
 
 const initialState: IAuthorsState = {
   authors: [
@@ -67,6 +68,9 @@ const authorSlice = createSlice({
           isLoading: false,
           error: action.error.message,
         };
+        if (action.error.message === 'Rejected') {
+          newState.authors = mockAuthors as IAuthor[];
+        }
         return newState;
       });
   },
