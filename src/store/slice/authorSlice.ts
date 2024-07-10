@@ -6,7 +6,7 @@ import mockAuthors from '../../utils/mock/authors.json';
 const initialState: IAuthorsState = {
   authors: [
     {
-      id: -1,
+      id: '-1',
       phone: '',
       first_name: '',
       last_name: '',

@@ -1,9 +1,9 @@
 interface IProduct {
-  id: number;
+  id: string;
   aricle_num: number;
   name: string;
-  descrition_id: number;
-  author_id: number;
+  descrition_id: string;
+  author_id: string;
   make_year: number;
   size: string;
   edition: string;

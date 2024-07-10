@@ -1,7 +1,7 @@
 export type IUserRole = 'author' | 'buyer';
 
 export interface IUser {
-  id: number;
+  id: string;
   phone: string;
   first_name: string;
   last_name: string;
