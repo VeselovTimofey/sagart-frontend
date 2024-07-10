@@ -334,7 +334,7 @@ components:
       type: object
       properties:
         id:
-          type: integer
+          type: string
         login:
           type: string 
         phone:
@@ -355,7 +355,7 @@ components:
       type: object
       properties:
         id:
-          type: integer
+          type: string
         first_name:
           type: string
         last_name:
@@ -391,13 +391,13 @@ components:
       type: object
       properties:
         id:
-          type: integer
+          type: string
         product_name:
           type: string
         product_descrition_id:
-          type: integer
+          type: string
         product_author_id:  
-          type: integer   
+          type: string   
         product_make_date:
           type: string
         product_size:
@@ -427,7 +427,7 @@ components:
       type: object
       properties:
         id:
-          type: integer
+          type: string
         status:
           type: string
         start_date:
@@ -446,7 +446,7 @@ components:
       type: object
       properties:
         id:
-          type: integer
+          type: string
         article:
           type: string
         

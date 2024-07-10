@@ -46,11 +46,11 @@
   ],
   "Product": [
     {
-      "id": 1,
+      "id": "1",
       "aricle_num": 1001,
       "name": "Силуэт танцпола",
-      "descrition_id": 101,
-      "author_id": 1,
+      "descrition_id": "101",
+      "author_id": "1",
       "make_year": 1889,
       "size": "60 x 40 см",
       "edition": "Original",
@@ -69,11 +69,11 @@
       "price": 55000
     },
     {
-      "id": 2,
+      "id": "2",
       "aricle_num": 1002,
       "name": "Athena",
-      "descrition_id": 102,
-      "author_id": 2,
+      "descrition_id": "102",
+      "author_id": "2",
       "make_year": 1503,
       "size": "150 x 200 см",
       "edition": "Original",
@@ -92,11 +92,11 @@
       "price": 2127215
     },
     {
-      "id": 3,
+      "id": "3",
       "aricle_num": 1003,
       "name": "Вечер перед крепким",
-      "descrition_id": 103,
-      "author_id": 3,
+      "descrition_id": "103",
+      "author_id": "3",
       "make_year": 2004,
       "size": "50 x 40 см",
       "edition": "Original",
@@ -115,11 +115,11 @@
       "price": 39000
     },
     {
-      "id": 4,
+      "id": "4",
       "aricle_num": 1004,
       "name": "Abstract flowers",
-      "descrition_id": 104,
-      "author_id": 4,
+      "descrition_id": "104",
+      "author_id": "4",
       "make_year": 2010,
       "size": "80 x 100 см",
       "edition": "Original",
@@ -138,11 +138,11 @@
       "price": 27000
     },
     {
-      "id": 5,
+      "id": "5",
       "aricle_num": 1005,
       "name": "Красная ваза",
-      "descrition_id": 105,
-      "author_id": 5,
+      "descrition_id": "105",
+      "author_id": "5",
       "make_year": 1937,
       "size": "110 x 80 см",
       "edition": "Original",
@@ -161,11 +161,11 @@
       "price": 70000
     },
     {
-      "id": 6,
+      "id": "6",
       "aricle_num": 1006,
       "name": "Мадарао",
-      "descrition_id": 106,
-      "author_id": 6,
+      "descrition_id": "106",
+      "author_id": "6",
       "make_year": 2005,
       "size": "30 x 46 см",
       "edition": "Original",
@@ -184,11 +184,11 @@
       "price": 85000
     },
     {
-      "id": 7,
+      "id": "7",
       "aricle_num": 1007,
       "name": "Сияй!",
-      "descrition_id": 107,
-      "author_id": 3,
+      "descrition_id": "107",
+      "author_id": "3",
       "make_year": 2008,
       "size": "80 x 60 см",
       "edition": "Original",
@@ -207,11 +207,11 @@
       "price": 35000
     },
     {
-      "id": 8,
+      "id": "8",
       "aricle_num": 1008,
       "name": "Утро в Париже",
-      "descrition_id": 108,
-      "author_id": 2,
+      "descrition_id": "108",
+      "author_id": "2",
       "make_year": 1525,
       "size": "100 x 140 см",
       "edition": "Original",
@@ -230,11 +230,11 @@
       "price": 1000000
     },
     {
-      "id": 9,
+      "id": "9",
       "aricle_num": 1009,
       "name": "Любовники",
-      "descrition_id": 109,
-      "author_id": 4,
+      "descrition_id": "109",
+      "author_id": "4",
       "make_year": 2010,
       "size": "50 x 50 см",
       "edition": "Original",
@@ -253,11 +253,11 @@
       "price": 120000
     },
     {
-      "id": 10,
+      "id": "10",
       "aricle_num": 1010,
       "name": "Красный квадрат",
-      "descrition_id": 110,
-      "author_id": 5,
+      "descrition_id": "110",
+      "author_id": "5",
       "make_year": 2014,
       "size": "78 см x 65.3 см",
       "edition": "Original",
@@ -276,11 +276,11 @@
       "price": 300000
     },
     {
-      "id": 11,
+      "id": "11",
       "aricle_num": 1011,
       "name": "Wild wild west",
-      "descrition_id": 111,
-      "author_id": 5,
+      "descrition_id": "111",
+      "author_id": "5",
       "make_year": 1930,
       "size": "80 x 120 см",
       "edition": "Original",
@@ -299,11 +299,11 @@
       "price": 45000
     },
     {
-      "id": 12,
+      "id": "12",
       "aricle_num": 1012,
       "name": "Morning in Paris",
-      "descrition_id": 112,
-      "author_id": 4,
+      "descrition_id": "112",
+      "author_id": "4",
       "make_year": 1486,
       "size": "100 x 140 см",
       "edition": "Original",
@@ -322,11 +322,11 @@
       "price": 100000
     },
     {
-      "id": 13,
+      "id": "13",
       "aricle_num": 1013,
       "name": "Город",
-      "descrition_id": 113,
-      "author_id": 4,
+      "descrition_id": "113",
+      "author_id": "4",
       "make_year": 2015,
       "size": "100 x 140 см",
       "edition": "Original",
@@ -345,11 +345,11 @@
       "price": 55000
     },
     {
-      "id": 14,
+      "id": "14",
       "aricle_num": 1014,
       "name": "Общество",
-      "descrition_id": 114,
-      "author_id": 6,
+      "descrition_id": "114",
+      "author_id": "6",
       "make_year": 2018,
       "size": "100 x 140 см",
       "edition": "Original",
@@ -368,11 +368,11 @@
       "price": 30000
     },
     {
-      "id": 15,
+      "id": "15",
       "aricle_num": 1015,
       "name": "Путешествие",
-      "descrition_id": 115,
-      "author_id": 3,
+      "descrition_id": "115",
+      "author_id": "3",
       "make_year": 2011,
       "size": "80 x 60 см",
       "edition": "Original",
@@ -391,11 +391,11 @@
       "price": 10000
     },
     {
-      "id": 16,
+      "id": "16",
       "aricle_num": 1016,
       "name": "Вокзал",
-      "descrition_id": 116,
-      "author_id": 4,
+      "descrition_id": "116",
+      "author_id": "4",
       "make_year": 2012,
       "size": "75 x 50 см",
       "edition": "Original",
@@ -414,11 +414,11 @@
       "price": 75000
     },
     {
-      "id": 17,
+      "id": "17",
       "aricle_num": 1017,
       "name": "Загадочный дом",
-      "descrition_id": 117,
-      "author_id": 5,
+      "descrition_id": "117",
+      "author_id": "5",
       "make_year": 2016,
       "size": "78 см x 65.3 см",
       "edition": "Original",
@@ -437,11 +437,11 @@
       "price": 30000
     },
     {
-      "id": 18,
+      "id": "18",
       "aricle_num": 1018,
       "name": "Кот",
-      "descrition_id": 118,
-      "author_id": 4,
+      "descrition_id": "118",
+      "author_id": "4",
       "make_year": 2018,
       "size": "80 x 100 см",
       "edition": "Original",
@@ -460,11 +460,11 @@
       "price": 3000
     },
     {
-      "id": 19,
+      "id": "19",
       "aricle_num": 1019,
       "name": "Шестерни",
-      "descrition_id": 119,
-      "author_id": 3,
+      "descrition_id": "119",
+      "author_id": "3",
       "make_year": 2019,
       "size": "50 x 40 см",
       "edition": "Original",
@@ -483,11 +483,11 @@
       "price": 55000
     },
     {
-      "id": 20,
+      "id": "20",
       "aricle_num": 1020,
       "name": "Заснеженность",
-      "descrition_id": 120,
-      "author_id": 6,
+      "descrition_id": "120",
+      "author_id": "6",
       "make_year": 2016,
       "size": "100 x 140 см",
       "edition": "Original",
@@ -506,11 +506,11 @@
       "price": 30000
     },
     {
-      "id": 21,
+      "id": "21",
       "aricle_num": 1021,
       "name": "Улица",
-      "descrition_id": 121,
-      "author_id": 5,
+      "descrition_id": "121",
+      "author_id": "5",
       "make_year": 1945,
       "size": "80 x 120 см",
       "edition": "Original",
@@ -529,11 +529,11 @@
       "price": 120000
     },
     {
-      "id": 22,
+      "id": "22",
       "aricle_num": 1022,
       "name": "Парадная",
-      "descrition_id": 122,
-      "author_id": 6,
+      "descrition_id": "122",
+      "author_id": "6",
       "make_year": 2021,
       "size": "100 x 140 см",
       "edition": "Original",
@@ -554,7 +554,7 @@
   ],
   "Author": [
     {
-      "id": 1,
+      "id": "1",
       "phone": "+1234567890",
       "first_name": "John",
       "last_name": "Doe",
@@ -588,7 +588,7 @@
       "style_works": [{ "name": "Abstract" }, { "name": "Modern" }]
     },
     {
-      "id": 2,
+      "id": "2",
       "phone": "+1987654321",
       "first_name": "Jane",
       "last_name": "Smith",
@@ -619,7 +619,7 @@
       "style_works": [{ "name": "Impressionism" }]
     },
     {
-      "id": 3,
+      "id": "3",
       "phone": "+1123456789",
       "first_name": "Alice",
       "last_name": "Johnson",
@@ -652,7 +652,7 @@
       "style_works": [{ "name": "Surrealism" }]
     },
     {
-      "id": 4,
+      "id": "4",
       "phone": "+1098765432",
       "first_name": "Bob",
       "last_name": "Brown",
@@ -683,7 +683,7 @@
       "style_works": [{ "name": "Expressionism" }]
     },
     {
-      "id": 5,
+      "id": "5",
       "phone": "+1023456789",
       "first_name": "Charlie",
       "last_name": "Davis",
@@ -717,7 +717,7 @@
       "style_works": [{ "name": "Modern" }, { "name": "Classical" }]
     },
     {
-      "id": 6,
+      "id": "6",
       "phone": "+1543210987",
       "first_name": "Diana",
       "last_name": "Evans",
