@@ -1,11 +1,18 @@
-import artworks from '../../utils/mock/artworks';
-import { authors } from '../../utils/mock/authors';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import AuthorPageUi from './ui';
+import { AppStore } from '../../utils/types/appDispatch';
 
 export default function AuthorPage() {
-  // TODO: Add data requests here
-  const author = authors[0];
-  const worksByAuthor = artworks.slice(5);
+  const { authorId } = useParams();
+  const { authors } = useSelector((state: AppStore) => state.authors);
+  const { products } = useSelector((state: AppStore) => state.products);
+  const author =
+    authors.find((currentAuthor) => `${currentAuthor.id}` === authorId) ||
+    authors[0];
+  const worksByAuthor = products
+    .filter((currentProduct) => currentProduct.author_id === author.id)
+    .slice(5);
 
   return <AuthorPageUi {...author} {...{ worksByAuthor }} />;
 }
