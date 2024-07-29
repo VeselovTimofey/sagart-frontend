@@ -1,7 +1,8 @@
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+
 import ProductPageUi from './ui';
-import { AppStore } from '../../utils/types/appDispatch';
+import type { AppStore } from '../../utils/types/appDispatch';
 
 export default function ProductPage() {
   const { productId } = useParams();

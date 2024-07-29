@@ -4,9 +4,8 @@ import { useSelector } from 'react-redux';
 import type { CardProps } from '@mui/material';
 
 import type { IProduct } from '../../utils/types';
-
+import type { AppStore } from '../../utils/types/appDispatch';
 import ProductCardUi from './ui';
-import { AppStore } from '../../utils/types/appDispatch';
 
 interface IProductCard extends CardProps {
   product: IProduct;
