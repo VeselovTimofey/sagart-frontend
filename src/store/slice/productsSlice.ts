@@ -6,11 +6,11 @@ import mockProduct from '../../utils/mock/products.json';
 const initialState: IProductsState = {
   products: [
     {
-      id: 0,
+      id: '0',
       aricle_num: 0,
       name: '',
-      descrition_id: 0,
-      author_id: 1,
+      descrition_id: '0',
+      author_id: '1',
       make_year: 0,
       size: '',
       edition: '',

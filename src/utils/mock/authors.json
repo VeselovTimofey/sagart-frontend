@@ -1,0 +1,194 @@
+[
+  {
+    "id": "1",
+    "phone": "+1234567890",
+    "first_name": "John",
+    "last_name": "Doe",
+    "middle_name": "A",
+    "email": "john.doe@example.com",
+    "role": ["author"],
+    "nick_name": "Johnny",
+    "photo": "/images/authors/john_doe.jpg",
+    "videocard": "https://www.youtube.com/watch?v=example1",
+    "biography": "John Doe is a contemporary artist known for his abstract works.",
+    "education": [
+      {
+        "type": "Art School",
+        "level": "Высшее",
+        "institute": "Art Institute of Chicago"
+      }
+    ],
+    "gender": "male",
+    "year_of_birth": 1980,
+    "place_of_birth": "New York, USA",
+    "solo_shows": true,
+    "group_shows": true,
+    "collected_private_collectors": true,
+    "collected_major_institutions": true,
+    "winner_top_awards": true,
+    "social_networks": [
+      { "name": "Instagram", "account": "@johnnydoe" },
+      { "name": "Twitter", "account": "@doejohnny" }
+    ],
+    "address": "123 Art St, New York, NY",
+    "style_works": [{ "name": "Abstract" }, { "name": "Modern" }]
+  },
+  {
+    "id": "2",
+    "phone": "+1987654321",
+    "first_name": "Jane",
+    "last_name": "Smith",
+    "middle_name": "B",
+    "email": "jane.smith@example.com",
+    "role": ["author"],
+    "nick_name": null,
+    "photo": "/images/authors/jane_smith.jpg",
+    "videocard": "https://www.youtube.com/watch?v=example2",
+    "biography": "Jane Smith is renowned for her impressionist landscapes.",
+    "education": [
+      {
+        "type": "Fine Arts College",
+        "level": "Высшее",
+        "institute": "Royal College of Art"
+      }
+    ],
+    "gender": "famale",
+    "year_of_birth": 1975,
+    "place_of_birth": "London, UK",
+    "solo_shows": true,
+    "group_shows": true,
+    "collected_private_collectors": true,
+    "collected_major_institutions": false,
+    "winner_top_awards": false,
+    "social_networks": [{ "name": "Facebook", "account": "JaneSmithArt" }],
+    "address": "456 Paint Rd, London, UK",
+    "style_works": [{ "name": "Impressionism" }]
+  },
+  {
+    "id": "3",
+    "phone": "+1123456789",
+    "first_name": "Alice",
+    "last_name": "Johnson",
+    "middle_name": "C",
+    "email": "alice.johnson@example.com",
+    "role": ["author"],
+    "nick_name": "Ally",
+    "photo": "/images/authors/alice_johnson.jpg",
+    "videocard": "https://www.youtube.com/watch?v=example3",
+    "biography": "Alice Johnson explores surrealism through her vibrant paintings.",
+    "education": [
+      {
+        "type": "Art University",
+        "level": "Специальное",
+        "institute": "Parsons School of Design"
+      }
+    ],
+    "gender": "famale",
+    "year_of_birth": 1985,
+    "place_of_birth": "Los Angeles, USA",
+    "solo_shows": true,
+    "group_shows": false,
+    "collected_private_collectors": true,
+    "collected_major_institutions": true,
+    "winner_top_awards": true,
+    "social_networks": [{ "name": "Instagram", "account": "@alicejohnsonart" }],
+    "address": "789 Color Ln, Los Angeles, CA",
+    "style_works": [{ "name": "Surrealism" }]
+  },
+  {
+    "id": "4",
+    "phone": "+1098765432",
+    "first_name": "Bob",
+    "last_name": "Brown",
+    "middle_name": "D",
+    "email": "bob.brown@example.com",
+    "role": ["author"],
+    "nick_name": null,
+    "photo": "/images/authors/bob_brown.jpg",
+    "videocard": "https://www.youtube.com/watch?v=example4",
+    "biography": "Bob Brown is an expressionist artist with a focus on urban life.",
+    "education": [
+      {
+        "type": "Art Academy",
+        "level": "Высшее",
+        "institute": "Academy of Art University"
+      }
+    ],
+    "gender": "male",
+    "year_of_birth": 1970,
+    "place_of_birth": "Chicago, USA",
+    "solo_shows": false,
+    "group_shows": true,
+    "collected_private_collectors": true,
+    "collected_major_institutions": false,
+    "winner_top_awards": false,
+    "social_networks": [{ "name": "LinkedIn", "account": "BobBrownArt" }],
+    "address": "321 Paint Ave, Chicago, IL",
+    "style_works": [{ "name": "Expressionism" }]
+  },
+  {
+    "id": "5",
+    "phone": "+1023456789",
+    "first_name": "Charlie",
+    "last_name": "Davis",
+    "middle_name": "E",
+    "email": "charlie.davis@example.com",
+    "role": ["author"],
+    "nick_name": "Chuck",
+    "photo": "/images/authors/charlie_davis.jpg",
+    "videocard": "https://www.youtube.com/watch?v=example5",
+    "biography": "Charlie Davis combines modern and classical elements in his works.",
+    "education": [
+      {
+        "type": "Art Institute",
+        "level": "Высшее",
+        "institute": "Pratt Institute"
+      }
+    ],
+    "gender": "male",
+    "year_of_birth": 1990,
+    "place_of_birth": "San Francisco, USA",
+    "solo_shows": true,
+    "group_shows": true,
+    "collected_private_collectors": true,
+    "collected_major_institutions": true,
+    "winner_top_awards": true,
+    "social_networks": [
+      { "name": "Instagram", "account": "@charliedavis" },
+      { "name": "Twitter", "account": "@davischarlie" }
+    ],
+    "address": "123 Sketch Rd, San Francisco, CA",
+    "style_works": [{ "name": "Modern" }, { "name": "Classical" }]
+  },
+  {
+    "id": "6",
+    "phone": "+1543210987",
+    "first_name": "Diana",
+    "last_name": "Evans",
+    "middle_name": "F",
+    "email": "diana.evans@example.com",
+    "role": ["author"],
+    "nick_name": null,
+    "photo": "/images/authors/diana_evans.jpg",
+    "videocard": "https://www.youtube.com/watch?v=example6",
+    "biography": "Diana Evans is known for her minimalist sculptures.",
+    "education": [
+      {
+        "type": "Art School",
+        "level": "Профессиональное",
+        "institute": "School of the Art Institute of Chicago"
+      }
+    ],
+    "gender": "famale",
+    "year_of_birth": 1982,
+    "place_of_birth": "Boston, USA",
+    "solo_shows": true,
+    "group_shows": false,
+    "collected_private_collectors": true,
+    "collected_major_institutions": false,
+    "winner_top_awards": true,
+    "social_networks": [{ "name": "Facebook", "account": "DianaEvansArt" }],
+    "address": "456 Sculpt Ln, Boston, MA",
+    "style_works": [{ "name": "Minimalism" }]
+  }
+]

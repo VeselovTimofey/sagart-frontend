@@ -1,11 +1,11 @@
 import { useCallback } from 'react';
+import { useSelector } from 'react-redux';
 
 import type { CardProps } from '@mui/material';
 
 import type { IProduct } from '../../utils/types';
-
+import type { AppStore } from '../../utils/types/appDispatch';
 import ProductCardUi from './ui';
-import { authors } from '../../utils/mock/authors';
 
 interface IProductCard extends CardProps {
   product: IProduct;
@@ -27,6 +27,8 @@ export default function ProductCard({ product, size, ...props }: IProductCard) {
     () => console.log('toggled basket: ', product),
     [product]
   );
+
+  const { authors } = useSelector((state: AppStore) => state.authors);
 
   const author =
     authors.find((currentAuthor) => currentAuthor.id === product.author_id) ||
